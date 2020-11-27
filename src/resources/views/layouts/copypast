@@ -1,0 +1,155 @@
+    <!--繰り返し DBからとりだしのを件数分ｸ返す-->
+    @foreach($products as $product)
+
+    <!--繰り返し-->
+      <div class="item">
+        <a class="product" href="">
+          <div class="p-img">
+           <!-- <img alt="文字表示" src="{{ asset('/img/リサイズ黒.jpg') }}"> -->
+           <img alt="文字表示" src="{{$product->image}}">
+
+          </div>
+          <div class="p-body">
+            <div class="p-title">{{$product->product_name}}</div>
+          </div>
+          <div class="p-price">{{$product->price}}円</div>
+        </a>
+        <!--product-->
+      </div>
+      <!--item-->
+
+      @endforeach
+      <!--foreach/products-->
+
+
+      <img alt="文字表示" src="{{ asset('/img/リサイズ黒.jpg') }}">
+
+
+  <!--{{$product->links()}}-->
+
+
+@for($i=0;$i<=5;$i++)
+            <option value="1">{{$i}}</option>
+            @endfor
+
+
+              <select name="quent" id="">
+            @for($i=0;$i<=5;$i++) <option value="1">{{$i}}</option>
+              @endfor
+          </select>
+
+        <!-- <td>{{$size ?? ''}}</td> -->
+
+        <input type="hidden" value="{{$size}}" name="user_id">
+
+@foreach($carts as $cart)
+        @csrf
+          <input type="hidden" name="product_name" value="{{$cart->product->product_name}}">
+          <input type="hidden" name="price" value="{{$cart->product->price}}">
+        @endforeach
+        <input type="submit" name="next" value="レジへ進む" class="btn next-btn">
+
+<form action="{{route ('payment_conf')}}" method="get">
+        @foreach($carts as $cart)
+        @csrf
+          <input type="hidden" name="products[{{$loop->index}}][name]"
+             value="{{$cart->product->product_name}}">
+
+          <input type="hidden" name="products[{{$loop->index}}][price]" value="{{$cart->product->price}}">
+        @endforeach
+          <input type="submit" name="next" value="レジへ進む" class="btn next-btn">
+
+      </form>
+.$this->faker->randomFloat()
+
+
+        //$this-> = Cart:: = Cartクラスの事
+
+
+====================
+CART.PHP
+    //showCart()でログインユーザーidとcartsテーブルのuser_idが合致するデータを取得
+    public function showCart()
+    {
+        $user_id = Auth::id();
+        $data['carts'] = $this->where('user_id', $user_id)->get();
+        $data['count'] = 0;
+        $data['sum'] = 0;
+        foreach ($data['carts'] as $cart) {
+            $data['count']++;
+            $data['sum'] += $cart->product->price;
+        }
+        return $data;
+    }
+
+    public function cartDelete($product_id)
+    {
+        $user_id = Auth::id();
+        //cartsテーブルのuser_idに$user_id(productも然り)と同じのがあれば、削除
+        $delete = $this->where('user_id', $user_id)->where('product_id', $product_id)->delete();
+
+        if ($delete > 0) {
+            $message = 'カートから削除しました。';
+        } else {
+            $message = 'カートから削除失敗しました。';
+        }
+        // dd($message);
+
+        return $message;
+    }
+=========================
+PRODUCT.PHP
+class Product extends Model
+{
+
+    protected $table = 'products';
+    use HasFactory;
+
+    // リレーションの設定。size/category/blandは一つのProductに従属する。
+    public function size(){
+        return $this->belongsTo('App\Models\Size');
+    }
+    public function category(){
+        return $this->belongsTo('App\Models\Categort');
+    }
+    public function bland(){
+        return $this->belongTo('App\Models\Bland')
+=====================
+USERS.PHP
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\SoftDeletes;//(+)
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Cashier\Billable;
+
+
+class Users extends Authenticatable
+{
+    //論理削除をONにする
+    use SoftDeletes;
+    use HasFactory, Notifiable;
+    use Billable;
+
+
+    public function cart()
+    {
+        return $this->belongsTo('App\Models\Cart');
+    }
+    //userテーブルを参照します？そう！テーブル名の指定にprotectedを使う
+    protected $table = 'users';
+    protected $fillable = ['name', 'email', 'sex', 'postal_code', 'address', 'birthday', 'password'];
+    //eloquentを通して追加してもOKのやつら
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+    //Striperに必要素材↑
+    // 日付として扱うカラムを定義（ここに論理削除に使うカラムも指定する）
+    protected $dates = ['delete_at'];
+}
+

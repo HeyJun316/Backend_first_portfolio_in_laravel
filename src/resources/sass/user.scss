@@ -1,0 +1,250 @@
+$bg-sub-color: #e5caae;
+$bg-base-color: #93612e;
+//buttontext↓
+$btn-base-color: #d6d6d6;
+$font-base-color: #ebd6c7;
+$font-sub-color: black;
+$layout-width-inner: 1088px;
+
+$breakpoints: (
+  "sp": "(max-width: 767px)",
+  "tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+  "tab": "(max-width: #{$layout-width-inner - 1px})",
+  "pc": "(min-width: #{$layout-width-inner})"
+);
+
+@mixin mq($breakpoint: md) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+body {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  color: $font-base-color;
+}
+.title {
+  color: $font-sub-color;
+  margin: 60px 0;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 47px;
+    left: 41.5%;
+    background: $font-base-color;
+    width: 250px;
+    height: 2px;
+    bottom: 0;
+  }
+}
+.btn {
+  margin-top: 20px;
+  cursor: pointer;
+  width: 30%;
+  font-size: 19px;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+}
+a {
+  text-decoration: none;
+  color: $font-base-color;
+}
+//
+//header
+//
+
+header {
+  background: $bg-base-color;
+  width: 100%;
+  position: fiexd;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: all 0, 5s ease-in-out 0s;
+  .h-inner {
+    display: flex;
+    height: 110px;
+    align-items: center;
+    .h-left {
+      margin-right: auto;
+      margin-left: 95px;
+      display: flex;
+      img {
+        width: 65px;
+        height: 65px;
+      }
+      h2 {
+        margin-left: 25px;
+        margin-top: 20px;
+        font-size: 30px;
+      }
+    }
+    .h-right {
+      margin-left: auto;
+      .h-navs {
+        // display: flex;
+        padding-right: 30px;
+        .h-nav {
+          padding-right: 50px;
+          display: inline-block;
+          transition: all 0.5s ease-in-out 0s;
+          // &:hover {
+            // opacity: 0.9;
+            // position: relative;
+            // &:after {
+            //   position: absolute;
+            //   content: "";
+            //   background: red;
+            //   width: 85%;
+            //   height: 5px;
+            //   top: 20px;
+            //   right: 34px;
+            // }
+        }
+        .dropdown {
+          z-index: 200;
+          display:none;
+          background-color:$bg-base-color;
+          position: absolute;
+          top:65px;
+          right:0;
+          width: 120px;
+          padding: 10px 9px 10px 20px;
+          .d-item{
+            width: 100%;
+
+            a{
+              z-index: 200;
+              color: $font-base-color;
+              display: block;
+              // color: $font-sub-color;
+              padding: 10px 0;
+
+              // margin: 5px -5px 5px 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//
+//delete
+//
+.resist {
+  color: $font-sub-color;
+  margin-bottom: 4%;
+  .r-container {
+    margin: 100px auto 0 auto;
+    width: 50%;
+    height: 700px;
+    border: 1px solid $font-sub-color;
+    background: #f2f2f2;
+    text-align: center;
+    .r-inner dl {
+      padding: 70px 100px 100px;
+      .r-info {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        text-align: left;
+        .r-dt {
+          margin-right: 60px;
+          width: 175px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        // 欄の大きさ
+        .input {
+          width: 300px;
+          height: 30px;
+        }
+      }
+      //性別の位置調整
+      .r-radio {
+        position:relative;
+        margin: 40px 0 45px 0;
+        .radio-dt {
+          position: absolute;
+          content: "";
+          left: 0px;
+        }
+        .radio-inner {
+          position: absolute;
+          content: "";
+          left: 231px;
+        }
+      }
+      //生年月日の位置調整
+      .r-birth {
+        position: relative;
+        margin: 30px 20px 50px 0;
+        dd {
+          position: absolute;
+          content: "";
+          left: 231px;
+        }
+        .r-b {
+          position: absolute;
+          content: "";
+          left: 0px;
+        }
+      }
+    }
+    .back-btn {
+      width: 160px;
+    }
+  }
+  .r-btn {
+    margin-top: 5%;
+  }
+}
+.post{
+  margin-top: 60px;
+}
+//
+//footerï
+//
+footer {
+  height: 80px;
+  background: #e5caae;
+  color: $bg-base-color;
+  .f-container {
+    display: flex;
+    padding-top: 30px;
+    margin-right: auto;
+    .f-left {
+      font-size: 20px;
+      margin: 0 auto 0 80px;
+      display: flex;
+    }
+    .f-right li {
+      display: inline-block;
+      padding-right: 40px;
+      .fab {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.div_contact{
+  text-align: center;
+  margin: 0 80px 0 auto;
+}
+.input_contact {
+  width: 100%;
+  font-size: 19px;
+  cursor: pointer;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+}

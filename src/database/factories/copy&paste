@@ -1,0 +1,345 @@
+CATEGORY
+    public function definition()
+    {
+        return [
+            'name_jp' => $this->faker->name
+                .$this->faker->randomNumber(),
+            'name_en' => $this->faker->word .
+            $this->faker->lexify('name_en_???????')
+        ];
+    }
+}
+
+==============
+LOCAL SEEDER
+
+        //簡単なテストデータ用
+        // Users::factory([
+        //     'name' => 'test',
+        //     'email' => 'test@test.com',
+        // ])->create();
+
+
+        // $blands = Bland::factory()
+        //     ->times(2)
+        //     ->create();
+
+
+============
+
+  $categories = Category::factory([
+            'id' =>1,
+            'name_jp'=>'プレーントゥ',
+            'name_en'=>'Plain Toe',
+        ],[
+            'id' =>2,
+            'name_jp'=>'ストレートチップ',
+            'name_en'=>'Cap Toe',
+        ],[
+            'id' =>3,
+            'name_jp'=>'ウイングチップ',
+            'name_en'=>'Full Brogue',
+        ],[
+            'id' =4,
+            'name_jp'=>'サドル',
+            'name_en'=>'Saddle Shoes',
+        ],[
+            'id' =>5,
+            'name_jp'=>'Uチップ',
+            'name_en'=>'U-tip',
+        ],[
+            'id' =>6,
+            'name_jp'=>'シングルモンク',
+            'name_en'=>'Monk Strap Shoes',
+        ],[
+            'id' =>7,
+            'name_jp'=>'ホールカット',
+            'name_en'=>'Wholecut Shoes',
+        ],[
+            'id' =>8,
+            'name_jp'=>'ダブルモンク',
+            'name_en'=>'Double Monk Strap Shoes',
+        ],[
+            'id' =>9,
+            'name_jp'=>'ローファー',
+            'name_en'=>'Loafer',
+        ],[
+            'id' =>10,
+            'name_jp'=>'チャッカブーツ',
+            'name_en'=>'Chukka Boots',
+        ],[
+            'id' =>11,
+            'name_jp'=>'サイドゴアブーツ',
+            'name_en'=>'Side Gore Boots',
+        ],[
+        ]) //eloquent(model)こと
+            ローファー			Loafer
+            ビットローファ			Bit Loafers
+            タッセルローファ			Tassel Loafers
+            チャッカブーツ			Chukka Boots
+            サイドゴアブーツ			Side Gore Boots
+
+            <?php
+
+namespace Database\Seeders;
+
+use App\Models\Size;
+use App\Models\Bland;
+use App\Models\Users;
+use App\Models\History;
+use App\Models\Product;
+use App\Models\Cart;
+use Carbon\Traits\Date;
+use App\Models\Category;
+use Brick\Math\BigInteger;
+use Illuminate\Support\Str;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+
+
+class LocalSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // 簡単なテストデータ用
+        // Users::factory([
+        //     'name' => 'test',
+        //     'email' => 'test@test.com',
+        // ])->create();
+
+
+        // $blands = Bland::factory()
+        //     ->times(2)
+        //     ->create();
+       $blands = DB::table('blands')->insert([
+            [
+                'id' => 1,
+                'bland_name' => 'リーガル',
+            ],
+            [
+                'id' => 2,
+
+                'bland_name' => 'スコッチグレイン'
+            ],
+            [
+                'id' => 3,
+                'bland_name' => 'ユニオンインペリアル'
+            ],
+            [
+                'id' => 4,
+                'bland_name' => '三陽山長'
+            ],
+            [
+                'id' => 5,
+                'bland_name' => 'シェットランドフォックス'
+            ],
+
+                'bland_name' => 'リーガル',
+                'bland_name' => 'スコッチグレイン'
+                'bland_name' => 'ユニオンインペリアル'
+                'bland_name' => '三陽山長'
+                'bland_name' => 'シェットランドフォックス'
+                'bland_name' => 'エドワードグリーン'
+                'bland_name' => 'チャーチ'
+                'bland_name' => 'トリッカーズ'
+                'bland_name' => 'クロケットジョーンズ'
+                'bland_name' => 'ジョンロブ'
+
+
+            [
+                'id' => 6,
+                'bland_name' => 'エドワードグリーン'
+            ],
+            [
+                'id' => 7,
+                'bland_name' => 'チャーチ'
+            ],
+            [
+                'id' => 8,
+                'bland_name' => 'トリッカーズ'
+            ],
+            [
+                'id' => 9,
+                'bland_name' => 'クロケットジョーンズ'
+            ],
+            [
+                'id' => 10,
+                'bland_name' => 'ジョンロブ'
+            ],
+            'name_jp' => 'ストレートチップ',
+            'name_jp' => 'ウイングチップ',
+            'name_jp' => 'ダブルモンク',
+            'name_jp' => 'ローファー',
+
+
+
+        ]);
+            'id' => 1,
+            'name_jp' => 'ストレートチップ',
+            'name_en' => 'Cap Toe',
+            'id' => 2,
+            'name_jp' => 'ウイングチップ',
+            'name_en' => 'Full Brogue',
+            'id' => 3,
+            'name_jp' => 'ダブルモンク',
+            'name_en' => 'Double Monk Strap Shoes',
+            'id' => 4,
+            'name_jp' => 'ローファー',
+            'name_en' => 'Loafer',
+
+        $categories = Category::factory([
+            'id' => 1,
+            'name_jp' => 'ストレートチップ',
+            'name_en' => 'Cap Toe',
+        ], [
+            'id' => 2,
+            'name_jp' => 'ウイングチップ',
+            'name_en' => 'Full Brogue',
+        ], [
+            'id' => 3,
+            'name_jp' => 'ダブルモンク',
+            'name_en' => 'Double Monk Strap Shoes',
+        ], [
+            'id' => 4,
+            'name_jp' => 'ローファー',
+            'name_en' => 'Loafer',
+        ]);
+
+        $sizes = DB::table('Sizes')->insert([
+                [
+                    'id' => 1,
+                    'size' => '24.5',
+
+                ],
+                [
+                    'id' => 2,
+                    'size' => '25.0'
+                ],
+                [
+                    'id' => 3,
+                    'size' => '25.5'
+                ],
+                [
+                    'id' => 4,
+                    'size' => '26.0'
+                ],
+                [
+                    'id' => 5,
+                    'size' => '26.5'
+                ],
+                [
+                    'id' => 6,
+                    'size' => '27.0'
+                ],
+                [
+                    'id' => 7,
+                    'size' => '27.5'
+                ],
+                [
+                    'id' => 8,
+                    'size' => '28.0'
+                ],
+                [
+                    'id' => 9,
+                    'size' => '28.5'
+                ],
+        ]);
+
+
+
+        $users = Users::factory()
+            ->times(3)
+            ->create();
+        //======
+        //これ↓必要？→これがなかたら、historyの重複コレクションを作るときにエラーが出る
+        $products = Product::factory()
+            ->times(3)
+            ->create();
+        //======
+
+
+        //Cartテーブルの重複したデータを持つロジ
+        foreach ($products as $index => $product) {
+            if ($index > 0) {
+                break;
+            }
+            foreach ($users as $user) {
+                Cart::factory()
+                    ->times(3)
+                    ->create([
+                        'user_id' => $user->id,
+                        'product_id' => $product->id,
+                    ]);
+            }
+        }
+
+
+
+        //Hitoryテーブルの重複したデータを持つロジ
+        foreach ($users as $index => $user) {
+            if ($index > 0) {
+                break;
+            }
+            foreach ($products as $product) {
+                History::factory()
+                    ->times(3)
+                    ->create([
+                        'user_id' => $user->id,
+                        'product_id' => $product->id,
+                    ]);
+            }
+        }
+
+        //Productsの重複した外部キーデータを持つロジ
+        foreach ($blands as $index => $bland) {
+            if ($index > 0) {
+                break;
+            }
+            foreach ($sizes as $index => $size) {
+                if ($index > 0) {
+                    break;
+                }
+                foreach ($categories as $category) {
+                    Product::factory()
+                        ->times(3)
+                        ->create([
+
+                            'bland_id' => $bland->id,
+                            'category_id' => $category->id,
+                            'size_id' => $size->id,
+                        ]);
+                }
+            }
+        }
+    }
+}
+
+
+        //Hitoryテーブルの重複したデータを持つロジ
+        // foreach ($users as $index => $user) {
+        //     if ($index > 0) {
+        //         break;
+        //     }
+        //     foreach ($products as $product) {
+        //         History::factory()
+        //             ->times(3)
+        //             ->create([
+        //                 //===
+        //                 'user_id' => $user->id,
+        //                 'product_id' => $product->id,
+        //                 //↑がよく分からん(解決済み)
+        //                 //$userのuser_idをHistoryテーブル内に重複してデータを作る？？
+        //                 //user_id=1 purchased_date 2020/11/11
+        //                 //user_id=1 purchased_date 2019/5/14 みたい感じ？
+        //                 //OK!!あってるぜ！
+        //                 //===
+
+        //             ]);
+        //     }
+        // }？？

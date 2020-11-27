@@ -1,0 +1,296 @@
+$bg-sub-color: #e5caae;
+$bg-base-color: #93612e;
+$bg-third-color: #f2f2f2;
+//buttontext↓
+$btn-base-color: #d6d6d6;
+$font-base-color: #ebd6c7;
+$font-sub-color: black;
+$layout-width-inner: 1088px;
+
+$breakpoints: (
+  "sp": "(max-width: 767px)",
+  "tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+  "tab": "(max-width: #{$layout-width-inner - 1px})",
+  "pc": "(min-width: #{$layout-width-inner})"
+);
+
+@mixin mq($breakpoint: md) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+body {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  color: $font-base-color;
+}
+.title {
+  color: $font-sub-color;
+  margin: 60px 0;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 50px;
+    left: 41.5%;
+    background: $font-base-color;
+    width: 250px;
+    height: 2px;
+    bottom: 0;
+  }
+}
+.back {
+  text-align: center;
+  // margin: 0 auto;
+}
+.btn {
+  margin: 10px 0 25px;
+  cursor: pointer;
+  width: 40%;
+  font-size: 19px;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+  margin-top: 100px;
+}
+a {
+  text-decoration: none;
+  color: $font-base-color;
+}
+.change {
+  background-color: white;
+  padding: 10px 20px;
+}
+.none{
+  border-left:none;
+}
+//
+//header
+//
+
+header {
+  background: $bg-base-color;
+  width: 100%;
+  position: fiexd;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: all 0, 5s ease-in-out 0s;
+  .h-inner {
+    display: flex;
+    height: 110px;
+    align-items: center;
+    .h-left {
+      margin-right: auto;
+      margin-left: 95px;
+      display: flex;
+      img {
+        width: 65px;
+        height: 65px;
+      }
+      h2 {
+        margin-left: 25px;
+        margin-top: 20px;
+        font-size: 30px;
+      }
+    }
+    .h-right {
+      margin-left: auto;
+      .h-navs {
+        // display: flex;
+        padding-right: 30px;
+        .h-nav {
+          padding-right: 50px;
+          display: inline-block;
+          transition: all 0.5s ease-in-out 0s;
+          // &:hover {
+          // opacity: 0.9;
+          // position: relative;
+          // &:after {
+          //   position: absolute;
+          //   content: "";
+          //   background: red;
+          //   width: 85%;
+          //   height: 5px;
+          //   top: 20px;
+          //   right: 34px;
+          // }
+        }
+        .dropdown {
+          z-index: 200;
+          display: none;
+          background-color: $bg-base-color;
+          position: absolute;
+          top: 65px;
+          right: 0;
+          width: 120px;
+          padding: 10px 9px 10px 20px;
+          .d-item {
+            width: 100%;
+
+            a {
+              z-index: 200;
+              color: $font-base-color;
+              display: block;
+              // color: $font-sub-color;
+              padding: 10px 0;
+
+              // margin: 5px -5px 5px 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//
+//history
+//
+.payment {
+  // margin-bottom:1000px ;
+  color: $font-sub-color;
+  .p-inner {
+    display: flex;
+    // justify-content: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .l-pay {
+      position: absolute;
+      width: 50%;
+      height: 350px;
+      left: 114px;
+      .p-table {
+        border: 1px solid $font-sub-color;
+        border-collapse: collapse;
+        background-color: #f2f2f2;
+        th,
+        td {
+          border: 1px solid $font-sub-color;
+          padding: 20px 10px;
+          vertical-align: middle;
+          text-align: center;
+        }
+        .p-prod {
+          // border: 1px solid transparent;
+          // border-bottom: 1px solid $font-sub-color;
+          display: flex;
+        }
+        .top {
+          border-top: 1px solid transparent;
+          border-left: 1px solid transparent;
+          border-right: 1px solid transparent;
+        }
+        .bottom {
+          border: 1px solid transparent;
+        }
+      }
+      // p-table↑
+      .a-table {
+        // border: 1px solid $font-sub-color;
+        background-color: $bg-third-color;
+        border-collapse: collapse;
+        width:auto;
+        th,
+        td {
+          border-collapse: collapse;
+          border: 1px solid $font-sub-color;
+          padding: 15px 20px;
+          vertical-align: middle;
+          text-align: left;
+        }
+      }
+      .w-pay {
+        border: 1px solid $font-sub-color;
+        width: 250px;
+        text-align: center;
+        padding: 10px 20px;
+        background-color: $bg-third-color;
+      }
+      .sub-title h2 {
+        font-size: 20px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+    }
+    .r-pay {
+      width: 50%;
+      height: 350px;
+      position: absolute;
+      top: 60px;
+      right: -27px;
+      .r-decision {
+        border: 1px solid $font-sub-color;
+        width: 600px;
+        background-color: #f2f2f2;
+        height: 340px;
+        text-align: center;
+        .total-p {
+          padding-top: 100px;
+          color: $font-sub-color;
+          font-size: 30px;
+          position: relative;
+          &:after {
+            position: absolute;
+            content: "";
+            background: $font-sub-color;
+            width: 450px;
+            height: 1px;
+            top: 140px;
+            left: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+                .content{
+                  margin-top: 40px;
+                }
+
+//
+//footer
+//
+footer {
+  height: 80px;
+  background: #e5caae;
+  color: $bg-base-color;
+  margin-top: 50%;
+  .f-container {
+    display: flex;
+    padding-top: 30px;
+    margin-right: auto;
+    .f-left {
+      font-size: 20px;
+      margin: 0 auto 0 80px;
+      display: flex;
+    }
+    .f-right li {
+      display: inline-block;
+      padding-right: 40px;
+      .fab {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.div_contact{
+  text-align: center;
+  margin: 0 80px 0 auto;
+}
+.input_contact {
+  width: 100%;
+  font-size: 19px;
+  cursor: pointer;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+}
