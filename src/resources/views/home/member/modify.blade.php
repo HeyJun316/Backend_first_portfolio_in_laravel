@@ -85,7 +85,7 @@
           <!--パスワード-->
           <div class=" r-info">
             <dt class="r-dt"><label for="pass">パスワード</label></dt>
-            <dd><a href="{{route('password_modify')}}" style="color:black;">パスワードは安全のため表示できません。<br>パスワードを変更する</a></dd>
+            <dd class="password_modify">表示不可<br><br><a href="{{route('password_modify')}}" style="color:black;">パスワードを変更</a></dd>
           </div>
           <input type="hidden" name="jun" value="2">
           <input type="submit" name="btn" class="btn r-btn" value="変更を登録する">

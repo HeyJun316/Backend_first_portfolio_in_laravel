@@ -25,17 +25,28 @@ class ProductsTable extends Migration
             $table->unsignedBigInteger('stock');
             $table->timestamps();
 
+            $table
+                ->foreign('size_id')
+                ->references('id')
+                ->on('sizes')
+                ->onDelete('cascade');
 
-            $table->foreign('size_id')->references('id')->on('sizes')->onDelete('cascade');
+            $table
+                ->foreign('category_id')
+                ->references('id')
+                ->on('categories')
+                ->onDelete('cascade');
 
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-
-            $table->foreign('bland_id')->references('id')->on('blands')->onDelete('cascade');
-
-
-
-
-
+            $table
+                ->foreign('bland_id')
+                ->references('id')
+                ->on('blands')
+                ->onDelete('cascade');
+            // $table
+            //     ->foreing('product_id')
+            //     ->references('id')
+            //     ->on('images')
+            //     ->onDelete('cascade');
         });
     }
 
@@ -47,6 +58,5 @@ class ProductsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
-
     }
 }

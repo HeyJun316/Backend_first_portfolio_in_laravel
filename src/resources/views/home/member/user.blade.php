@@ -1,6 +1,6 @@
 @extends('layouts.l_temp')
 @section('usercss')
-  <link rel="stylesheet" href="{{ asset('css/user.css') }}">
+<link rel="stylesheet" href="{{ asset('css/user.css') }}">
 @endsection
 @section('content')
 
@@ -14,16 +14,16 @@
   <div class="r-container">
     <div class="r-inner">
 
-    <dl>
+      <dl>
 
-    <!--氏名-->
+        <!--氏名-->
         <div class="r-info">
           <dt class="r-dt">
             <label for="name">
               氏名
             </label>
           </dt>
-
+<dd>
           <p class="input">{{$users->name}}</p>
           </dd>
         </div>
@@ -35,20 +35,23 @@
               メールアドレス
             </label>
           </dt>
-          <p class="input">{{$users->email}}</p>
           <dd>
+            <p class="input">{{$users->email}}</p>
+          </dd>
+        </div>
+
+        <div class="r-info">
+          <dt class="r-dt">
+            <label for="mail">
+              性別
+            </label>
+          </dt>
+          <dd>
+            <p class="input">{{$users->sex}}</p>
           </dd>
         </div>
 
         <!--性別-->
-        <div class="r-radio r-info">
-          <div class="r-dt radio-dt">
-            性別
-          </div>
-          <div class="radio-inner">
-            <label for="man" class=>{{$users->sex}}</label>
-          </div>
-        </div>
 
         <!--郵便局-->
         <div class="r-info post">
@@ -68,14 +71,14 @@
         </div>
 
         <!--生年月日+jQuery-->
-        <div class="r-info r-birth">
-          <dt class="r-dt r-b">
-            <label for="03" class="append">
+        <div class="r-info">
+          <dt class="r-dt">
+            <label for="mail">
               生年月日
             </label>
           </dt>
           <dd>
-            {{$users->birthday}}
+            <p class="input">{{$users->birthday}}</p>
           </dd>
         </div>
 

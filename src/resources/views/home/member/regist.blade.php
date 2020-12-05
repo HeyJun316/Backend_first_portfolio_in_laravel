@@ -13,14 +13,14 @@
   </div>
   <!--title-->
   <div class="r-container">
-  @if($errors->any())
-      <div style="color:red">
-        @foreach($errors->all() as $error)
-        {{$error}}
-        @endforeach
-      </div>
-      <!--style-->
-      @endif
+    @if($errors->any())
+    <div style="color:red">
+      @foreach($errors->all() as $error)
+      {{$error}}
+      @endforeach
+    </div>
+    <!--style-->
+    @endif
 
     <div class="r-inner">
       <dl>
@@ -51,17 +51,18 @@
           <!--r-info-->
 
           <!--性別-->
-          <div class="r-radio r-info">
-            <div class="r-dt radio-dt">
+          <div class="r-info">
+            <dt class="r-dt sex">
               性別
-            </div>
-            <div class="radio-inner">
+            </dt>
+            <dd>
               <label for="man">男性</label>
-              <input type="radio" name="sex"  id="man" class="radio-form" value="男性" @if(old('sex')=="男性") checked @endif>
-              
+              <input type="radio" name="sex" id="man" value="男性" @if(old('sex')=="男性" ) checked @endif>
+              <br class="line">
+
               <label for="woman">女性</label>
-              <input type="radio" name="sex"  id="man" class="radio-form" value="女性" @if(old('sex')=="女性") checked @endif>
-            </div>
+              <input type="radio" name="sex" id="man" value="女性" @if(old('sex')=="女性" ) checked @endif>
+            </dd>
           </div>
           <!--r-info-->
 
@@ -75,14 +76,14 @@
           <!--r-info-->
           <!--住所-->
           <div class="r-info">
-
             <dt class="r-dt"><label for="address">住所</label></dt>
             <dd><input type="text" name="address" value="{{ old('address') }}" placeholder="住所" class="input"></dd>
           </div>
           <!--r-info-->
+
           <!--生年月日+jQuery-->
           <div class="r-info r-birth">
-            <dt class="r-dt r-b">
+            <dt class="r-dt r-b adjust3">
               <label for="03" class="append">
                 生年月日
               </label>
@@ -90,10 +91,10 @@
             <dd>
               <select name="year" id="year">
                 <option value="{{old('$i')}}">---</option>
-              </select>年
+              </select>年<br class="line">
               <select name="month" id="month">
                 <option value="{{old('$i')}}">---</option>
-              </select>月
+              </select>月<br class="line">
               <select name="day" id="day">
                 <option value="{{old('$i')}}">---</option>
               </select>日
@@ -104,13 +105,13 @@
           <!--パスワード-->
           <div class="r-info">
             <dt class="r-dt"><label for="pass">パスワード</label></dt>
-            <dd><input type="password" name="password"  placeholder="パスワード" class="input"></dd>
+            <dd><input type="password" name="password" placeholder="パスワード" class="input"></dd>
           </div>
           <!--r-info-->
 
           <div class="r-info">
             <dt class="r-dt"><label for="pass">パスワード<br>(確認)</label></dt>
-            <dd><input type="password" name="password_confirmation"  placeholder="パスワード" class="input"></dd>
+            <dd><input type="password" name="password_confirmation" placeholder="パスワード" class="input"></dd>
           </div>
           <!--r-info-->
           <input type="submit" name="btn" class="btn r-btn" value="会員登録">

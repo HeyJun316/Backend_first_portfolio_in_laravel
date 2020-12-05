@@ -23,17 +23,19 @@
             <th>商品名</th>
             <th>値段</th>
             <th>サイズ</th>
-            <th>数量</th></a>
-            <td rowspan="3"><a href="{{url('home/cart/cart')}}" style="color:black;" class="change">変更</a></td>
+            </a>
+            <td>-</td>
           </tr>
           @foreach($carts as $cart)
           <tr>
             <td class="p-prod top">
-              <img src="../img/リサイズ2.png" alt="">
               <p>{{$cart->product->product_name}}</p>
             </td>
             <td>{{$cart->product->price}}円</td>
             <td>1</td>
+            <td><a href="{{url('home/cart/cart')}}" style="color:black;" class="change">変更</a>
+              <!--直前の数量を反映する-->
+            </td>
             <!--直前の数量を反映する-->
           </tr>
           @endforeach
@@ -70,7 +72,7 @@
           <h2>決算方法</h2>
         </div>
         <div class="w-pay">
-          <input type="radio" name="card" value="card">クレジットカード
+          <input type="radio" name="card" value="card" checked>クレジットカード
           </form>
         </div>
 
@@ -84,7 +86,10 @@
     <div class="r-pay">
       <div class="r-decision">
         <div class="total-p">
-          合計金額&emsp;&emsp;&emsp; {{number_format($sum)}}円
+          <span style="font-weight:bold;" class="span">
+            合計金額
+          </span>
+          <br>{{number_format($sum)}}円
         </div>
         <div class="content">
           <form action="{{ asset('charge') }}" method="POST" class="kessan">

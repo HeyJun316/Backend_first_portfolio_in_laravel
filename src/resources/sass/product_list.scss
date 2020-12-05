@@ -1,8 +1,5 @@
-
-// Variables
-@import 'variables';
-$bg-base-color: #93612e;
 $bg-sub-color: #e5caae;
+$bg-base-color: #93612e;
 //buttontext↓
 $btn-base-color: #d6d6d6;
 $font-base-color: #ebd6c7;
@@ -39,23 +36,30 @@ body {
   font-size: 30px;
   margin-bottom: 50px;
   position: relative;
-  &:after {
-    content: "";
-    top: 50px;
-    left: 43%;
-    background: $font-base-color;
-    width: 250px;
-    height: 2px;
-    bottom: 0;
+  @include mq(tab-only) {
+    font-size: 20px;
+    margin: 32px 0;
+  }
+  @include mq(sp) {
+    margin: 15px 0;
+    font-size: 20px;
   }
 }
+
 .btn {
   margin-top: 20px;
-  width: 30%;
+  width: 38%;
   font-size: 19px;
   cursor: pointer;
   background-color: $bg-base-color;
   color: $btn-base-color;
+  @include mq(tab-only) {
+    font-size: 12px;
+  }
+  @include mq(sp) {
+    font-size: 12px;
+    margin-top: 15px;
+  }
 }
 a {
   text-decoration: none;
@@ -63,7 +67,6 @@ a {
 }
 //
 //header
-//
 header {
   background: $bg-base-color;
   width: 100%;
@@ -72,64 +75,90 @@ header {
   top: 0;
   z-index: 100;
   transition: all 0, 5s ease-in-out 0s;
+
   .h-inner {
     display: flex;
     height: 110px;
     align-items: center;
+    @include mq(tab-only) {
+      height: 80px;
+    }
+    @include mq(sp) {
+      height: 60px;
+    }
     .h-left {
       margin-right: auto;
-      margin-left: 95px;
+      margin-left: 75px;
       display: flex;
+      @include mq(sp) {
+        margin-left: auto;
+      }
       img {
         width: 65px;
         height: 65px;
+        @include mq(tab-only) {
+          width: 50px;
+          height: 50px;
+        }
+        @include mq(sp) {
+          width: 40px;
+          height: 40px;
+        }
       }
-      h2 {
+      .header_title {
         margin-left: 25px;
         margin-top: 20px;
         font-size: 30px;
+        @include mq(tab-only) {
+          margin-left: 20px;
+          margin-top: 16px;
+          font-size: 18px;
+          @include mq(sp) {
+            margin: 0;
+          }
+        }
       }
     }
     .h-right {
       margin-left: auto;
+      @include mq(sp) {
+        display: none;
+      }
       .h-navs {
-        // display: flex;
         padding-right: 30px;
         .h-nav {
           padding-right: 50px;
           display: inline-block;
           transition: all 0.5s ease-in-out 0s;
-          // &:hover {
-            // opacity: 0.9;
-            // position: relative;
-            // &:after {
-            //   content: "";
-            //   background: red;
-            //   width: 85%;
-            //   height: 5px;
-            //   top: 20px;
-            //   right: 34px;
-            // }
+          @include mq(tab-only) {
+            padding-right: 15px;
+          }
+          a {
+            font-size: 13px;
+          }
         }
         .dropdown {
           z-index: 200;
-          display:none;
-          background-color:$bg-base-color;
-          top:65px;
-          right:0;
+          display: none;
+          background-color: $bg-base-color;
+          position: absolute;
+          top: 65px;
+          right: 0;
           width: 120px;
           padding: 10px 9px 10px 20px;
-          .d-item{
+          @include mq(tab-only) {
+            width: 74px;
+          }
+          .d-item {
             width: 100%;
-
-            a{
+            a {
               z-index: 200;
               color: $font-base-color;
               display: block;
-              // color: $font-sub-color;
               padding: 10px 0;
-
-              // margin: 5px -5px 5px 5px;
+              @include mq(tab-only) {
+                font-size: 13px;
+              }
             }
           }
         }
@@ -137,9 +166,90 @@ header {
     }
   }
 }
+.login_regist {
+  font-size: 12px;
+}
+.logout {
+  background-color: #93612e;
+  color: #d6d6d6;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include mq(tab-only) {
+    font-size: 12px;
+    padding: 0;
+  }
+}
 //
 //mainvisual
 //
+.vertical {
+  writing-mode: vertical-rl;
+  font-size: 50px;
+  position: absolute;
+  top: 23%;
+  right: 190px;
+  height: auto;
+  @include mq(tab-only) {
+    font-size: 35px;
+    top: 150px;
+    right: 120px;
+  }
+  @include mq(sp) {
+    top: 12%;
+    right: 15%;
+    font-size: 24px;
+  }
+}
+.swiper-slide {
+  z-index: 0 !important;
+  // background-image: url(../img/m-top4.jpg); //本来
+  // background-image:url("{{ asset('assets/img/m-top4.jpg') }}") ;
+  // background-image: url("../public/img/m-top4.jpg")
+  // background-image: url("../assets/img/m-top4.jpg");
+  // background-image: url("{{ asset('assets/img/m-top4.jpg') }}");
+  // background-image: url("/assets/img/m-top4.jpg");
+  // background-image: url("{{ asset('assets/img/m-top4.jpg') }}");
+  background-image: url("/img/m-top4.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+  width: 100%;
+  min-width: 40%;
+  @include mq(tab-only) {
+    font-size: 20px;
+    height: 400px;
+  }
+  @include mq(sp) {
+    font-size: 10px;
+    height: 230px;
+  }
+}
+.swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background: #ffffff9e;
+  opacity: 0.6;
+  transition: all 0.5s ease-in-out 0s;
+}
+.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+  background: #2f7dc8;
+  opacity: 1;
+  transition: all 0.5s ease-in-out 0s;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 75px;
+  height: 75px;
+  z-index: 900;
+  margin: -80px -30px;
+  transition: all 0.5s ease-in-out 0s;
+  &:after {
+    content: "";
+  }
+}
 //
 //main
 //
@@ -149,96 +259,284 @@ header {
   display: flex;
   width: 100%;
   min-height: 500px;
-  margin: 60px 0 95px 60px;
+  margin: 70px 0 85px 0;
+  @include mq(tab-only) {
+    // padding-left: 3%;
+  }
+  @include mq(sp) {
+    font-size: 15px;
+    display: block;
+    // padding-left: 30px;
+  }
   .s-head {
     font-size: 25px;
     font-weight: bold;
+    @include mq(tab-only) {
+      font-size: 20px;
+    }
+    @include mq(sp) {
+      font-size: 15px;
+    }
   }
   a {
     color: $font-sub-color;
   }
   .s-container {
     width: 15%;
+    margin: 10px 0 0 15px;
+    @include mq(tab-only) {
+      margin-top: 0;
+    }
+    @include mq(sp) {
+      margin-top: 0;
+      width: 100%;
+    }
     .category {
+      margin-bottom: 10px;
       .s-search {
-        font-size: 13px;
-        padding-top: 10px;
-        // text-align: center;
+        font-size: 15px;
+        padding-top: 5px;
+        @include mq(tab-only) {
+          font-size: 13px;
+          text-align: left;
+        }
+        @include mq(sp) {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-left: -10%;
+          font-size: 11px;
+        }
         li {
-          margin: 15px 0 0 30px;
+          margin-top: 15px;
+          @include mq(tab-only) {
+            margin-top: 10px;
+            width: 100%;
+          }
+          @include mq(sp) {
+            margin: 3% 2% 0 0;
+          }
         }
       }
     }
     .ser-box {
       margin-top: 50px;
+      @include mq(tab-only) {
+        margin-top: 35px;
+      }
+      @include mq(sp) {
+        margin-top: 25px;
+      }
       input {
-        margin: 35px 0 0 30px;
-      }
-    }
-  }
-
-  .m-container {
-    width: 85%;
-    // text-align: center;
-    .items {
-      // background: red;
-      margin-top: 15px;
-      display: flex;
-      flex-wrap: wrap;
-      .item {
-        width: calc(20% - 14px * 3 / 4);
-        padding: 15px;
-        .p-body {
-          margin-top: 20px;
+        margin-top: 35px;
+        @include mq(tab-only) {
+          margin: 15px 0 0 0;
+          width: 100px;
+          font-size: 10px;
         }
-        .p-price {
-          padding-top: 5px;
-          font-size: 20px;
-          font-weight: bold;
+        @include mq(sp) {
+          margin-top: 15px;
         }
       }
-    }
-    .more{
-      margin-top: 13px;
-      .display,
-      .flex-1,
-      .w-5,
-      .h-5{
-        display: none;
-      }
-
     }
   }
 }
+.m-container {
+  width: 85%;
+  @include mq(tab-only) {
+    margin-left: 10px;
+  }
+  @include mq(sp) {
+    margin: 10% 0 0 15px;
+    width: 100%;
+  }
+  .items {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    @include mq(sp) {
+      margin: 0 0 0 3%;
+    }
+    .item {
+      width: calc(20% - 14px * 3 / 4);
+      padding: 15px;
+      @include mq(tab-only) {
+        padding: 10px;
+        width: calc(30% - 27px * 2 / 3);
+      }
+      @include mq(sp) {
+        padding: 5% 13% 0% 0%;
+        width: calc(36% - 10px * 1 / 2);
+      }
+      img {
+        width: 100%;
+        @include mq(sp) {
+        }
+      }
+      .p-body {
+        margin-top: 20px;
+        @include mq(tab-only) {
+          margin-top: 5px;
+        }
+        @include mq(sp) {
+          margin-top: 5px;
+        }
+      }
+      .p-body {
+        @include mq(tab-only) {
+          font-size: 15px;
+        }
+      }
+      .p-price {
+        padding-top: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        @include mq(tab-only) {
+          font-size: 14px;
+        }
+        @include mq(sp) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .more {
+    position: absolute;
+    right: 5%;
+    @include mq(tab-only) {
+      font-size: 14px;
+      right: 11%;
+    }
+    @include mq(sp) {
+      right: 14%;
+      font-size: 15px;
+  }
+  }
+}
+.category {
+  @include mq(sp) {
+    font-size: 10px;
+  }
+}
+.form {
+  @include mq(sp) {
+    margin-left: 3%;
+  }
+}
+
+
+.search_btn {
+  // margin: 0;
+  // margin-top: 5px;
+  width: 20%;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+}
+.div_contact {
+  text-align: center;
+  margin: 0 80px 0 auto;
+  @include mq(sp) {
+    margin: 0 auto 0 auto;
+  }
+  @include mq(sp) {
+    margin: -5px auto 0 auto;
+  }
+}
+.input_contact {
+  width: 100%;
+  font-size: 19px;
+  cursor: pointer;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+  @include mq(tab-only) {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+  @include mq(sp) {
+    font-size: 12px;
+  }
+}
+
+.search_btn {
+  // margin: 0;
+  // margin-top: 5px;
+  width: 75%;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+}
+.div_contact {
+  text-align: center;
+  margin: 0 80px 0 auto;
+}
+.input_contact {
+  width: 100%;
+  font-size: 19px;
+  cursor: pointer;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+  @include mq(tab-only) {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
+.search_input {
+  width: 75%;
+  @include mq(sp) {
+    width: 74%;
+}
+}
+.more{
+  margin-top: 13px;
+  .display,
+  .flex-1,
+  .w-5,
+  .h-5{
+    display: none;
+  }
+
+}
+//
+//footerï
+//
 footer {
   height: 80px;
   background: #e5caae;
   color: $bg-base-color;
+  @include mq(tab-only) {
+    height: 60px;
+  }
+  @include mq(sp) {
+    font-size: 20px;
+  }
   .f-container {
     display: flex;
     padding-top: 30px;
     margin-right: auto;
+    @include mq(tab-only) {
+      padding-top: 10px;
+    }
     .f-left {
       font-size: 20px;
-      margin:0 auto 0 80px;
+      margin: 0 auto 0 80px;
       display: flex;
+      @include mq(tab-only) {
+        font-size: 15px;
+        margin: 12px auto 0 90px;
+      }
+      @include mq(sp) {
+        font-size: 17px;
+        margin: 3px auto 0 auto;
+      }
     }
-    .f-right li{
+    .f-right li {
       display: inline-block;
-      padding-right: 40px;
-      .fab{
+      .fab {
         cursor: pointer;
       }
     }
   }
-}
-.search_btn{
-  // margin: 0;
-    // margin-top: 5px;
-    width: 20%;
-    font-size: 15px;
-    cursor: pointer;
-    background-color: $bg-base-color;
-    color: $btn-base-color;
-
 }

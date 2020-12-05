@@ -8,6 +8,7 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+
   @yield('homecss')
   @yield('product_listcss')
   @yield('cartcss')
@@ -25,18 +26,8 @@
   @yield('payment_conf')
   @yield('payment_comp')
 
-
-
-
-
-
-
-
-
-
-
   <link rel="icon" href="../img/靴のアイコン8.jpeg">
-  <title>最強EC</title>
+  <title >最強EC</title>
 </head>
 
 <body>
@@ -49,10 +40,9 @@
         <a href="{{url ('/home')}}">
           <!-- <img src="../img/ウッディ.jpg" alt="logo"> -->
           <img alt="文字表示" src="{{ asset('/img/ウッディ.jpg') }}">
-
         </a>
 
-        <h2>最強EC</h2>
+        <h2 class="header_title">最強EC</h2>
       </div>
       <!--h-left-->
 
@@ -72,7 +62,7 @@
               <form action="{{route ('logout') }}" method="post">
                 @csrf
                 <li class="d-item">
-                  <button type="submit" style="background-color:#93612e; color:#d6d6d6;border:none; outline:none; cursor:pointer;">
+                  <button type="submit"class="logout">
                     ログアウト
                 </li>
               </form>
@@ -83,7 +73,7 @@
           </li>
         </ul>
         @else
-        <li class="h-nav"><a href="{{ url('/home/member/login') }}">ログイン/登録</a></li>
+        <li class="h-nav"><a href="{{ url('/home/member/login') }}"class="login_regist">ログイン/登録</a></li>
 
 
         </ul>

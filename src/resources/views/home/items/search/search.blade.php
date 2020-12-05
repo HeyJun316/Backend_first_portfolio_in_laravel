@@ -3,9 +3,10 @@
 
 @section('content')
 
-@section('searchcss')
-<link rel="stylesheet" href="{{ asset('css/search.css') }}">
+@section('product_listcss')
+<link rel="stylesheet" href="{{ asset('css/product_list.css') }}">
 @endsection
+
 
 
 
@@ -14,20 +15,20 @@
 
     <div class="category">
       <h2 class="s-head">探す</h2>
-      @foreach($categories as $category)
       <ul class="s-search">
+        @foreach($categories as $category)
         <li><a href="{{route ('product_list',['id' => $category->id])}}">
             {{$category->name_jp}}</a></li>
+            @endforeach
       </ul>
-      @endforeach
     </div>
     <!--cate-->
 
     <div class="ser-box">
       <h2 class="s-head">検索</h2>
-      <form action="{{ url('/home/items/search/search')}}" method="get">
+      <form action="{{ url('/home/items/search/search')}}" method="get" class="form">
         @csrf
-        <input type="serach" name="product_name" placeholder="キーワード">
+        <input type="serach" name="product_name" placeholder="キーワード" class="search_input">
         <input type="submit" value="検索" class="search_btn">
       </form>
     </div>

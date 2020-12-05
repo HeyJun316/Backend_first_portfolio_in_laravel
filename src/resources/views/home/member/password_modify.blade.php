@@ -19,7 +19,7 @@
             @endforeach
         </ul>
     </div>
-@endifstor
+@endif
   <div class="r-container">
     <div class="r-inner">
     <form action="{{route('password_change')}}" method="post">
@@ -49,7 +49,7 @@
         <div class="r-info">
           <dt class="r-dt">
             <label for="password_confirmation">
-              新しいパスワード【確認】
+              新しいパスワード<br>【確認】
             </label>
           </dt>
           <dd><input type="password" name="password_confirmation" class="input"></dd>

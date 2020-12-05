@@ -28,7 +28,6 @@ class UploadUser extends FormRequest
             'postal_code' => 'string|size:7',
             'address' => 'required|max:100',
             'email' => 'required_if:jun,2|email:filter,spoof,dns,strict',
-
         ];
     }
 }

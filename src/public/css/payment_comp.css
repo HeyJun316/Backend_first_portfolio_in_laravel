@@ -15,24 +15,37 @@ body {
   margin-bottom: 50px;
   position: relative;
 }
-.title:after {
-  position: absolute;
-  content: "";
-  top: 47px;
-  left: 41.5%;
-  background: #ebd6c7;
-  width: 250px;
-  height: 2px;
-  bottom: 0;
+@media (min-width: 768px) and (max-width: 1087px) {
+  .title {
+    font-size: 20px;
+    margin: 32px 0;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    margin: 15px 0;
+    font-size: 20px;
+  }
 }
 
 .btn {
   margin-top: 20px;
-  cursor: pointer;
-  width: 30%;
+  width: 38%;
   font-size: 19px;
+  cursor: pointer;
   background-color: #93612e;
   color: #d6d6d6;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  .btn {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .btn {
+    font-size: 12px;
+    margin-top: 15px;
+  }
 }
 
 a {
@@ -54,22 +67,64 @@ header .h-inner {
   height: 110px;
   align-items: center;
 }
+@media (min-width: 768px) and (max-width: 1087px) {
+  header .h-inner {
+    height: 80px;
+  }
+}
 header .h-inner .h-left {
   margin-right: auto;
-  margin-left: 95px;
+  margin-left: 75px;
   display: flex;
+}
+@media (max-width: 767px) {
+  header .h-inner .h-left {
+    margin: 0 auto;
+  }
 }
 header .h-inner .h-left img {
   width: 65px;
   height: 65px;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  header .h-inner .h-left img {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  header .h-inner .h-left img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
 }
 header .h-inner .h-left h2 {
   margin-left: 25px;
   margin-top: 20px;
   font-size: 30px;
 }
+@media (min-width: 768px) and (max-width: 1087px) {
+  header .h-inner .h-left h2 {
+    margin-left: 20px;
+    margin-top: 16px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1087px) and (max-width: 767px) {
+  header .h-inner .h-left h2 {
+    font-size: 26px;
+    margin-top: 11px;
+    margin-left: 25px;
+  }
+}
 header .h-inner .h-right {
   margin-left: auto;
+}
+@media (max-width: 767px) {
+  header .h-inner .h-right {
+    display: none;
+  }
 }
 header .h-inner .h-right .h-navs {
   padding-right: 30px;
@@ -78,6 +133,14 @@ header .h-inner .h-right .h-navs .h-nav {
   padding-right: 50px;
   display: inline-block;
   transition: all 0.5s ease-in-out 0s;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  header .h-inner .h-right .h-navs .h-nav {
+    padding-right: 15px;
+  }
+}
+header .h-inner .h-right .h-navs .h-nav a {
+  font-size: 13px;
 }
 header .h-inner .h-right .h-navs .dropdown {
   z-index: 200;
@@ -89,6 +152,11 @@ header .h-inner .h-right .h-navs .dropdown {
   width: 120px;
   padding: 10px 9px 10px 20px;
 }
+@media (min-width: 768px) and (max-width: 1087px) {
+  header .h-inner .h-right .h-navs .dropdown {
+    width: 74px;
+  }
+}
 header .h-inner .h-right .h-navs .dropdown .d-item {
   width: 100%;
 }
@@ -98,58 +166,150 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
   display: block;
   padding: 10px 0;
 }
+@media (min-width: 768px) and (max-width: 1087px) {
+  header .h-inner .h-right .h-navs .dropdown .d-item a {
+    font-size: 13px;
+  }
+}
 
-.buy {
-  margin-bottom: 18.5%;
+.login_regist {
+  font-size: 12px;
 }
-.buy .thanks {
-  padding-top: 50px;
-  color: black;
-  font-size: 30px;
-  font-weight: bold;
+
+.logout {
+  background-color: #93612e;
+  color: #d6d6d6;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-.buy .d-container {
-  margin: 100px auto 0 auto;
-  width: 500px;
+@media (min-width: 768px) and (max-width: 1087px) {
+  .logout {
+    font-size: 12px;
+    padding: 0;
+  }
+}
+
+.delete {
+  margin-bottom: 18%;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  .delete {
+    margin-bottom: 15%;
+  }
+}
+@media (max-width: 767px) {
+  .delete {
+    margin-bottom: 0%;
+  }
+}
+.delete .d-container {
+  margin: 50px auto 0 auto;
+  width: 50%;
   border: 1px solid black;
   background: #f2f2f2;
-  height: 250px;
+  height: auto;
   text-align: center;
 }
-.buy .d-container .d-inner {
-  margin-top: 30px;
+@media (min-width: 768px) and (max-width: 1087px) {
+  .delete .d-container {
+    margin: 0 auto;
+  }
 }
-.buy .d-container .d-inner .back-btn {
-  width: 160px;
+@media (max-width: 767px) {
+  .delete .d-container {
+    margin: 5% auto 8%;
+    width: 50%;
+  }
+}
+.delete .d-container .d-inner {
+  margin-top: 0%;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  .delete .d-container .d-inner {
+    margin-top: 0%;
+  }
+}
+@media (max-width: 767px) {
+  .delete .d-container .d-inner {
+    margin: 6%;
+  }
+}
+.delete .d-container .d-inner .back-btn {
+  width: 140px;
+  margin: 30px;
+}
+@media (max-width: 767px) {
+  .delete .d-container .d-inner .back-btn {
+    width: 100px;
+  }
 }
 
 footer {
   height: 80px;
   background: #e5caae;
   color: #93612e;
-  margin-top: 130px;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  footer {
+    height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  footer {
+    font-size: 17px;
+  }
 }
 footer .f-container {
   display: flex;
-  padding-top: 25px;
+  padding-top: 30px;
   margin-right: auto;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  footer .f-container {
+    padding-top: 10px;
+  }
 }
 footer .f-container .f-left {
   font-size: 20px;
   margin: 0 auto 0 80px;
   display: flex;
 }
+@media (min-width: 768px) and (max-width: 1087px) {
+  footer .f-container .f-left {
+    font-size: 15px;
+    margin: 12px auto 0 90px;
+  }
+}
+@media (max-width: 767px) {
+  footer .f-container .f-left {
+    font-size: 17px;
+    margin: 3px auto 0 auto;
+  }
+}
 footer .f-container .f-right li {
   display: inline-block;
-  padding-right: 40px;
 }
 footer .f-container .f-right li .fab {
   cursor: pointer;
 }
 
+.search_btn {
+  width: 20%;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #93612e;
+  color: #d6d6d6;
+}
+
 .div_contact {
   text-align: center;
   margin: 0 80px 0 auto;
+}
+@media (max-width: 767px) {
+  .div_contact {
+    margin: 0 auto 0 auto;
+  }
 }
 
 .input_contact {
@@ -158,4 +318,15 @@ footer .f-container .f-right li .fab {
   cursor: pointer;
   background-color: #93612e;
   color: #d6d6d6;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  .input_contact {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .input_contact {
+    font-size: 12px;
+  }
 }

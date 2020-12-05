@@ -1,9 +1,5 @@
-
-// Variables
-@import 'variables';
 $bg-sub-color: #e5caae;
 $bg-base-color: #93612e;
-$bg-third-color: #F2F2F2;
 //buttontext↓
 $btn-base-color: #d6d6d6;
 $font-base-color: #ebd6c7;
@@ -40,28 +36,29 @@ body {
   font-size: 30px;
   margin-bottom: 50px;
   position: relative;
-  &:after {
-    position: absolute;
-    content: "";
-    top: 47px;
-    left: 41.5%;
-    background: $font-base-color;
-    width: 250px;
-    height: 2px;
-    bottom: 0;
+  @include mq(tab-only) {
+    font-size: 20px;
+    margin: 32px 0;
+  }
+  @include mq(sp) {
+    margin: 15px 0;
+    font-size: 20px;
   }
 }
-.back{
-  text-align: center;
-  margin-bottom: 55px;
-}
 .btn {
-  margin: 10px 0 25px;
-  cursor: pointer;
-  width: 7%;
+  margin-top: 20px;
+  width: 38%;
   font-size: 19px;
+  cursor: pointer;
   background-color: $bg-base-color;
   color: $btn-base-color;
+  @include mq(tab-only) {
+    font-size: 12px;
+  }
+  @include mq(sp) {
+    font-size: 12px;
+    margin-top: 15px;
+  }
 }
 a {
   text-decoration: none;
@@ -69,8 +66,6 @@ a {
 }
 //
 //header
-//
-
 header {
   background: $bg-base-color;
   width: 100%;
@@ -83,41 +78,60 @@ header {
     display: flex;
     height: 110px;
     align-items: center;
+    @include mq(tab-only) {
+      height: 80px;
+    }
     .h-left {
       margin-right: auto;
-      margin-left: 95px;
+      margin-left: 75px;
       display: flex;
+      @include mq(sp) {
+        margin-left: auto;
+      }
       img {
         width: 65px;
         height: 65px;
+        @include mq(tab-only) {
+          width: 50px;
+          height: 50px;
+        }
+        @include mq(sp) {
+          width: 50px;
+          height: 50px;
+        }
       }
       h2 {
         margin-left: 25px;
         margin-top: 20px;
         font-size: 30px;
+        @include mq(tab-only) {
+          margin-left: 20px;
+          margin-top: 16px;
+          font-size: 18px;
+          @include mq(sp) {
+            font-size: 26px;
+            margin-top: 0;
+          }
+        }
       }
     }
     .h-right {
       margin-left: auto;
+      @include mq(sp) {
+        display: none;
+      }
       .h-navs {
-        // display: flex;
         padding-right: 30px;
         .h-nav {
           padding-right: 50px;
           display: inline-block;
           transition: all 0.5s ease-in-out 0s;
-          // &:hover {
-          // opacity: 0.9;
-          // position: relative;
-          // &:after {
-          //   position: absolute;
-          //   content: "";
-          //   background: red;
-          //   width: 85%;
-          //   height: 5px;
-          //   top: 20px;
-          //   right: 34px;
-          // }
+          @include mq(tab-only) {
+            padding-right: 15px;
+          }
+          a {
+            font-size: 13px;
+          }
         }
         .dropdown {
           z-index: 200;
@@ -128,17 +142,19 @@ header {
           right: 0;
           width: 120px;
           padding: 10px 9px 10px 20px;
+          @include mq(tab-only) {
+            width: 74px;
+          }
           .d-item {
             width: 100%;
-
             a {
               z-index: 200;
               color: $font-base-color;
               display: block;
-              // color: $font-sub-color;
               padding: 10px 0;
-
-              // margin: 5px -5px 5px 5px;
+              @include mq(tab-only) {
+                font-size: 13px;
+              }
             }
           }
         }
@@ -146,18 +162,34 @@ header {
     }
   }
 }
+.login_regist {
+  font-size: 12px;
+}
+.logout {
+  background-color: #93612e;
+  color: #d6d6d6;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include mq(tab-only) {
+    font-size: 12px;
+    padding: 0;
+  }
+}
 //
 //history
 //
-.bg{
-  background-color:$bg-third-color;
-}
 .h-table {
   color: $font-sub-color;
   border-collapse: collapse;
   margin: 0 auto 30px;
+  width: 70%;
   border: 1px solid $font-sub-color;
-  p{
+  @include mq(sp) {
+    width: 90%;
+    font-size: 12px;
+  }
+  p {
     // display: inline-block;
     // margin-bottom: 40px;
     vertical-align: top;
@@ -165,44 +197,77 @@ header {
     padding: 2px 0 0 15px;
     line-height: 20px;
   }
-  .p-name{
+  .p-name {
     margin-bottom: 5px;
+    @include mq(sp) {
+     margin-bottom: 0;
+    }
   }
-  .p-titlename{
+  .p-titlename {
     margin-bottom: 14px;
   }
   th,
   td {
     width: 300px;
-    padding: 10px 20px;
+    padding: 7px 15px;
     border: 1px solid black;
     text-align: left;
+
   }
   .h-list {
     display: flex;
     border: 1px solid transparent;
   }
 }
-
+.back{
+  text-align: center;
+}
+.back_btn{
+  font-size: 20px;
+  width: 15%;
+  margin-bottom: 3%;
+  @include mq(sp) {
+    font-size: 15px;
+    width: 13%;
+    margin-bottom: 3%;
+    margin-top: 0;
+  }
+}
 //
-//footer
+//footerï
 //
 footer {
   height: 80px;
   background: #e5caae;
   color: $bg-base-color;
+  @include mq(tab-only) {
+    height: 60px;
+  }
+  @include mq(sp) {
+    font-size: 17px;
+  }
   .f-container {
     display: flex;
     padding-top: 30px;
     margin-right: auto;
+    @include mq(tab-only) {
+      padding-top: 10px;
+    }
     .f-left {
       font-size: 20px;
       margin: 0 auto 0 80px;
       display: flex;
+      @include mq(tab-only) {
+        font-size: 15px;
+        margin: 12px auto 0 90px;
+      }
+      @include mq(sp) {
+        font-size: 17px;
+        margin: 3px auto 0 auto;
+      }
     }
     .f-right li {
       display: inline-block;
-      padding-right: 40px;
       .fab {
         cursor: pointer;
       }
@@ -210,7 +275,7 @@ footer {
   }
 }
 
-.div_contact{
+.div_contact {
   text-align: center;
   margin: 0 80px 0 auto;
 }

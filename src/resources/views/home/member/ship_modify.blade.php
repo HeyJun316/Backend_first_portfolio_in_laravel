@@ -1,7 +1,7 @@
 @extends('layouts.l_temp')
 
 @section('modifycss')
-<link rel="stylesheet" href="{{ asset('css/ship_modify.css') }}">
+<link rel="stylesheet" href="{{ asset('css/modify.css') }}">
 @endsection
 
 @section('content')

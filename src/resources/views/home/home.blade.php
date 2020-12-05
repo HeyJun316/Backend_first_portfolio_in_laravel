@@ -2,7 +2,7 @@
 
 
 @section('homecss')
-<link rel="stylesheet" href="{{ asset('css/home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/home.css') }}">`
 @endsection
 
 
@@ -38,24 +38,22 @@
 
 <section class="side-main">
   <div class="s-container">
-
     <div class="category">
       <h2 class="s-head">探す</h2>
-      @foreach($categories as $category)
       <ul class="s-search">
-        <li>
-          <a href="{{route ('product_list',['id' => $category->id] ) }}">
+        @foreach($categories as $category)
+        <li class="category_nav">
+          <a href="{{route ('product_list',['id' => $category->id] ) }}" class="category">
             {{$category->name_jp}}
           </a>
         </li>
+        @endforeach
       </ul>
-      @endforeach
     </div>
     <!--cate-->
-
     <div class="ser-box">
       <h2 class="s-head">検索</h2>
-      <form action="{{ url('/home/items/search/search')}}" method="get">
+      <form action="{{ url('/home/items/search/search')}}" method="get" class="form">
         @csrf
         <input type="search" class="search_input" name="product_name" placeholder="キーワード">
         <input type="submit" value="検索" class="search_btn">
@@ -86,7 +84,7 @@
       @endforeach
     </div>
     <!--items-->
-    <div class="more"></a>
+    <div class="more">
       <p><a href="{{ route('new')}}">もっと見る</a></p>
     </div>
   </div>

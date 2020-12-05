@@ -12,7 +12,6 @@
     <div class="p-left">
       <div class="main-img">
         <img alt="文字表示" src="{{ asset('/img/最新4.jpg') }}">
-
       </div>
       <!--main-img-->
       <div class="sub-img">
@@ -23,8 +22,6 @@
         <img alt="文字表示" src="{{ asset('/img/リサイズ2.png') }}">
         <img alt="文字表示" src="{{ asset('/img/リサイズ2.png') }}">
         <img alt="文字表示" src="{{ asset('/img/リサイズ2.png') }}">
-
-
       </div>
       <!--sub-image-->
 
@@ -50,22 +47,20 @@
 
       <div class="p-size">
         <ul class="size_lists">
-          <form action="{{route ('cart')}}" method="POST">
+          <form action="{{route ('cart')}}" method="POST" class="size">
             @csrf
             <input type="hidden" value="{{$product_id}}" name="product_id">
             @foreach($size_id as $size)
-
-
             <li class="size_list">
               <input type="radio" name="size" value="{{$size->size}}" class="radio">
               {{$size->size}}
             </li>
             @endforeach
-          </ul>
-        </div>
-        @if(Auth::check())
-        <div class="p-btn">
-          <input type="submit" name="cart" value="カートに入れる" class="btn">
+        </ul>
+      </div>
+      @if(Auth::check())
+      <div class="p-btn">
+        <input type="submit" name="cart" value="カートに入れる" class="btn cart_in">
         </form>
         @else
         <a href="{{url('home/member/login')}}">
