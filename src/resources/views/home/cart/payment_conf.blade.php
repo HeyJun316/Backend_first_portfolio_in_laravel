@@ -33,9 +33,9 @@
             </td>
             <td>{{$cart->product->price}}円</td>
             <td>{{$cart->size->size}}</td>
-            <td>1</td>
+            <td>1</td>asdgfadsf
             <td>
-            <input href="{{url('home/cart/cart')}}" style="color:black;"type="submit" value="変更">
+              <input href="{{url('home/cart/cart')}}" style="color:black;" type="submit" value="変更">
               <!--直前の数量を反映する-->
             </td>
             <!--直前の数量を反映する-->
@@ -56,7 +56,7 @@
             <th class="noborder">名前</th>
             <td>{{$user->name}}</td>
             <td rowspan="3" style="text-align:center;">
-            <input href="{{route('ship_modify')}}" style="color:black;"  type="submit" value="変更">
+              <input href="{{route('ship_modify')}}" style="color:black;" type="submit" value="変更">
             </td>
           </tr>
           <tr>
