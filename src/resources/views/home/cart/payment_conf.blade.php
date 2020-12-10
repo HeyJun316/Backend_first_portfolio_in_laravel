@@ -33,7 +33,7 @@
             </td>
             <td>{{$cart->product->price}}円</td>
             <td>{{$cart->size->size}}</td>
-            <td>1</td>asdgfadsf
+            <td>1</td>
             <td>
               <input href="{{url('home/cart/cart')}}" style="color:black;" type="submit" value="変更">
               <!--直前の数量を反映する-->
