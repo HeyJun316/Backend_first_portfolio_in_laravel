@@ -300,7 +300,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 }
 .side-main .s-container {
   width: 15%;
-  margin: 10px 0 0 15px;
+  margin: 10px 0 0 40px;
 }
 @media (min-width: 768px) and (max-width: 1087px) {
   .side-main .s-container {

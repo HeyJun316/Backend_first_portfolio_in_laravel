@@ -5,17 +5,16 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PasswordChange;
 use App\Http\Requests\UploadUser;
 use App\Models\Cart;
-// use Illuminate\Support\Facades\Auth;//(+)ForAdd`Log`inName
 use App\Models\Size;
 use App\Models\Users;
 use App\Models\History;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Product_size;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
-//(+)login中のユーザーを取得
 
 class shoesController extends Controller
 {
@@ -26,13 +25,9 @@ class shoesController extends Controller
     public function user()
     {
         $users = Auth::user();
-        // dd($users);
-        // $basic_infos = [
-        // 'name'=>'氏名','mail'=>'メールアドレス','sex'=>'性別'];
         return view('home.member.user', [
             'users' => $users,
         ]);
-        // ->with($basic_infos)
     }
     public function modify(Request $request)
     {
@@ -77,10 +72,6 @@ class shoesController extends Controller
         $data = $cart->showCart();
         $user_id = Auth::id();
         $users = Users::where('id', $user_id)->get();
-        // $order_number =$cart->createNumber();
-
-        // $add_history =$cart->addHistory($order_number);
-        // dd(add_history);
 
         return view('home.cart.payment_conf', $data)->with('users', $users);
     }
@@ -95,28 +86,14 @@ class shoesController extends Controller
 
         return view('home.cart.cart', $data);
     }
-    // gonna create cate's html loafer/monk strap...
-    // public function loafer()
-    // {
-    //     $categories = Category::take(4)->get();
-    //     $products = Product::take(8)->orderBy(
-    //         'created_at',
-    //         'desc'
-    //     )->simplePaginate(8);
-    //     return view('home.items.category.loafer', [
-    //         'products' => $products,
-    //         'categories' => $categories
-    //     ]);
-    // }
 
     //HOME
     public function home(Request $Requeat)
     {
         $categories = Category::take(4)->get();
-        //    where('category_id',$request->product()->id)->get();
 
         $products = Product::take(8)->get();
-        //    dd($products);
+        // dd($products);
         return view('home.home', [
             'products' => $products,
             'categories' => $categories,
@@ -125,21 +102,12 @@ class shoesController extends Controller
 
     public function single_product(Request $request, int $id)
     {
-        $products = Product::find($id);
-        $product_id = $products->id;
-        $product_name = $products->product_name;
-        $price = $products->price;
-        $detail = $products->detail;
-        $size_id = Size::take(8)->get(); //sizeを8つ取り出し表示
-        // $products = Product::take(1)->get(); //(-)
+        $products = Product::with(['product_size', 'images'])->find($id);
         return view('home.items.single_product', [
-            'product_id' => $product_id,
-            'product_name' => $product_name,
-            'price' => $price,
-            'size_id' => $size_id,
-            'detail' => $detail,
+            'products' => $products,
         ]);
     }
+
     //PRODUCT_LIST
     public function product_list(Request $request, int $id)
     {
@@ -173,7 +141,6 @@ class shoesController extends Controller
     {
         $user_id = Auth::id();
         $histories = History::where('user_id', $user_id)->get();
-        // dd($histories);
         return view('home.member.history', [
             'histories' => $histories,
         ]);
@@ -205,7 +172,28 @@ class shoesController extends Controller
             'categories' => $categories,
         ]);
     }
-
+    public function cheap(Request $request)
+    {
+        $products = Product::take(8)
+            ->orderBy('price', 'asc')
+            ->paginate(8);
+        $categories = Category::take(4)->get();
+        return view('home.items.product_list', [
+            'products' => $products,
+            'categories' => $categories,
+        ]);
+    }
+    public function pricy()
+    {
+        $products = Product::take(8)
+            ->orderBy('price', 'desc')
+            ->paginate(8);
+        $categories = Category::take(4)->get();
+        return view('home.items.product_list', [
+            'products' => $products,
+            'categories' => $categories,
+        ]);
+    }
     public function admin()
     {
         //管理者画面

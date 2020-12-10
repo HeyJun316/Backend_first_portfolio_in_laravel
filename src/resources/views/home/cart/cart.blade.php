@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+
 <section class="main">
   <div class="title">
     カート
@@ -23,12 +24,13 @@
         </tr>
         <!--1行目-->
         @foreach($carts as $cart)
+
         <tr>
           <td class="c-prod">
             <p>{{$cart->product->product_name}}</p>
           </td>
           <td>{{$cart->product->price}}円</td>
-          <td>{{$cart->product->size->size}}</td>
+          <td>{{$cart->size->size}}</td>
           <td>
             1
           </td>
@@ -37,6 +39,7 @@
             @csrf
             <td class="delete">
               <input type="hidden" value="{{$cart->product_id}}" name="product_id">
+              <input type="hidden" value="{{$cart->size_id}}" name="size_id">
               <input type="hidden" value="{{Auth::User()->id}}" name="user_id">
               <input type="submit" value="取り消す" name="delete">
             </td>

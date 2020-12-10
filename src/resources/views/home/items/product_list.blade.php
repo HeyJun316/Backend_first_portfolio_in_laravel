@@ -41,7 +41,8 @@
       <div class="item">
         <a class="product" href="{{ route('single_product',['id' => $product->id] ) }}">
           <div class="p-img">
-            <img alt="文字表示" src="{{ asset('/img/リサイズ黒.jpg') }}">
+          <img alt="文字表示" src="{{ asset($product->image) }}">
+
 
           </div>
           <div class="p-body">

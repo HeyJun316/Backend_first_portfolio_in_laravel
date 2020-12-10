@@ -35,7 +35,6 @@ body {
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
-  position: relative;
   @include mq(tab-only) {
     font-size: 20px;
     margin: 32px 0;
@@ -48,7 +47,7 @@ body {
 
 .btn {
   margin-top: 20px;
-  width: 38%;
+  width: auto;
   font-size: 19px;
   cursor: pointer;
   background-color: $bg-base-color;
@@ -61,6 +60,7 @@ body {
     margin-top: 15px;
   }
 }
+
 a {
   text-decoration: none;
   color: $font-base-color;
@@ -101,8 +101,8 @@ header {
           height: 50px;
         }
         @include mq(sp) {
-          width: 40px;
-          height: 40px;
+          width: 45px;
+          height: 45px;
         }
       }
       .header_title {
@@ -113,9 +113,11 @@ header {
           margin-left: 20px;
           margin-top: 16px;
           font-size: 18px;
-          @include mq(sp) {
-            margin: 0;
-          }
+        }
+        @include mq(sp) {
+          margin-left: 20px;
+          margin-top: 13px;
+          font-size: 20px;
         }
       }
     }
@@ -142,11 +144,12 @@ header {
           display: none;
           background-color: $bg-base-color;
           position: absolute;
-          top: 65px;
-          right: 0;
+          top: 90px;
+          right: -11px;
           width: 120px;
           padding: 10px 9px 10px 20px;
           @include mq(tab-only) {
+            right: 0px;
             width: 74px;
           }
           .d-item {
@@ -175,14 +178,17 @@ header {
   border: none;
   outline: none;
   cursor: pointer;
+  padding: 0;
   @include mq(tab-only) {
     font-size: 12px;
-    padding: 0;
   }
 }
-//
 //mainvisual
 //
+.m-main img {
+  width: 100%;
+  height: 550px;
+}
 .vertical {
   writing-mode: vertical-rl;
   font-size: 50px;
@@ -192,25 +198,17 @@ header {
   height: auto;
   @include mq(tab-only) {
     font-size: 35px;
-    top: 150px;
+    top: 45px;
     right: 120px;
   }
   @include mq(sp) {
-    top: 12%;
+    top: 30px;
     right: 15%;
     font-size: 24px;
   }
 }
+
 .swiper-slide {
-  z-index: 0 !important;
-  // background-image: url(../img/m-top4.jpg); //本来
-  // background-image:url("{{ asset('assets/img/m-top4.jpg') }}") ;
-  // background-image: url("../public/img/m-top4.jpg")
-  // background-image: url("../assets/img/m-top4.jpg");
-  // background-image: url("{{ asset('assets/img/m-top4.jpg') }}");
-  // background-image: url("/assets/img/m-top4.jpg");
-  // background-image: url("{{ asset('assets/img/m-top4.jpg') }}");
-  background-image: url("/img/m-top4.jpg");
   background-position: center;
   background-size: cover;
   height: 550px;
@@ -225,7 +223,12 @@ header {
     height: 230px;
   }
 }
-.swiper-pagination-bullet {
+.swiper-pagination {
+  width: 100%;
+  text-align: center;
+}
+
+.swiper .swiper-pagination-bullet {
   width: 18px;
   height: 18px;
   background: #ffffff9e;
@@ -241,11 +244,10 @@ header {
 }
 .swiper-button-prev,
 .swiper-button-next {
-  width: 75px;
-  height: 75px;
   z-index: 900;
-  margin: -80px -30px;
   transition: all 0.5s ease-in-out 0s;
+  background-color: transparent;
+  // bottom:100px;
   &:after {
     content: "";
   }
@@ -259,7 +261,7 @@ header {
   display: flex;
   width: 100%;
   min-height: 500px;
-  margin: 120px 0 85px 0;
+  margin: 50px 0 85px 0;
   @include mq(tab-only) {
     // padding-left: 3%;
   }
@@ -275,6 +277,7 @@ header {
     }
     @include mq(sp) {
       font-size: 15px;
+      margin-left: 20px;
     }
   }
   a {
@@ -282,7 +285,7 @@ header {
   }
   .s-container {
     width: 15%;
-    margin: 10px 0 0 15px;
+    margin: 10px 0 0 40px;
     @include mq(tab-only) {
       margin-top: 0;
     }
@@ -419,7 +422,6 @@ header {
   }
 }
 
-
 .search_btn {
   // margin: 0;
   // margin-top: 5px;
@@ -484,6 +486,7 @@ header {
 //
 //footerï
 //
+
 footer {
   height: 80px;
   background: #e5caae;
@@ -496,14 +499,14 @@ footer {
   }
   .f-container {
     display: flex;
-    padding-top: 30px;
+    padding-top: 25px;
     margin-right: auto;
     @include mq(tab-only) {
       padding-top: 10px;
     }
     .f-left {
       font-size: 20px;
-      margin: 0 auto 0 80px;
+      margin: 5px auto 0 80px;
       display: flex;
       @include mq(tab-only) {
         font-size: 15px;
@@ -511,7 +514,7 @@ footer {
       }
       @include mq(sp) {
         font-size: 17px;
-        margin: 3px auto 0 auto;
+        margin: 3px 60px 0;
       }
     }
     .f-right li {
@@ -521,4 +524,33 @@ footer {
       }
     }
   }
+}
+.div_contact {
+  text-align: center;
+  margin: 0 80px 0 auto;
+  @include mq(tab-only) {
+    margin: 5px 80px 0px auto;
+  }
+
+  @include mq(sp) {
+    margin: 0 60px 0 auto;
+  }
+}
+.input_contact {
+  width: 100%;
+  font-size: 19px;
+  cursor: pointer;
+  background-color: $bg-base-color;
+  color: $btn-base-color;
+  @include mq(tab-only) {
+    font-size: 16px;
+  }
+
+  @include mq(sp) {
+    font-size: 14px;
+  }
+}
+
+.div_price {
+  margin-top: 30px;
 }

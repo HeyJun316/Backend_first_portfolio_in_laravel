@@ -296,12 +296,12 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 }
 
 .empty_p {
-  margin: auto 40%;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
   .empty_p {
-    margin: 0 atuo;
+    margin: 0 auto;
   }
 }
 
@@ -366,7 +366,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 
 .r-container .r-box {
   width: 50%;
-  height: 90%;
+  height: auto;
   border: 1px solid black;
   background-color: #f2f2f2;
   text-align: center;
@@ -375,7 +375,6 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 @media (min-width: 768px) and (max-width: 1087px) {
   .r-container .r-box {
     width: 70%;
-    height: 75%;
   }
 }
 
@@ -419,6 +418,10 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
     margin-top: 20px;
     font-size: 15px;
   }
+}
+
+.form {
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {

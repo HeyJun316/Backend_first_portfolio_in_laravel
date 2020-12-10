@@ -111,7 +111,15 @@ Route::get(
     '/home/items/product_list/{id}',
     'shoesController@product_list',
 )->name('product_list');
+
 Route::get('/home/items/product_list', 'shoesController@new')->name('new');
+
+Route::get('/home/items/cheaper_product_list', 'shoesController@cheap')->name(
+    'cheap',
+);
+Route::get('/home/items/pricier_product_list', 'shoesController@pricy')->name(
+    'pricy',
+);
 
 //HOME
 Route::get('/home', 'shoesController@home');
@@ -119,6 +127,7 @@ Route::get('/home', 'shoesController@home');
 //CART
 Route::get('/home/cart/cart/', 'shoesController@cart')->name('cart');
 Route::post('/home/cart/cart/', 'cartController@addMyCart');
+
 Route::post('/cartdelete', 'cartController@cartDelete')->name('cartdelete');
 
 Route::get('/home/cart/payment_conf', 'shoesController@payment_conf')->name(

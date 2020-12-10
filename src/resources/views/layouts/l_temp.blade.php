@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"/>
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   @yield('homecss')
   @yield('product_listcss')
@@ -27,7 +28,7 @@
   @yield('payment_comp')
 
   <link rel="icon" href="../img/靴のアイコン8.jpeg">
-  <title >最強EC</title>
+  <title>最強EC</title>
 </head>
 
 <body>
@@ -62,7 +63,7 @@
               <form action="{{route ('logout') }}" method="post">
                 @csrf
                 <li class="d-item">
-                  <button type="submit"class="logout">
+                  <button type="submit" class="logout">
                     ログアウト
                 </li>
               </form>
@@ -73,7 +74,7 @@
           </li>
         </ul>
         @else
-        <li class="h-nav"><a href="{{ url('/home/member/login') }}"class="login_regist">ログイン/登録</a></li>
+        <li class="h-nav"><a href="{{ url('/home/member/login') }}" class="login_regist">ログイン/登録</a></li>
 
 
         </ul>
@@ -105,10 +106,11 @@
   </footer>
 
 </body>
-<script src="./js/swiper.min.js"></script>
+
+<!-- <script src="{{asset ('js/swiper.min.js') }}"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script>
   var mySwiper = new Swiper('.swiper-container', {
-    // ここからオプション
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',

@@ -30,7 +30,7 @@ body {
 
 .btn {
   margin-top: 20px;
-  width: 38%;
+  width: auto;
   font-size: 19px;
   cursor: pointer;
   background-color: #93612e;
@@ -72,6 +72,11 @@ header .h-inner {
     height: 80px;
   }
 }
+@media (max-width: 767px) {
+  header .h-inner {
+    height: 60px;
+  }
+}
 header .h-inner .h-left {
   margin-right: auto;
   margin-left: 75px;
@@ -79,7 +84,7 @@ header .h-inner .h-left {
 }
 @media (max-width: 767px) {
   header .h-inner .h-left {
-    margin: 0 auto;
+    margin-left: auto;
   }
 }
 header .h-inner .h-left img {
@@ -94,28 +99,27 @@ header .h-inner .h-left img {
 }
 @media (max-width: 767px) {
   header .h-inner .h-left img {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
+    width: 45px;
+    height: 45px;
   }
 }
-header .h-inner .h-left h2 {
+header .h-inner .h-left .header_title {
   margin-left: 25px;
   margin-top: 20px;
   font-size: 30px;
 }
 @media (min-width: 768px) and (max-width: 1087px) {
-  header .h-inner .h-left h2 {
+  header .h-inner .h-left .header_title {
     margin-left: 20px;
     margin-top: 16px;
     font-size: 18px;
   }
 }
-@media (min-width: 768px) and (max-width: 1087px) and (max-width: 767px) {
-  header .h-inner .h-left h2 {
-    font-size: 26px;
-    margin-top: 11px;
-    margin-left: 25px;
+@media (max-width: 767px) {
+  header .h-inner .h-left .header_title {
+    margin-left: 20px;
+    margin-top: 13px;
+    font-size: 20px;
   }
 }
 header .h-inner .h-right {
@@ -148,13 +152,14 @@ header .h-inner .h-right .h-navs .dropdown {
   background-color: #93612e;
   position: absolute;
   top: 65px;
-  right: 0;
+  right: -11px;
   width: 120px;
   padding: 10px 9px 10px 20px;
 }
 @media (min-width: 768px) and (max-width: 1087px) {
   header .h-inner .h-right .h-navs .dropdown {
     width: 74px;
+    right: 0px;
   }
 }
 header .h-inner .h-right .h-navs .dropdown .d-item {
@@ -182,11 +187,11 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
   border: none;
   outline: none;
   cursor: pointer;
+  padding: 0;
 }
 @media (min-width: 768px) and (max-width: 1087px) {
   .logout {
     font-size: 12px;
-    padding: 0;
   }
 }
 
@@ -257,12 +262,12 @@ footer {
 }
 @media (max-width: 767px) {
   footer {
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 footer .f-container {
   display: flex;
-  padding-top: 30px;
+  padding-top: 25px;
   margin-right: auto;
 }
 @media (min-width: 768px) and (max-width: 1087px) {
@@ -272,7 +277,7 @@ footer .f-container {
 }
 footer .f-container .f-left {
   font-size: 20px;
-  margin: 0 auto 0 80px;
+  margin: 5px auto 0 80px;
   display: flex;
 }
 @media (min-width: 768px) and (max-width: 1087px) {
@@ -284,7 +289,7 @@ footer .f-container .f-left {
 @media (max-width: 767px) {
   footer .f-container .f-left {
     font-size: 17px;
-    margin: 3px auto 0 auto;
+    margin: 3px 60px 0;
   }
 }
 footer .f-container .f-right li {
@@ -294,21 +299,18 @@ footer .f-container .f-right li .fab {
   cursor: pointer;
 }
 
-.search_btn {
-  width: 20%;
-  font-size: 15px;
-  cursor: pointer;
-  background-color: #93612e;
-  color: #d6d6d6;
-}
-
 .div_contact {
   text-align: center;
   margin: 0 80px 0 auto;
 }
+@media (min-width: 768px) and (max-width: 1087px) {
+  .div_contact {
+    margin: 5px 80px 0px auto;
+  }
+}
 @media (max-width: 767px) {
   .div_contact {
-    margin: 0 auto 0 auto;
+    margin: 0 60px 0 auto;
   }
 }
 
@@ -321,12 +323,11 @@ footer .f-container .f-right li .fab {
 }
 @media (min-width: 768px) and (max-width: 1087px) {
   .input_contact {
-    margin-top: 8px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media (max-width: 767px) {
   .input_contact {
-    font-size: 12px;
+    font-size: 14px;
   }
 }

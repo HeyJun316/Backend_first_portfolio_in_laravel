@@ -16,7 +16,6 @@ class ProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('product_name', 255)->unique();
-            $table->unsignedBigInteger('size_id');
             $table->unsignedBigInteger('bland_id');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('price');
@@ -24,12 +23,6 @@ class ProductsTable extends Migration
             $table->string('image', 255);
             $table->unsignedBigInteger('stock');
             $table->timestamps();
-
-            $table
-                ->foreign('size_id')
-                ->references('id')
-                ->on('sizes')
-                ->onDelete('cascade');
 
             $table
                 ->foreign('category_id')
@@ -42,11 +35,6 @@ class ProductsTable extends Migration
                 ->references('id')
                 ->on('blands')
                 ->onDelete('cascade');
-            // $table
-            //     ->foreing('product_id')
-            //     ->references('id')
-            //     ->on('images')
-            //     ->onDelete('cascade');
         });
     }
 

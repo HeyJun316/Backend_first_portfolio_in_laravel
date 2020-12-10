@@ -45,9 +45,10 @@ body {
     font-size: 20px;
   }
 }
+
 .btn {
   margin-top: 20px;
-  width: 38%;
+  width: auto;
   font-size: 19px;
   cursor: pointer;
   background-color: $bg-base-color;
@@ -60,6 +61,7 @@ body {
     margin-top: 15px;
   }
 }
+
 a {
   text-decoration: none;
   color: $font-base-color;
@@ -74,6 +76,7 @@ header {
   top: 0;
   z-index: 100;
   transition: all 0, 5s ease-in-out 0s;
+
   .h-inner {
     display: flex;
     height: 110px;
@@ -81,12 +84,15 @@ header {
     @include mq(tab-only) {
       height: 80px;
     }
+    @include mq(sp) {
+      height: 60px;
+    }
     .h-left {
       margin-right: auto;
       margin-left: 75px;
       display: flex;
       @include mq(sp) {
-        margin: 0 auto;
+        margin-left: auto;
       }
       img {
         width: 65px;
@@ -96,12 +102,11 @@ header {
           height: 50px;
         }
         @include mq(sp) {
-          width: 50px;
-          height: 50px;
-          margin-top: 10px;
+          width: 45px;
+          height: 45px;
         }
       }
-      h2 {
+      .header_title {
         margin-left: 25px;
         margin-top: 20px;
         font-size: 30px;
@@ -109,11 +114,11 @@ header {
           margin-left: 20px;
           margin-top: 16px;
           font-size: 18px;
-          @include mq(sp) {
-            font-size: 26px;
-            margin-top: 11px;
-            margin-left: 25px;
-          }
+        }
+        @include mq(sp) {
+          margin-left: 20px;
+          margin-top: 13px;
+          font-size: 20px;
         }
       }
     }
@@ -141,11 +146,12 @@ header {
           background-color: $bg-base-color;
           position: absolute;
           top: 65px;
-          right: 0;
+          right: -11px;
           width: 120px;
           padding: 10px 9px 10px 20px;
           @include mq(tab-only) {
             width: 74px;
+            right: 0px
           }
           .d-item {
             width: 100%;
@@ -173,11 +179,12 @@ header {
   border: none;
   outline: none;
   cursor: pointer;
+  padding: 0;
   @include mq(tab-only) {
     font-size: 12px;
-    padding: 0;
   }
 }
+
 .delete {
   // margin-top: px;
   margin-bottom: 18%;
@@ -226,6 +233,7 @@ header {
 //
 //footer
 //
+
 footer {
   height: 80px;
   background: #e5caae;
@@ -234,18 +242,18 @@ footer {
     height: 60px;
   }
   @include mq(sp) {
-    font-size: 17px;
+    font-size: 20px;
   }
   .f-container {
     display: flex;
-    padding-top: 30px;
+    padding-top: 25px;
     margin-right: auto;
     @include mq(tab-only) {
       padding-top: 10px;
     }
     .f-left {
       font-size: 20px;
-      margin: 0 auto 0 80px;
+      margin: 5px auto 0 80px;
       display: flex;
       @include mq(tab-only) {
         font-size: 15px;
@@ -253,7 +261,7 @@ footer {
       }
       @include mq(sp) {
         font-size: 17px;
-        margin: 3px auto 0 auto;
+        margin: 3px 60px 0;
       }
     }
     .f-right li {
@@ -264,21 +272,15 @@ footer {
     }
   }
 }
-
-.search_btn {
-  // margin: 0;
-  // margin-top: 5px;
-  width: 20%;
-  font-size: 15px;
-  cursor: pointer;
-  background-color: $bg-base-color;
-  color: $btn-base-color;
-}
 .div_contact {
   text-align: center;
   margin: 0 80px 0 auto;
+  @include mq(tab-only) {
+    margin: 5px 80px 0px auto;
+  }
+
   @include mq(sp) {
-    margin: 0 auto 0 auto;
+    margin: 0 60px 0 auto;
   }
 }
 .input_contact {
@@ -288,10 +290,10 @@ footer {
   background-color: $bg-base-color;
   color: $btn-base-color;
   @include mq(tab-only) {
-    margin-top: 8px;
-    font-size: 12px;
+    font-size: 16px;
   }
+
   @include mq(sp) {
-    font-size: 12px;
+    font-size: 14px;
   }
 }

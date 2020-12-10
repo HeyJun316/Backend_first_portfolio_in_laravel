@@ -10,7 +10,6 @@
   <div class="title">
     <h2>決済</h2>
   </div>
-
   <div class="p-inner">
 
     <div class="l-pay">
@@ -23,17 +22,20 @@
             <th>商品名</th>
             <th>値段</th>
             <th>サイズ</th>
-            </a>
+            <th>数量</th>
             <td>-</td>
           </tr>
+
           @foreach($carts as $cart)
           <tr>
             <td class="p-prod top">
               <p>{{$cart->product->product_name}}</p>
             </td>
             <td>{{$cart->product->price}}円</td>
+            <td>{{$cart->size->size}}</td>
             <td>1</td>
-            <td><a href="{{url('home/cart/cart')}}" style="color:black;" class="change">変更</a>
+            <td>
+            <input href="{{url('home/cart/cart')}}" style="color:black;"type="submit" value="変更">
               <!--直前の数量を反映する-->
             </td>
             <!--直前の数量を反映する-->
@@ -53,7 +55,9 @@
           <tr>
             <th class="noborder">名前</th>
             <td>{{$user->name}}</td>
-            <td rowspan="3"><a href="{{route('ship_modify')}}" style="color:black;" class="change">変更</a></td>
+            <td rowspan="3" style="text-align:center;">
+            <input href="{{route('ship_modify')}}" style="color:black;"  type="submit" value="変更">
+            </td>
           </tr>
           <tr>
             <th class="none" style="border-right:none;">郵便番号</th>
@@ -95,7 +99,7 @@
           <form action="{{ asset('charge') }}" method="POST" class="kessan">
             @csrf
             {{ csrf_field() }}
-            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_51Hex2hJWvOOGSfsbU0ArdQlYHyNLmfPxyUxtsIEVT0crrQfwQ082QC6lc6GgM3R6kqhkJjfSLmT5RHbjMiLCpa4P00Fo3GNEkV" data-amount=" {{number_format($sum)}} " data-name="Stripe Demo" data-label="決済をする" data-description="Online course about integrating Stripe" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto" data-currency="JPY">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_51Hex2hJWvOOGSfsbU0ArdQlYHyNLmfPxyUxtsIEVT0crrQfwQ082QC6lc6GgM3R6kqhkJjfSLmT5RHbjMiLCpa4P00Fo3GNEkV" data-amount=" {{$sum}} " data-name="Stripe Demo" data-label="決済をする" data-description="Online course about integrating Stripe" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto" data-currency="JPY">
             </script>
           </form>
         </div>
@@ -105,7 +109,6 @@
     <!--r-pay-->
   </div>
   <!--p-inner-->
-
 </section>
 
 </section>

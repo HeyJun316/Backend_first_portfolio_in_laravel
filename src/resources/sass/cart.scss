@@ -247,9 +247,9 @@ header {
   }
 }
 .empty_p {
-  margin: auto 40%;
+  margin: 0 auto;
   @include mq(tab-only) {
-    margin: 0 atuo;
+    margin: 0 auto;
   }
   @include mq(sp) {
     margin: 0;
@@ -299,13 +299,12 @@ header {
   }
   .r-box {
     width: 50%;
-    height: 90%;
+    height: auto;
     border: 1px solid black;
     background-color: #f2f2f2;
     text-align: center;
     @include mq(tab-only) {
       width: 70%;
-      height: 75%;
     }
   }
   .total-p {
@@ -340,6 +339,9 @@ header {
     margin-top: 20px;
     font-size: 15px;
   }
+}
+.form{
+  margin-bottom: 10px;
 }
 .form a {
   @include mq(tab-only) {

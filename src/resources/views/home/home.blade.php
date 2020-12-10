@@ -2,30 +2,44 @@
 
 
 @section('homecss')
-<link rel="stylesheet" href="{{ asset('css/home.css') }}">`
+<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
 
 
 @section('mainvisual')
 
 <section class="mainvisual">
-  <div class="container swiper-contsiner">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
 
+  <div class="container swiper-container">
+    <div class="swiper-wrapper">
+
+      <!--swiper-slide①-->
+      <div class="swiper-slide" style="background-image: url(/img/m-top4.jpg);">
         <div class="m-main">
           <h1 class="vertical">至高の<br>&emsp;&emsp;&thinsp; 一足を</h1>
-
         </div>
         <!--m-main-->
       </div>
-      <!--swiper-slide-->
 
+      <!--swiper-slide②-->
+      <div class="swiper-slide" style="background-image: url(/img/top2.png);">
+        <div class="m-main">
+        </div>
+        <!--m-main-->
+      </div>
+
+      <!--swiper-slide③-->
+      <div class="swiper-slide" style="background-image: url(/img/top.png);">
+        <div class="m-main">
+        </div>
+        <!--m-main-->
+      </div>
     </div>
     <!--swiperwrapper-->
+
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
   </div>
   <!--container-->
 
@@ -48,6 +62,23 @@
           </a>
         </li>
         @endforeach
+
+      </ul>
+    </div>
+    <div class="category div_price">
+      <h2 class="s-head ">価格検索</h2>
+      <ul class="s-search">
+        <li class="category_nav">
+          <a href="{{ route('cheap') }}">
+            価格が安い順番
+          </a>
+        </li>
+        <li class="category_nav">
+          <a href="{{ route('pricy') }}" class="category">
+            価格が高い順番
+
+          </a>
+        </li>
       </ul>
     </div>
     <!--cate-->
@@ -59,7 +90,8 @@
         <input type="submit" value="検索" class="search_btn">
       </form>
     </div>
-    <!--d-box-->
+    <!--ser-box-->
+
   </div>
   <!--s-container-->
 
@@ -71,7 +103,7 @@
       <div class="item">
         <a class="product" href="{{ route ('single_product',['id' => $product->id] ) }}">
           <div class="p-img">
-            <img alt="文字表示" src="{{ asset('/img/リサイズ黒.jpg') }}">
+            <img alt="文字表示" src="{{ asset($product->image) }}">
           </div>
           <div class="p-body">
             <div class="p-title">{{$product->product_name}}</div>
