@@ -15,7 +15,7 @@ class BlandsTable extends Migration
     {
         Schema::create('blands', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('bland_name', 255);
+            $table->string('bland_name');
             $table->timestamps();
             $table->unique('bland_name', 'unique_bland_name');
         });
