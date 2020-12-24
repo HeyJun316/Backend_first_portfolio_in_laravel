@@ -119,1025 +119,1025 @@ class LocalSeeder extends Seeder
                 'image' => 'img/products/02-0.jpg',
                 'stock' => 10,
             ],
-            [
-                'product_name' => 'DALIA WOMEN',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 81800,
-                'detail' => 'エッジに施されたスタッズがアクセントになったサンダルDALIA(ダリア)。
-                フロント2か所のワイドストラップと、バックストラップによりホールド感のある履き心地。また重厚感のあるルックスながらトゥの開きが程よい抜け感を演出してくれます。',
-                'image' => 'img/products/03-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'MALVERN C',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 80030,
-                'detail' =>
-                    'トラディショナルな外羽根プレーントゥモデルのMALVERN C(マルバーン)。 ',
-                'image' => 'img/products/04-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'HUDSON',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 78000,
-                'detail' =>
-                    'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーのメンズコレクション。「Purely Made in England」というポリシーを掲げるジョセフチーニーより。',
-                'image' => 'img/products/05-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'FENCHURCH',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 48400,
-                'detail' =>
-                    '11028 LAST(木型)はチーニーが展開しているラストの中ではロングノーズです。パンチドキャップトゥがすっきりと端正な見映えになっていてドレススタイルには最適な1足。',
-                'image' => 'img/products/06-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => '[限定]MAYAR C',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 78000,
-                'detail' => 'マイヤーのコンセプトは、「都会で履くエレガントなカントリーシューズ」。
-                外羽根や独特のステッチワーク、かかと周りにまでぐるりとコバがあしらわれたオールアラウンドグッドイヤーウェルト製法など、カントリーテイストを彷彿させるディテールながら、ブラックのグレインカーフレザーを使用することで、エレガントさとタフさを兼ね備えました。',
-                'image' => 'img/products/07-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'FRANCIS',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 75900,
-                'detail' => 'オン・オフでご使用いただけるクラシックかつトラディショナルな王道のセミブローグモデルのFRANCIS(フランシス)。
-                ',
-                'image' => 'img/products/08-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'GEOFFREY',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 75900,
-                'detail' => 'フォーマルスタイルにおける王道のストレートチップドレスシューズのGEOFFREY(ジェフェリー)。
-                ',
-                'image' => 'img/products/09-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'ROGER',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 75900,
-                'detail' => 'フォーマルスタイルにおすすめのクォーターブローグシューズのROGER(ロジャー)。
-                アッパーは、ボックスカーフ使いで足馴染みも良く、古くからある6184 LAST(木型)を採用。日本人の足にも相性の良い小ぶりなヒールカップ、細身のEウィズ仕様により心地の良いフィッティングとなっております。',
-                'image' => 'img/products/10-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'CAIRNGORM H',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 72300,
-                'detail' => 'ジョセフ チーニーを代表するシューズ"CAIRNGORM 2R(ケンゴン)"にドレスとカジュアルの要素を融合したハイブリッドモデルが登場。
-                外羽根や独特のステッチワーク、頑強なグッドイヤーウェルト製法など従来のケンゴンのディテールを残しつつ、ビジネスシーンでもお使いいただけるよう、内ハトメ仕様などスマートな要素を取り入れました。
-                ',
-                'image' => 'img/products/11-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'WILFORD JR',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 60803,
-                'detail' => '16世紀頃のスコットランドやアイルランドで履かれたブローギング(飾り穴)が施された靴は、通気性や水はけを良くする工夫としてあしらわれ、今では装飾性の高い意匠となって継承されています。
-',
-                'image' => 'img/products/12-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'DIPLOMAT(LAST 173) ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 91300,
-                'detail' =>
-                    'ラスト173を採用し、英国の風格が飾り穴から醸し出されるセミブローグモデルのDIPLOMAT(ディプロマット)。',
-                'image' => 'img/products/13-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'OLD',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 42400,
-                'detail' =>
-                    '装飾の少ないシンプルなデザインでスッキリとした、革の表情も楽しめるプレーントゥシューズのOLD(オールド)。 ',
-                'image' => 'img/products/14-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'PENZANCE 2',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 48439,
-                'detail' =>
-                    'カーフレザーをアッパーに使用したグルカサンダルのPENZANCE 2(ペンザス 2)。',
-                'image' => 'img/products/15-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'CARTMEL(LAST173) ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 91300,
-                'detail' =>
-                    '英国を代表する老舗シューズブランドチャーチより、上品でクラシックなイメージのラスト173を使用したダービーキャップトゥシューズ。',
-                'image' => 'img/products/16-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'BUCKINGHAM',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 87106,
-                'detail' =>
-                    'ビスポークシューズの雰囲気を感じさせる特別仕様で英国のクラフトマンシップをご堪能いただける一足。',
-                'image' => 'img/products/17-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'HOLYROOD',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 87100,
-                'detail' =>
-                    'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーのメンズコレクション。',
-                'image' => 'img/products/18-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'HARRY',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 71200,
-                'detail' =>
-                    '伝統的な製法、技術により靴をつくり続けるジョセフ チーニーのタッセルローファーHARRY(ハリー)。',
-                'image' => 'img/products/19-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'BROAD II',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 48900,
-                'detail' =>
-                    'オーセンティックで、バランスのいいウィングチップシューズのBROAD ??(ブロード)。',
-                'image' => 'img/products/20-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'CAIRNGORM 2R/',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 80200,
-                'detail' => 'トラディショナルな外羽根キャップトゥモデルのCAIRNGORM 2R(ケンゴン)。
-                無骨ながら愛嬌のある表情とミルスペックを満たす履き心地。',
-                'image' => 'img/products/21-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'LIME',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 40000,
-                'detail' => 'ジョセフチーニーのストレートチップモデルLIME(ライム)。
-                ロングノーズのエレガントな雰囲気が漂いながらもボールジョイントに比較的ゆとりがある11028 LAST(木型)。',
-                'image' => 'img/products/22-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'FENCHURCH1',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 64900,
-                'detail' => 'シティコレクションのクォーターブローグモデルFENCHURCH(フェンチャーチ)。
-                11028 LAST(木型)はチーニーが展開しているラストの中ではロングノーズです。',
-                'image' => 'img/products/23-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'ALDERTON',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 48000,
-                'detail' =>
-                    '外羽根ながらプレーントゥでフォーマルな印象のALDERTON(アルダートン)。',
-                'image' => 'img/products/24-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'ASTWELL/',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 10200,
-                'detail' =>
-                    'ブローグが施された一本ラインが入るパンチドキャップトゥのASTWELL(アストウェル)。',
-                'image' => 'img/products/25-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'AVON C',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 81500,
-                'detail' => '大振りな飾り穴がカントリーテイストを一層引き立てるAVON C(エイボンC)。
-                バランスの良いフォルムに穴取りの大きいブローグ、ぽってりとしたラウンドトゥ、頑強なグッドイヤーウェルト製法、厚みのあるソールなど、無骨さと洗練さを兼ね備えたトラディショナルなカントリーシューズ。',
-                'image' => 'img/products/26-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'GRAFTON (LAST 173)',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 103400,
-                'detail' =>
-                    'チャーチ愛用者はご存知の方も多い外羽根式フルブローグの名作GRAFTON(グラフトン)。',
-                'image' => 'img/products/27-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'GRAFTONⅡ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 130000,
-                'detail' => 'チャーチ愛用者はご存知の方も多い外羽根式フルブローグの名作GRAFTON(グラフトン)
-                EU離脱後の思いをぶつけた一足',
-                'image' => 'img/products/28-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'CHETWYND (LAST 173) /',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 96800,
-                'detail' => 'オーセンティックで、バランスの取れたウィングチップのCHETWYND(チェットウィンド)。
-                ',
-                'image' => 'img/products/31-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'ALFRED',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 78120,
-                'detail' =>
-                    'オックスフォードといわれる1番人気で定番のストレートチップモデルALFRED(アルフレッド)。',
-                'image' => 'img/products/31-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'CONSUL2',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 91300,
-                'detail' => '
-                ラスト173による優美なフォルムとトゥキャップのボリュームバランス、絶妙に張り出したコバも、まさに英国靴といった絶妙さ。靴好きならひと目でチャーチと分かるシルエットは、まさにブランドのアイコニックモデルと言っても過言ではありません。',
-                'image' => 'img/products/32-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'HUDSON2',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 59400,
-                'detail' => '
-                ジョセフ チーニーのローファーラインナップにおいて最定番に位置づけられるモデルのHUDSON(ハドソン)。',
-                'image' => 'img/products/34-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'WILFRED',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 78112,
-                'detail' =>
-                    'ビジネスシーンからカジュアルシーンにと幅広く使用できるセミブローグモデルのWILFRED(ウィルフレッド)。',
-                'image' => 'img/products/35-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'CONSUL',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 91300,
-                'detail' =>
-                    'ビジネスを含む幅広いシーンで活躍してくれるストレートチップのCONSUL(コンサル)。',
-                'image' => 'img/products/36-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'NIRAH2WOMEN',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 98600,
-                'detail' => '
-                人気モデル KETSBY(ケツビー)のアッパー部分をプレーンに、そしてコバ部分にスタッズ(メット)をはめ込んだモデルです。',
-                'image' => 'img/products/64-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'WILFRD',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 105000,
-                'detail' => '
-                クラシカルな雰囲気に、人目を惹く斬新なデザインが、現代的でスタイリッシュな一足。英国紳士靴メーカーならではのトラッド&クラシカルな印象で、コーディネートの主役にも。パンツやスカート、ドレスに合わせても、上品さが漂うシューズです。',
-                'image' => 'img/products/65-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'long tips',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 90000,
-                'detail' => '
-                スッキリとしたフォルムでプレーンなこのシューズは、スカートからパンツスタイルまで合わせやすく、流行にされないので長くお履きいただけます。',
-                'image' => 'img/products/66-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => '45491H',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 140000,
-                'detail' => '1884年アメリカはマサチューセッツ州にて、Charles H.Alden氏によってスタートしたシューズメーカー【Alden】(オールデン)。
-                ',
-                'image' => 'img/products/67-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'N9402',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 723400,
-                'detail' => 'こちらの商品は手作業で製品を作り上げているため若干の色ムラ・しわ・大きさや
-                ハンドステッチ等の不均一感、シューレース穴位置の非対称等見受けられる場合がございます。
-',
-                'image' => 'img/products/68-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'AtlanticWorks',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 31900,
-                'detail' => '定番のベネシャンモカシンに新色登場です。
-                高い技術でモカシンを作り続けている全米でも数少ないファクトリー、Atlantic Worksに製作を依頼したカラーレスベネシャンモカシン。',
-                'image' => 'img/products/69-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'SHIRLEY 55 WOMEN',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 86900,
-                'detail' => '
-                アッパーにはチャーチ定番のポリッシュ素材を使用。通常のカーフよりも光沢感が増しており、傷や汚れが付きにくく、お手入れもしやすい特徴があります。
-                ',
-                'image' => 'img/products/70-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'PERLA',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 47700,
-                'detail' =>
-                    'アッパーのゴールドカラービットモチーフが上品な印象をプラスしてくれるトラッドスタイル定番のローファー。',
-                'image' => 'img/products/71-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'DALIA WOMEN2',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 81600,
-                'detail' => 'エッジに施されたスタッズがアクセントになったサンダルDALIA(ダリア)。
-                フロント2か所のワイドストラップと、バックストラップによりホールド感のある履き心地。',
-                'image' => 'img/products/72-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'RHONDA WOMEN',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 81700,
-                'detail' => 'エッジに施されたスタッズがアクセントになったクロスサンダルRHONDA(ロンダ)。
-                甲の上で大胆にクロスした太めのストラップと、シルバーのバッグルストラップが足元をクールに演出。 ',
-                'image' => 'img/products/73-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'KELSEY WOMEN',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 78,
-                'detail' =>
-                    '安定感のあるローヒールタイプ。洗練されたシルバートーンのバックルがアクセント。',
-                'image' => 'img/products/74-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'NIRAH 2 WOMEN',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 170000,
-                'detail' =>
-                    '小振りなスタッズが大人の女性らしいエレガントさを放つサイドゴアブーツNIRAH 2(ニラ)。',
-                'image' => 'img/products/75-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'LORA',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 50000,
-                'detail' =>
-                    'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーに、待望のウィメンズコレクション。',
-                'image' => 'img/products/76-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'FILEY',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 69400,
-                'detail' =>
-                    'グットイヤー・ウェルト・シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーのウィメンズコレクション。',
-                'image' => 'img/products/77-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'MAYER',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 57000,
-                'detail' =>
-                    'グッドイヤーウェルト製法によって作られ、履き込むことで自分の足に馴染み、フィット感が高まります。',
-                'image' => 'img/products/78-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'MILY',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 85000,
-                'detail' =>
-                    'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーに、待望のウィメンズコレクション。',
-                'image' => 'img/products/79-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'BONNIE',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 89000,
-                'detail' => '
-                ジョセフチーニーのウィメンズシューズはメンズシューズ同様に、レザーのカッティングからファイナルポリッシュまでの全工程をノーザンプトンの自社工場で完結。',
-                'image' => 'img/products/80-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'ORIBELLA(WHITE) WOMEN',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 50000,
-                'detail' =>
-                    'キルトタッセルが英国らしい雰囲気をかもしだすクラシックなORIBELLA(オリベラ)。',
-                'image' => 'img/products/81-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'BONIE',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 56000,
-                'detail' =>
-                    'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーのウィメンズコレクション。',
-                'image' => 'img/products/82-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'BONNI',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 56000,
-                'detail' => 'トラッドスタイル定番のローファー。ジョセフチーニーのメンズコレクションでも定番のアイテムを女性らしいコンビカラーにアレンジしたBONNIE(ボニー)。
-                ',
-                'image' => 'img/products/83-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'MILLY',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 85000,
-                'detail' =>
-                    'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーに、待望のウィメンズコレクション。',
-                'image' => 'img/products/84-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'LANA WOMEN',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 50900,
-                'detail' => 'ダブルモンクとウィングチップが目を惹くLANA(ラナ)。
-                どことなくメンズライクでトラッド感のある、いかにもチャーチらしい佇まいです。',
-                'image' => 'img/products/85-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'KETSBY WOMEN ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 69000,
-                'detail' =>
-                    'チャーチウィメンズの人気モデル、履いたり脱いだりしやすいサイドゴアタイプのウィングチップショートブーツKETSBY(ケツビー)。',
-                'image' => 'img/products/86-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'ストレートチップ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 30000,
-                'detail' => 'オーセンティックなシルエットに拘ったハイクラスな革底ドレスシューズ。
-                艶感のあるインポートレザーを贅沢し使用し、足当たりの優しいソフトな鏡面加工レザーです。',
-                'image' => 'img/products/87-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'サイドゴアブーツ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 32000,
-                'detail' => 'グッドイヤーウエルト式製法で作られるゴアテックス フットウェアのリーガルならではの高付加価値ブーツです。
-                少し厚めのアウトソール。重厚さとドレッシーな佇まいに拘りました。
-                王道ドレス顔の機能ブーツです。',
-                'image' => 'img/products/88-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'プレーントウ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 50000,
-                'detail' => 'グッドイヤーウエルトの中物のコルクをクッション材のオーソライトに変更し、踏み込んだ時の沈み込む感覚が 新しい履き心地で、足なじみの早さもポイントのドレスシューズ。
-                つま先裏のトラスニットで優しい足当たりを実現、カカトのパッドや型押しライニングでスポーティー要素もプラス。
-                ビジネスシーンの中にコンフォタブル（快適）を提供する1足',
-                'image' => 'img/products/89-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' =>
-                    'M5633 BOURTON / MARRON ANTIQUE (DAINITE SOLE)',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 60000,
+            //             [
+            //                 'product_name' => 'DALIA WOMEN',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 81800,
+            //                 'detail' => 'エッジに施されたスタッズがアクセントになったサンダルDALIA(ダリア)。
+            //                 フロント2か所のワイドストラップと、バックストラップによりホールド感のある履き心地。また重厚感のあるルックスながらトゥの開きが程よい抜け感を演出してくれます。',
+            //                 'image' => 'img/products/03-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'MALVERN C',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 80030,
+            //                 'detail' =>
+            //                     'トラディショナルな外羽根プレーントゥモデルのMALVERN C(マルバーン)。 ',
+            //                 'image' => 'img/products/04-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'HUDSON',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 78000,
+            //                 'detail' =>
+            //                     'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーのメンズコレクション。「Purely Made in England」というポリシーを掲げるジョセフチーニーより。',
+            //                 'image' => 'img/products/05-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'FENCHURCH',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 48400,
+            //                 'detail' =>
+            //                     '11028 LAST(木型)はチーニーが展開しているラストの中ではロングノーズです。パンチドキャップトゥがすっきりと端正な見映えになっていてドレススタイルには最適な1足。',
+            //                 'image' => 'img/products/06-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => '[限定]MAYAR C',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 78000,
+            //                 'detail' => 'マイヤーのコンセプトは、「都会で履くエレガントなカントリーシューズ」。
+            //                 外羽根や独特のステッチワーク、かかと周りにまでぐるりとコバがあしらわれたオールアラウンドグッドイヤーウェルト製法など、カントリーテイストを彷彿させるディテールながら、ブラックのグレインカーフレザーを使用することで、エレガントさとタフさを兼ね備えました。',
+            //                 'image' => 'img/products/07-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'FRANCIS',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 75900,
+            //                 'detail' => 'オン・オフでご使用いただけるクラシックかつトラディショナルな王道のセミブローグモデルのFRANCIS(フランシス)。
+            //                 ',
+            //                 'image' => 'img/products/08-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'GEOFFREY',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 75900,
+            //                 'detail' => 'フォーマルスタイルにおける王道のストレートチップドレスシューズのGEOFFREY(ジェフェリー)。
+            //                 ',
+            //                 'image' => 'img/products/09-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'ROGER',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 75900,
+            //                 'detail' => 'フォーマルスタイルにおすすめのクォーターブローグシューズのROGER(ロジャー)。
+            //                 アッパーは、ボックスカーフ使いで足馴染みも良く、古くからある6184 LAST(木型)を採用。日本人の足にも相性の良い小ぶりなヒールカップ、細身のEウィズ仕様により心地の良いフィッティングとなっております。',
+            //                 'image' => 'img/products/10-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'CAIRNGORM H',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 72300,
+            //                 'detail' => 'ジョセフ チーニーを代表するシューズ"CAIRNGORM 2R(ケンゴン)"にドレスとカジュアルの要素を融合したハイブリッドモデルが登場。
+            //                 外羽根や独特のステッチワーク、頑強なグッドイヤーウェルト製法など従来のケンゴンのディテールを残しつつ、ビジネスシーンでもお使いいただけるよう、内ハトメ仕様などスマートな要素を取り入れました。
+            //                 ',
+            //                 'image' => 'img/products/11-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'WILFORD JR',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 60803,
+            //                 'detail' => '16世紀頃のスコットランドやアイルランドで履かれたブローギング(飾り穴)が施された靴は、通気性や水はけを良くする工夫としてあしらわれ、今では装飾性の高い意匠となって継承されています。
+            // ',
+            //                 'image' => 'img/products/12-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'DIPLOMAT(LAST 173) ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 91300,
+            //                 'detail' =>
+            //                     'ラスト173を採用し、英国の風格が飾り穴から醸し出されるセミブローグモデルのDIPLOMAT(ディプロマット)。',
+            //                 'image' => 'img/products/13-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'OLD',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 42400,
+            //                 'detail' =>
+            //                     '装飾の少ないシンプルなデザインでスッキリとした、革の表情も楽しめるプレーントゥシューズのOLD(オールド)。 ',
+            //                 'image' => 'img/products/14-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'PENZANCE 2',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 48439,
+            //                 'detail' =>
+            //                     'カーフレザーをアッパーに使用したグルカサンダルのPENZANCE 2(ペンザス 2)。',
+            //                 'image' => 'img/products/15-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'CARTMEL(LAST173) ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 91300,
+            //                 'detail' =>
+            //                     '英国を代表する老舗シューズブランドチャーチより、上品でクラシックなイメージのラスト173を使用したダービーキャップトゥシューズ。',
+            //                 'image' => 'img/products/16-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'BUCKINGHAM',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 87106,
+            //                 'detail' =>
+            //                     'ビスポークシューズの雰囲気を感じさせる特別仕様で英国のクラフトマンシップをご堪能いただける一足。',
+            //                 'image' => 'img/products/17-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'HOLYROOD',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 87100,
+            //                 'detail' =>
+            //                     'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーのメンズコレクション。',
+            //                 'image' => 'img/products/18-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'HARRY',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 71200,
+            //                 'detail' =>
+            //                     '伝統的な製法、技術により靴をつくり続けるジョセフ チーニーのタッセルローファーHARRY(ハリー)。',
+            //                 'image' => 'img/products/19-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'BROAD II',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 48900,
+            //                 'detail' =>
+            //                     'オーセンティックで、バランスのいいウィングチップシューズのBROAD ??(ブロード)。',
+            //                 'image' => 'img/products/20-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'CAIRNGORM 2R/',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 80200,
+            //                 'detail' => 'トラディショナルな外羽根キャップトゥモデルのCAIRNGORM 2R(ケンゴン)。
+            //                 無骨ながら愛嬌のある表情とミルスペックを満たす履き心地。',
+            //                 'image' => 'img/products/21-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'LIME',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 40000,
+            //                 'detail' => 'ジョセフチーニーのストレートチップモデルLIME(ライム)。
+            //                 ロングノーズのエレガントな雰囲気が漂いながらもボールジョイントに比較的ゆとりがある11028 LAST(木型)。',
+            //                 'image' => 'img/products/22-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'FENCHURCH1',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 64900,
+            //                 'detail' => 'シティコレクションのクォーターブローグモデルFENCHURCH(フェンチャーチ)。
+            //                 11028 LAST(木型)はチーニーが展開しているラストの中ではロングノーズです。',
+            //                 'image' => 'img/products/23-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'ALDERTON',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 48000,
+            //                 'detail' =>
+            //                     '外羽根ながらプレーントゥでフォーマルな印象のALDERTON(アルダートン)。',
+            //                 'image' => 'img/products/24-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'ASTWELL/',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 10200,
+            //                 'detail' =>
+            //                     'ブローグが施された一本ラインが入るパンチドキャップトゥのASTWELL(アストウェル)。',
+            //                 'image' => 'img/products/25-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'AVON C',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 81500,
+            //                 'detail' => '大振りな飾り穴がカントリーテイストを一層引き立てるAVON C(エイボンC)。
+            //                 バランスの良いフォルムに穴取りの大きいブローグ、ぽってりとしたラウンドトゥ、頑強なグッドイヤーウェルト製法、厚みのあるソールなど、無骨さと洗練さを兼ね備えたトラディショナルなカントリーシューズ。',
+            //                 'image' => 'img/products/26-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'GRAFTON (LAST 173)',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 103400,
+            //                 'detail' =>
+            //                     'チャーチ愛用者はご存知の方も多い外羽根式フルブローグの名作GRAFTON(グラフトン)。',
+            //                 'image' => 'img/products/27-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'GRAFTONⅡ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 130000,
+            //                 'detail' => 'チャーチ愛用者はご存知の方も多い外羽根式フルブローグの名作GRAFTON(グラフトン)
+            //                 EU離脱後の思いをぶつけた一足',
+            //                 'image' => 'img/products/28-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'CHETWYND (LAST 173) /',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 96800,
+            //                 'detail' => 'オーセンティックで、バランスの取れたウィングチップのCHETWYND(チェットウィンド)。
+            //                 ',
+            //                 'image' => 'img/products/31-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'ALFRED',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 78120,
+            //                 'detail' =>
+            //                     'オックスフォードといわれる1番人気で定番のストレートチップモデルALFRED(アルフレッド)。',
+            //                 'image' => 'img/products/31-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'CONSUL2',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 91300,
+            //                 'detail' => '
+            //                 ラスト173による優美なフォルムとトゥキャップのボリュームバランス、絶妙に張り出したコバも、まさに英国靴といった絶妙さ。靴好きならひと目でチャーチと分かるシルエットは、まさにブランドのアイコニックモデルと言っても過言ではありません。',
+            //                 'image' => 'img/products/32-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'HUDSON2',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 59400,
+            //                 'detail' => '
+            //                 ジョセフ チーニーのローファーラインナップにおいて最定番に位置づけられるモデルのHUDSON(ハドソン)。',
+            //                 'image' => 'img/products/34-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'WILFRED',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 78112,
+            //                 'detail' =>
+            //                     'ビジネスシーンからカジュアルシーンにと幅広く使用できるセミブローグモデルのWILFRED(ウィルフレッド)。',
+            //                 'image' => 'img/products/35-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'CONSUL',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 91300,
+            //                 'detail' =>
+            //                     'ビジネスを含む幅広いシーンで活躍してくれるストレートチップのCONSUL(コンサル)。',
+            //                 'image' => 'img/products/36-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'NIRAH2WOMEN',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 98600,
+            //                 'detail' => '
+            //                 人気モデル KETSBY(ケツビー)のアッパー部分をプレーンに、そしてコバ部分にスタッズ(メット)をはめ込んだモデルです。',
+            //                 'image' => 'img/products/64-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'WILFRD',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 105000,
+            //                 'detail' => '
+            //                 クラシカルな雰囲気に、人目を惹く斬新なデザインが、現代的でスタイリッシュな一足。英国紳士靴メーカーならではのトラッド&クラシカルな印象で、コーディネートの主役にも。パンツやスカート、ドレスに合わせても、上品さが漂うシューズです。',
+            //                 'image' => 'img/products/65-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'long tips',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 90000,
+            //                 'detail' => '
+            //                 スッキリとしたフォルムでプレーンなこのシューズは、スカートからパンツスタイルまで合わせやすく、流行にされないので長くお履きいただけます。',
+            //                 'image' => 'img/products/66-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => '45491H',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 140000,
+            //                 'detail' => '1884年アメリカはマサチューセッツ州にて、Charles H.Alden氏によってスタートしたシューズメーカー【Alden】(オールデン)。
+            //                 ',
+            //                 'image' => 'img/products/67-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'N9402',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 723400,
+            //                 'detail' => 'こちらの商品は手作業で製品を作り上げているため若干の色ムラ・しわ・大きさや
+            //                 ハンドステッチ等の不均一感、シューレース穴位置の非対称等見受けられる場合がございます。
+            // ',
+            //                 'image' => 'img/products/68-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'AtlanticWorks',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 31900,
+            //                 'detail' => '定番のベネシャンモカシンに新色登場です。
+            //                 高い技術でモカシンを作り続けている全米でも数少ないファクトリー、Atlantic Worksに製作を依頼したカラーレスベネシャンモカシン。',
+            //                 'image' => 'img/products/69-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'SHIRLEY 55 WOMEN',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 86900,
+            //                 'detail' => '
+            //                 アッパーにはチャーチ定番のポリッシュ素材を使用。通常のカーフよりも光沢感が増しており、傷や汚れが付きにくく、お手入れもしやすい特徴があります。
+            //                 ',
+            //                 'image' => 'img/products/70-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'PERLA',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 47700,
+            //                 'detail' =>
+            //                     'アッパーのゴールドカラービットモチーフが上品な印象をプラスしてくれるトラッドスタイル定番のローファー。',
+            //                 'image' => 'img/products/71-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'DALIA WOMEN2',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 81600,
+            //                 'detail' => 'エッジに施されたスタッズがアクセントになったサンダルDALIA(ダリア)。
+            //                 フロント2か所のワイドストラップと、バックストラップによりホールド感のある履き心地。',
+            //                 'image' => 'img/products/72-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'RHONDA WOMEN',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 81700,
+            //                 'detail' => 'エッジに施されたスタッズがアクセントになったクロスサンダルRHONDA(ロンダ)。
+            //                 甲の上で大胆にクロスした太めのストラップと、シルバーのバッグルストラップが足元をクールに演出。 ',
+            //                 'image' => 'img/products/73-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'KELSEY WOMEN',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 78,
+            //                 'detail' =>
+            //                     '安定感のあるローヒールタイプ。洗練されたシルバートーンのバックルがアクセント。',
+            //                 'image' => 'img/products/74-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'NIRAH 2 WOMEN',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 170000,
+            //                 'detail' =>
+            //                     '小振りなスタッズが大人の女性らしいエレガントさを放つサイドゴアブーツNIRAH 2(ニラ)。',
+            //                 'image' => 'img/products/75-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'LORA',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 50000,
+            //                 'detail' =>
+            //                     'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーに、待望のウィメンズコレクション。',
+            //                 'image' => 'img/products/76-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'FILEY',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 69400,
+            //                 'detail' =>
+            //                     'グットイヤー・ウェルト・シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーのウィメンズコレクション。',
+            //                 'image' => 'img/products/77-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'MAYER',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 57000,
+            //                 'detail' =>
+            //                     'グッドイヤーウェルト製法によって作られ、履き込むことで自分の足に馴染み、フィット感が高まります。',
+            //                 'image' => 'img/products/78-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'MILY',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 85000,
+            //                 'detail' =>
+            //                     'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーに、待望のウィメンズコレクション。',
+            //                 'image' => 'img/products/79-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'BONNIE',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 89000,
+            //                 'detail' => '
+            //                 ジョセフチーニーのウィメンズシューズはメンズシューズ同様に、レザーのカッティングからファイナルポリッシュまでの全工程をノーザンプトンの自社工場で完結。',
+            //                 'image' => 'img/products/80-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'ORIBELLA(WHITE) WOMEN',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 50000,
+            //                 'detail' =>
+            //                     'キルトタッセルが英国らしい雰囲気をかもしだすクラシックなORIBELLA(オリベラ)。',
+            //                 'image' => 'img/products/81-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'BONIE',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 56000,
+            //                 'detail' =>
+            //                     'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーのウィメンズコレクション。',
+            //                 'image' => 'img/products/82-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'BONNI',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 56000,
+            //                 'detail' => 'トラッドスタイル定番のローファー。ジョセフチーニーのメンズコレクションでも定番のアイテムを女性らしいコンビカラーにアレンジしたBONNIE(ボニー)。
+            //                 ',
+            //                 'image' => 'img/products/83-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'MILLY',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 85000,
+            //                 'detail' =>
+            //                     'グットイヤー･ウェルト･シューズの生産地として名高い英国ノーサンプトンにて、伝統的な製法、技術により靴をつくり続けるチーニーに、待望のウィメンズコレクション。',
+            //                 'image' => 'img/products/84-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'LANA WOMEN',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 50900,
+            //                 'detail' => 'ダブルモンクとウィングチップが目を惹くLANA(ラナ)。
+            //                 どことなくメンズライクでトラッド感のある、いかにもチャーチらしい佇まいです。',
+            //                 'image' => 'img/products/85-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'KETSBY WOMEN ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 69000,
+            //                 'detail' =>
+            //                     'チャーチウィメンズの人気モデル、履いたり脱いだりしやすいサイドゴアタイプのウィングチップショートブーツKETSBY(ケツビー)。',
+            //                 'image' => 'img/products/86-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'ストレートチップ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 30000,
+            //                 'detail' => 'オーセンティックなシルエットに拘ったハイクラスな革底ドレスシューズ。
+            //                 艶感のあるインポートレザーを贅沢し使用し、足当たりの優しいソフトな鏡面加工レザーです。',
+            //                 'image' => 'img/products/87-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'サイドゴアブーツ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 32000,
+            //                 'detail' => 'グッドイヤーウエルト式製法で作られるゴアテックス フットウェアのリーガルならではの高付加価値ブーツです。
+            //                 少し厚めのアウトソール。重厚さとドレッシーな佇まいに拘りました。
+            //                 王道ドレス顔の機能ブーツです。',
+            //                 'image' => 'img/products/88-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'プレーントウ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 50000,
+            //                 'detail' => 'グッドイヤーウエルトの中物のコルクをクッション材のオーソライトに変更し、踏み込んだ時の沈み込む感覚が 新しい履き心地で、足なじみの早さもポイントのドレスシューズ。
+            //                 つま先裏のトラスニットで優しい足当たりを実現、カカトのパッドや型押しライニングでスポーティー要素もプラス。
+            //                 ビジネスシーンの中にコンフォタブル（快適）を提供する1足',
+            //                 'image' => 'img/products/89-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' =>
+            //                     'M5633 BOURTON / MARRON ANTIQUE (DAINITE SOLE)',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 60000,
 
-                'detail' => '1829年創業のTricker’sは革靴の聖地である英国ノーサンプトンで最古のシューズファクトリーとして、現在でも当時と変わらぬ伝統の技法を守り続けています。
-                「質実剛健」と称されるそのものづくりは「ロイヤルワラント(英国王室御用達)」を授かるほどの職人技です。',
-                'image' => 'img/products/90-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'M2754 HENRY / 1 BURNISHED',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 40000,
-                'detail' => 'HENRYはサイドゴアのカントリーブーツ。
-                カントリーブーツやカントリーシューズは、かつて英国の上流階級がカントリーサイド（田舎）に狩りに出かけていくために考案されたのが始まりと言われています。',
-                'image' => 'img/products/91-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'M6119 LAMBOURN / BLACK CALF (LEATHER SOLE)',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 001,
-                'detail' => '
-                LAMBOURNはシンプルでエレガントなサイドゴアブーツ。
-                セミスクエアトゥのシルエットと装飾のないミニマルなデザインに気品が漂います。
-                ',
-                'image' => 'img/products/92-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'SILVER SKULL',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 190000,
-                'detail' =>
-                    'そしてその「ロイヤルワラント」を授かるきっかけになったのが、このCHURCHILLというモデルであると言われています。',
-                'image' => 'img/products/93-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'CHURCHILL
-                ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 69000,
-                'detail' => '
-                そしてその「ロイヤルワラント」を授かるきっかけになったのが、このCHURCHILLというモデルであると言われています。
-                CHURCHILLは、元々貴族や紳士達がルームシューズとして着用していたモデル。',
-                'image' => 'img/products/94-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'L5679 ANNE ',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 50400,
-                'detail' => '
-                ANNEはTrickerらしさを感じさせるカントリーシューズです。
-                カントリーブーツやカントリーシューズは、かつて英国の上流階級がカントリーサイド（田舎）に狩りに出かけていくために考案されたのが始まりと言われています。は季節を問わず履いていただけるアイテムです。',
-                'image' => 'img/products/95-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'L5679 ANE',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 87900,
-                'detail' => '
-                ウイングチップやメダリオンが英国らしい気品を感じさせるとともに、ラウンドトゥのシルエットやコバの張り出したソール周り、レースアップのディテールがワークテイストを演出します。
-                ',
-                'image' => 'img/products/96-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'L2754 SILVIA (COMMANDO SOLE)',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 40000,
-                'detail' =>
-                    'すっきりした足首回りや着脱のしやすさはサイドゴアブーツならではです。',
-                'image' => 'img/products/97-0.jpg',
-                'stock' => 10,
-            ],
-            [
-                'product_name' => 'L7590 (DAINITE SOLE)',
-                //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
-                'bland_id' => $blands->pluck('id')[
-                    rand(0, $blands->count() - 1)
-                ],
-                'category_id' => $categories->pluck('id')[
-                    rand(0, $categories->count() - 1)
-                ],
-                'price' => 78900,
-                'detail' => 'こちらのモデルはシングルストラップのフルブローグシューズです。
+            //                 'detail' => '1829年創業のTricker’sは革靴の聖地である英国ノーサンプトンで最古のシューズファクトリーとして、現在でも当時と変わらぬ伝統の技法を守り続けています。
+            //                 「質実剛健」と称されるそのものづくりは「ロイヤルワラント(英国王室御用達)」を授かるほどの職人技です。',
+            //                 'image' => 'img/products/90-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'M2754 HENRY / 1 BURNISHED',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 40000,
+            //                 'detail' => 'HENRYはサイドゴアのカントリーブーツ。
+            //                 カントリーブーツやカントリーシューズは、かつて英国の上流階級がカントリーサイド（田舎）に狩りに出かけていくために考案されたのが始まりと言われています。',
+            //                 'image' => 'img/products/91-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'M6119 LAMBOURN / BLACK CALF (LEATHER SOLE)',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 001,
+            //                 'detail' => '
+            //                 LAMBOURNはシンプルでエレガントなサイドゴアブーツ。
+            //                 セミスクエアトゥのシルエットと装飾のないミニマルなデザインに気品が漂います。
+            //                 ',
+            //                 'image' => 'img/products/92-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'SILVER SKULL',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 190000,
+            //                 'detail' =>
+            //                     'そしてその「ロイヤルワラント」を授かるきっかけになったのが、このCHURCHILLというモデルであると言われています。',
+            //                 'image' => 'img/products/93-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'CHURCHILL
+            //                 ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 69000,
+            //                 'detail' => '
+            //                 そしてその「ロイヤルワラント」を授かるきっかけになったのが、このCHURCHILLというモデルであると言われています。
+            //                 CHURCHILLは、元々貴族や紳士達がルームシューズとして着用していたモデル。',
+            //                 'image' => 'img/products/94-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'L5679 ANNE ',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 50400,
+            //                 'detail' => '
+            //                 ANNEはTrickerらしさを感じさせるカントリーシューズです。
+            //                 カントリーブーツやカントリーシューズは、かつて英国の上流階級がカントリーサイド（田舎）に狩りに出かけていくために考案されたのが始まりと言われています。は季節を問わず履いていただけるアイテムです。',
+            //                 'image' => 'img/products/95-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'L5679 ANE',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 87900,
+            //                 'detail' => '
+            //                 ウイングチップやメダリオンが英国らしい気品を感じさせるとともに、ラウンドトゥのシルエットやコバの張り出したソール周り、レースアップのディテールがワークテイストを演出します。
+            //                 ',
+            //                 'image' => 'img/products/96-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'L2754 SILVIA (COMMANDO SOLE)',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 40000,
+            //                 'detail' =>
+            //                     'すっきりした足首回りや着脱のしやすさはサイドゴアブーツならではです。',
+            //                 'image' => 'img/products/97-0.jpg',
+            //                 'stock' => 10,
+            //             ],
+            //             [
+            //                 'product_name' => 'L7590 (DAINITE SOLE)',
+            //                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
+            //                 'bland_id' => $blands->pluck('id')[
+            //                     rand(0, $blands->count() - 1)
+            //                 ],
+            //                 'category_id' => $categories->pluck('id')[
+            //                     rand(0, $categories->count() - 1)
+            //                 ],
+            //                 'price' => 78900,
+            //                 'detail' => 'こちらのモデルはシングルストラップのフルブローグシューズです。
 
-                ',
-                'image' => 'img/products/99-0.jpg',
-                'stock' => 10,
-            ],
+            //                 ',
+            //                 'image' => 'img/products/99-0.jpg',
+            //                 'stock' => 10,
+            //             ],
         ];
 
         DB::table('products')->insert($products);
