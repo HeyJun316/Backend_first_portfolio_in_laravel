@@ -72,6 +72,7 @@ class LocalSeeder extends Seeder
 
         $products = [
             [
+                'id' => 1,
                 'product_name' => 'PETER D',
                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
                 'bland_id' => $blands->pluck('id')[
@@ -87,6 +88,7 @@ class LocalSeeder extends Seeder
                 'stock' => 10,
             ],
             [
+                'id' => 2,
                 'product_name' => 'FAWKES 3 D',
                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
                 'bland_id' => $blands->pluck('id')[
@@ -102,6 +104,7 @@ class LocalSeeder extends Seeder
                 'stock' => 10,
             ],
             [
+                'id' => 3,
                 'product_name' => 'BRECON C',
                 //'size_id' => $sizes->pluck('id')[rand(0, $sizes->count() - 1)],
                 'bland_id' => $blands->pluck('id')[
