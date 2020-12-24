@@ -15,7 +15,7 @@ class ProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('product_name', 255)->unique();
+            $table->string('product_name');
             $table->unsignedBigInteger('bland_id');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('price');
@@ -23,6 +23,7 @@ class ProductsTable extends Migration
             $table->string('image', 255);
             $table->unsignedBigInteger('stock');
             $table->timestamps();
+            $table->unique('product_name', 'unique_product_name');
 
             $table
                 ->foreign('category_id')
