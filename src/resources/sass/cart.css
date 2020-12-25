@@ -200,6 +200,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 }
 
 .logout {
+  padding-left: 0;
   background-color: #93612e;
   color: #d6d6d6;
   border: none;

@@ -488,7 +488,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 }
 
 .product .p-inner .p-right .p-size .radio {
-  margin: 5px;
+  margin: 5%;
 }
 
 @media (max-width: 767px) {

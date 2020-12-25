@@ -12,13 +12,7 @@
     </h2>
   </div>
   <div class="r-container">
-    @if($errors->any())
-    <div style="color:red">
-      @foreach($errors->all() as $error)
-      {{$error}}
-      @endforeach
-    </div>
-    @endif
+
 
     <div class="r-inner">
       <form action="{{route('shipupload')}}" method="post">
@@ -26,6 +20,11 @@
 
         <dl>
           <!--氏名-->
+          @if($errors->has('name'))
+          <div style="color:red">
+            {{$errors->first('name')}}
+          </div>
+          @endif
           <div class="r-info">
             <dt class="r-dt"><label for="name">
                 氏名
@@ -39,6 +38,11 @@
 
 
           <!--郵便局-->
+          @if($errors->has('postal_code'))
+          <div style="color:red">
+            {{$errors->first('postal_code')}}
+          </div>
+          @endif
           <div class="r-info">
 
             <dt class="r-dt"><label for="postal_code">郵便番号</label></dt>
@@ -46,11 +50,16 @@
           </div>
 
           <!--住所-->
+          @if($errors->has('address'))
+          <div style="color:red">
+            {{$errors->first('address')}}
+          </div>
+          @endif
           <div class="r-info">
             <dt class="r-dt"><label for="address">住所</label></dt>
             <dd><input type="text" name="address" value="{{$user_info->address}}" placeholder="住所" class="input"></dd>
           </div>
-           <input type="hidden" name="jun" value="1">
+          <input type="hidden" name="jun" value="1">
           <input type="submit" name="btn" class="btn r-btn" value="変更を登録する">
       </form>
       </dl>

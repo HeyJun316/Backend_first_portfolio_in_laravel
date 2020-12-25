@@ -173,6 +173,7 @@ header {
   border: none;
   outline: none;
   cursor: pointer;
+  padding-left: 0;
   @include mq(tab-only) {
     font-size: 12px;
     padding: 0;
@@ -319,7 +320,7 @@ header {
   @include mq(tab-only) {
     font-size: 19px;
   }
-  @include mq(sp){
+  @include mq(sp) {
     font-size: 17px;
   }
 }
@@ -329,7 +330,6 @@ header {
     margin-top: 20px;
   }
 }
-
 
 //
 //

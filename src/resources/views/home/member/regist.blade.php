@@ -13,21 +13,19 @@
   </div>
   <!--title-->
   <div class="r-container">
-    @if($errors->any())
-    <div style="color:red">
-      @foreach($errors->all() as $error)
-      {{$error}}
-      @endforeach
-    </div>
-    <!--style-->
-    @endif
+
+
 
     <div class="r-inner">
       <dl>
         <form method="post" action="{{route ('register') }}">
           @csrf
           <!--氏名-->
-
+          @if($errors->has('name'))
+          <div style="color:red">
+            {{$errors->first('name')}}
+          </div>
+          @endif
           <div class="r-info">
             <dt class="r-dt"><label for="name">
                 氏名
@@ -40,6 +38,11 @@
           <!--r-info-->
 
           <!--メールアドレス-->
+          @if($errors->has('email'))
+          <div style="color:red">
+            {{$errors->first('email')}}
+          </div>
+          @endif
           <div class="r-info">
             <dt class="r-dt">
               <label for="mail">
@@ -51,6 +54,11 @@
           <!--r-info-->
 
           <!--性別-->
+          @if($errors->has('sex'))
+          <div style="color:red">
+            {{$errors->first('sex')}}
+          </div>
+          @endif
           <div class="r-info">
             <dt class="r-dt sex">
               性別
@@ -67,6 +75,11 @@
           <!--r-info-->
 
           <!--郵便局-->
+          @if($errors->has('postal_code'))
+          <div style="color:red">
+            {{$errors->first('postal_code')}}
+          </div>
+          @endif
           <div class="r-info">
             <dt class="r-dt"><label for="post">郵便番号</label></dt>
             <dd>
@@ -75,6 +88,11 @@
           </div>
           <!--r-info-->
           <!--住所-->
+          @if($errors->has('address'))
+          <div style="color:red">
+            {{$errors->first('address')}}
+          </div>
+          @endif
           <div class="r-info">
             <dt class="r-dt"><label for="address">住所</label></dt>
             <dd><input type="text" name="address" value="{{ old('address') }}" placeholder="住所" class="input"></dd>
@@ -82,6 +100,12 @@
           <!--r-info-->
 
           <!--生年月日+jQuery-->
+          @if($errors->has('year'))
+          <div style="color:red">
+            {{$errors->first('year')}}
+          </div>
+          @endif
+
           <div class="r-info r-birth">
             <dt class="r-dt r-b adjust3">
               <label for="03" class="append">
@@ -103,6 +127,11 @@
           <!--r-info-->
 
           <!--パスワード-->
+          @if($errors->has('password'))
+          <div style="color:red">
+            {{$errors->first('password')}}
+          </div>
+          @endif
           <div class="r-info">
             <dt class="r-dt"><label for="pass">パスワード</label></dt>
             <dd><input type="password" name="password" placeholder="パスワード" class="input"></dd>

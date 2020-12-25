@@ -208,6 +208,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
   border: none;
   outline: none;
   cursor: pointer;
+  padding-left: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {

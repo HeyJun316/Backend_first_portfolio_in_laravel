@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Auth;
 
-
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\Users;
@@ -53,12 +52,12 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:30',
             'email' => 'email:filter,spoof,dns,strict|unique:users,email',
-            'sex' =>'string|max:2',
-            'postal_code'=>'string|size:7',
-            'address'=>'string|max:100',
-            'year'=>'string|size:4',
-            'month'=>'integer|between:1,12',
-            'day'=>'integer|between:1,31',
+            'sex' => 'required|string|max:2',
+            'postal_code' => 'string|size:7',
+            'address' => 'string|max:100',
+            'year' => 'required|string|size:4',
+            'month' => 'required|integer|between:1,12',
+            'day' => 'required|integer|between:1,31',
             'password' => 'required|string|min:8|confirmed',
         ]);
     }
@@ -73,10 +72,14 @@ class RegisterController extends Controller
         return Users::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'sex' =>$data['sex'],
-            'postal_code'=>$data['postal_code'],
-            'address'=>$data['address'],
-            'birthday' => \Carbon\Carbon::create($data['year'], $data['month'], $data['day']),
+            'sex' => $data['sex'],
+            'postal_code' => $data['postal_code'],
+            'address' => $data['address'],
+            'birthday' => \Carbon\Carbon::create(
+                $data['year'],
+                $data['month'],
+                $data['day'],
+            ),
             'password' => Hash::make($data['password']),
         ]);
     }

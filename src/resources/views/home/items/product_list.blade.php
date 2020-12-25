@@ -13,8 +13,26 @@
       <ul class="s-search">
         @foreach($categories as $category)
         <li><a href="{{route ('product_list', ['id' => $category->id]) }}">
-            {{$category->name_jp}}</a></li>
-            @endforeach
+            {{$category->name_jp}}
+          </a>
+        </li>
+        @endforeach
+      </ul>
+    </div>
+    <div class="category div_price">
+      <h2 class="s-head ">価格検索</h2>
+      <ul class="s-search">
+        <li class="category_nav">
+          <a href="{{ route('cheap') }}">
+            価格が安い順番
+          </a>
+        </li>
+        <li class="category_nav">
+          <a href="{{ route('pricy') }}" class="category">
+            価格が高い順番
+
+          </a>
+        </li>
       </ul>
     </div>
     <!--cate-->
@@ -41,7 +59,7 @@
       <div class="item">
         <a class="product" href="{{ route('single_product',['id' => $product->id] ) }}">
           <div class="p-img">
-          <img alt="文字表示" src="{{ asset($product->image) }}">
+            <img alt="文字表示" src="{{ asset($product->image) }}">
 
 
           </div>

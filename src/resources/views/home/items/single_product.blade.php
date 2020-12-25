@@ -54,19 +54,31 @@
 
 
       <div class="p-size">
+
+        <!-- @if($errors->has('message'))
+        {{$errors->first('message')}}
+        @endif -->
         <ul class="size_lists">
           <form action="{{route ('cart')}}" method="POST" class="size">
             @csrf
             <input type="hidden" value="{{$products->id}}" name="product_id">
             @foreach($products->product_size as $sizes)
             <li class="size_list">
-              <input type="radio" name="size" value="{{$sizes->size->id}}" class="radio">
-              {{$sizes->size->size}}
+              <input type="radio" name="size" value="{{$sizes->size->id}}" class="radio" id="{{$sizes->size->id}}">
+              <label for="{{$sizes->size->id}}">
+                {{$sizes->size->size}}
+              </label>
             </li>
             @endforeach
         </ul>
       </div>
+
       <div class="p-btn">
+        @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <p style="color:red;">{{ $error }}</p>
+        @endforeach
+        @endif
         @if(Auth::check())
         <input type="submit" name="cart" value="カートに入れる" class="btn cart_in">
         </form>
@@ -75,6 +87,7 @@
           <input type="button" name="cart" value="カートに入れる" class="btn">
         </a>
         @endif
+
       </div>
     </div>
     <!--p-right-->

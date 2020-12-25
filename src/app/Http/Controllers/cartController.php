@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SizeRequest;
 use App\Models\Cart; //cartモデルを使う＋eloquant(+)
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class cartController extends Controller
 {
-    public function addMyCart(Request $request, Cart $cart)
+    public function addMyCart(SizeRequest $request, Cart $cart)
     {
         $product_id = $request->input('product_id');
         $size_id = $request->input('size');

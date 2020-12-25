@@ -206,6 +206,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
   color: #d6d6d6;
   border: none;
   outline: none;
+  padding-left: 0;
   cursor: pointer;
 }
 
