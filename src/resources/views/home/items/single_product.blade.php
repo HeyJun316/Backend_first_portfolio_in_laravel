@@ -59,7 +59,7 @@
         {{$errors->first('message')}}
         @endif -->
         <ul class="size_lists">
-          <form action="{{route ('cart')}}" method="POST" class="size">
+          <form action="{{route ('cart')}}" method="post" class="size">
             @csrf
             <input type="hidden" value="{{$products->id}}" name="product_id">
             @foreach($products->product_size as $sizes)

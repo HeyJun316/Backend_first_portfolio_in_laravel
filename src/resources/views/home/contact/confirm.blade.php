@@ -8,7 +8,7 @@
     <div class="r-container">
         <div class="r-inner">
             <dl>
-                <form method="POST" action="{{ route('contact.send') }}">
+                <form method="post" action="{{ route('contact.send') }}">
                     @csrf
                     <div class="r-info">
                         <dt class="r-dt">

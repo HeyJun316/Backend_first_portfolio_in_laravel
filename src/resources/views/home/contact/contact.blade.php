@@ -8,7 +8,7 @@
     <div class="r-container">
         <div class="r-inner">
             <dl>
-                <form method="POST" action="{{ route('contact.confirm') }}">
+                <form method="post" action="{{ route('contact.confirm') }}">
                     @csrf
                     <div class="r-info">
                         <dt class="r-dt"><label for="email">

@@ -100,7 +100,7 @@
           <br>{{number_format($sum)}}円
         </div>
         <div class="content">
-          <form action="{{ asset('charge') }}" method="POST" class="kessan">
+          <form action="{{ asset('charge') }}" method="post" class="kessan">
             @csrf
             {{ csrf_field() }}
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_51Hex2hJWvOOGSfsbU0ArdQlYHyNLmfPxyUxtsIEVT0crrQfwQ082QC6lc6GgM3R6kqhkJjfSLmT5RHbjMiLCpa4P00Fo3GNEkV" data-amount=" {{$sum}} " data-name="Stripe Demo" data-label="決済をする" data-description="Online course about integrating Stripe" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto" data-currency="JPY">
