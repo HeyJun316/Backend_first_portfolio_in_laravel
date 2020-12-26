@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Socialite;
 
 class LoginController extends Controller
 {
@@ -20,7 +22,6 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
 
     /**
      * Where to redirect users after login.
@@ -39,13 +40,28 @@ class LoginController extends Controller
         return view('home.member.login');
     }
 
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('home/member/login');
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
+    public function redirectToGoogle()
+    {
+        // Google へのリダイレクト
+        return Socialite::driver('google')->redirect();
+    }
 
-    public function logout(){
-        Auth::logout();
-        return redirect('home/member/login');
+    public function handleGoogleCallback()
+    {
+        // Google 認証後の処理
+        // あとで処理を追加しますが、とりあえず dd() で取得するユーザー情報を確認
+        $gUser = Socialite::driver('google')
+            ->stateless()
+            ->user();
+        dd($gUser);
     }
 }

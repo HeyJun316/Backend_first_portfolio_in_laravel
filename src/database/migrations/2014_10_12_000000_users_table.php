@@ -1,10 +1,12 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UsersTable extends Migration{
-     /**
+class UsersTable extends Migration
+{
+    /**
      * Run the migrations.
      *
      * @return void
@@ -13,11 +15,14 @@ class UsersTable extends Migration{
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',100);
-            $table->string('email',100)->unique();
-            $table->string('sex',100);
-            $table->string('postal_code',100);
-            $table->string('address',255);
+            $table->string('name', 100);
+            $table
+                ->string('email', 100)
+                ->unique()
+                ->nullable();
+            $table->string('sex', 100);
+            $table->string('postal_code', 100);
+            $table->string('address', 255);
             $table->date('birthday');
             $table->timestamps();
 

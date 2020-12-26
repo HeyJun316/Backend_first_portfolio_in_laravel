@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -13,11 +12,14 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
-        'google' => [
-            'client_id' => env('GOOGLE_CLIENT_ID'),
-            'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-            'redirect' => env('GOOGLE_CALLBACK_URL'),
-        ],
+    'twitter' => [
+        'client_id' => env(
+            '907425854790-npblcvims0qi0l0sv2fk0osime2un5do.apps.googleusercontent.com',
+        ),
+        'client_secret' => env('yj_2NceQIhJG8lVeGYHcriVF'),
+        'redirect' =>
+            env('APP_URL') . 'http://localhost:8080/home/member/login/callback',
+    ],
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
@@ -34,5 +36,4 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
 ];

@@ -13,20 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('auth')
-    ->middleware('guest')
-    ->group(function () {
-        Route::get('/{provider}', 'Auth\OAuthController@socialOAuth')
-            ->where('provider', 'google')
-            ->name('socialOAuth');
+Route::get('home/member/login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get(
+    'home/member/login/google/callback',
+    'Auth\LoginController@handleGoogleCallback',
+);
 
-        Route::get(
-            '/{provider}/callback',
-            'Auth\OAuthController@handleProviderCallback',
-        )
-            ->where('provider', 'google')
-            ->name('oauthCallback');
-    });
+Route::get('/home/member/login', 'Auth\LoginController@showLoginForm')->name(
+    'login',
+);
+Route::post('/home/member/login', 'Auth\LoginController@login');
 
 // REGITS
 Route::get('/home/member/regist', 'shoesController@regist');
@@ -74,12 +70,6 @@ Route::get('/home/member/history', 'shoesController@history')
     ->middleware('auth');
 
 Route::get('/home/items/search/search', 'shoesController@search');
-
-//LOGIN
-Route::get('/home/member/login', 'Auth\LoginController@showLoginForm')->name(
-    'login',
-);
-Route::post('/home/member/login', 'Auth\LoginController@login');
 
 //LOGOUT
 Route::post('/home/member/logout', 'Auth\LoginController@logout')->name(

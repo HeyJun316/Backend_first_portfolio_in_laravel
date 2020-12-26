@@ -11,6 +11,9 @@
 <section class="login">
   <div class="title">
     <h2>ログイン</h2>
+    @if (session('oauth_error'))
+    {{ session('oauth_error') }}
+    @endif
   </div>
   <div class="l-container">
     <div class="login-left">
@@ -22,10 +25,10 @@
         @endforeach
       </div>
       @endif
-      
+
       <div class="l-form">
         <form action="{{ route('login') }}" method="post">
-        @csrf
+          @csrf
           <input type="text" name="email" placeholder="メールアドレス" value="{{ old('email')}}" class="l-add" required>
           <!--+value="{{old ('email')}}-->
           <br>
@@ -41,7 +44,9 @@
     <div class="login-right">
       <h3 class="l-title">外部からログイン</h3>
       <form action="" method="post">
-        <input type="button" name="login" value="Googleでログイン" class="btn google">
+        <a href="{{ url('/home/member/login/google')}}">
+          <input type="button" name="login" value="Googleでログイン" class="btn google">
+        </a>
       </form>
     </div>
     <!--login-right-->
