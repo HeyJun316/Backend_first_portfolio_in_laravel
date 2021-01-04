@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -132,6 +132,17 @@
         $('.dropdown').stop().slideToggle('slow');
 
       });
+  });
+</script>
+<script>
+  $(function() {
+    $('.a-contents').hide();
+    $('.a-click').on('click', function() {
+      $(this).next().slideToggle('fast');
+      $(this).children('.a-icon').toggleClass('a-open');
+
+    });
+
   });
 </script>
 

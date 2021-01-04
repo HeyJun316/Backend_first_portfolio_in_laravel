@@ -193,6 +193,9 @@ header {
   @include mq(tab-only) {
     margin-bottom: 5%;
   }
+  @include mq(sp) {
+    margin-bottom: 30%;
+  }
 
   @include mq(sp) {
     height: auto;
@@ -201,7 +204,7 @@ header {
   .p-inner {
     margin-top: 5%;
     display: flex;
-    height: auto;
+    height: 450px;
     justify-content: space-between;
     @include mq(sp) {
       display: block;
@@ -210,7 +213,7 @@ header {
       width: 50%;
       margin: 0 0 40px 10%;
       @include mq(tab-only) {
-        margin: 0% 4% 0 16%;
+        margin: 0% 4% 0 5%;
       }
       @include mq(sp) {
         width: auto;
@@ -261,18 +264,18 @@ header {
     }
     .swiper-button-prev {
       margin-left: 20%;
-      top: 35%;
+      top: 20%;
       @include mq(tab-only) {
         margin-left: 5%;
-        top: 30%;
+        top: 35%;
       }
     }
     .swiper-button-next {
       margin-right: 20%;
-      top: 35%;
+      top: 20%;
       @include mq(tab-only) {
         margin-right: 5%;
-        top: 30%;
+        top: 35%;
       }
     }
     .p-right {
@@ -290,9 +293,11 @@ header {
       }
       .p-product {
         margin-left: 40px;
+        @include mq(tab-only) {
+          margin-left: 0;
+        }
         @include mq(sp) {
           text-align: center;
-          margin-left: 0;
         }
         .p-name {
           font-size: 27px;
@@ -346,8 +351,10 @@ header {
           margin-left: 40px;
           text-align: left;
           width: 170px;
-          @include mq(sp) {
+          @include mq(tab-only) {
             margin-left: 0;
+          }
+          @include mq(sp) {
             text-align: center;
             width: auto;
           }
@@ -365,6 +372,9 @@ header {
       }
       .p-btn {
         margin: 0 0 25px 45px;
+        @include mq(tab-only) {
+          margin-left: 20px;
+        }
         @include mq(sp) {
           text-align: center;
           margin: 0;
@@ -388,6 +398,7 @@ header {
 //footerï
 //
 footer {
+  margin-top: 5%;
   height: 80px;
   background: #e5caae;
   color: $bg-base-color;
@@ -449,4 +460,35 @@ footer {
   @include mq(sp) {
     font-size: 14px;
   }
+}
+.p-toggle {
+  margin-left: 40px;
+  text-align: left;
+  margin-bottom: 30px;
+  cursor: pointer;
+  @include mq(tab-only) {
+    margin-left: 0;
+  }
+  @include mq(sp) {
+    text-align: center;
+    margin-left: 0;
+  }
+  .a-click {
+    margin-bottom: 5px;
+  }
+  .size-tb {
+    border-collapse: collapse;
+  }
+  td {
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 13px;
+    @include mq(tab-only) {
+      font-size: 10px;
+    }
+  }
+}
+.table_header td {
+  font-weight: bold;
+  background-color: #f2f2f2;
 }

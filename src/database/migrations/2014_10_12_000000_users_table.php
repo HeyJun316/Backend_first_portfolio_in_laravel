@@ -20,10 +20,10 @@ class UsersTable extends Migration
                 ->string('email', 100)
                 ->unique()
                 ->nullable();
-            $table->string('sex', 100);
-            $table->string('postal_code', 100);
-            $table->string('address', 255);
-            $table->date('birthday');
+            $table->string('sex', 100)->nullable();
+            $table->string('postal_code', 100)->nullable();
+            $table->string('address', 255)->nullable();
+            $table->date('birthday')->nullable();
             $table->timestamps();
 
             $table->softDeletes();

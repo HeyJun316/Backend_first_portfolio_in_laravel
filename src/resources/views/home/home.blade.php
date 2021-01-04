@@ -96,7 +96,7 @@
   <!--s-container-->
 
   <div class="m-container">
-    <h2 class="s-head">最新</h2>
+    <h2 class="s-head">おすすめ</h2>
     <div class="items">
       <!--繰り返し DBからとりだしのを件数分ｸ返す-->
       @foreach($products as $product)
@@ -117,7 +117,7 @@
     </div>
     <!--items-->
     <div class="more">
-      <p><a href="{{ route('new')}}">もっと見る</a></p>
+      <p><a href="{{ route('new')}}">最新を見る</a></p>
     </div>
   </div>
   <!--m-container-->

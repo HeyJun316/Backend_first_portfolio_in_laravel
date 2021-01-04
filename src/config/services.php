@@ -12,13 +12,10 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
-    'twitter' => [
-        'client_id' => env(
-            '907425854790-npblcvims0qi0l0sv2fk0osime2un5do.apps.googleusercontent.com',
-        ),
-        'client_secret' => env('yj_2NceQIhJG8lVeGYHcriVF'),
-        'redirect' =>
-            env('APP_URL') . 'http://localhost:8080/home/member/login/callback',
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => env('APP_URL') . '/home/member/login/google/callback',
     ],
 
     'mailgun' => [

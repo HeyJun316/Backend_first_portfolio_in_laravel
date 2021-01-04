@@ -88,8 +88,9 @@ class shoesController extends Controller
     public function home(Request $Requeat)
     {
         $categories = Category::take(4)->get();
-
-        $products = Product::take(8)->get();
+        $products = Product::take(8)
+            ->orderBy('id', 'desc')
+            ->get();
         return view('home.home', [
             'products' => $products,
             'categories' => $categories,

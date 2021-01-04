@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
+use App\Models\Users;
 
 class LoginController extends Controller
 {
@@ -57,11 +58,24 @@ class LoginController extends Controller
 
     public function handleGoogleCallback()
     {
-        // Google 認証後の処理
-        // あとで処理を追加しますが、とりあえず dd() で取得するユーザー情報を確認
         $gUser = Socialite::driver('google')
             ->stateless()
             ->user();
-        dd($gUser);
+        $user = Users::where('email', $gUser->email)->first();
+        if ($user == null) {
+            $user = $this->createUserByGoogle($gUser);
+        }
+        \Auth::login($user, true);
+        return redirect('/home');
+    }
+
+    public function createUserByGoogle($gUser)
+    {
+        $user = Users::create([
+            'name' => $gUser->name,
+            'email' => $gUser->email,
+            'password' => \Hash::make(uniqid()),
+        ]);
+        return $user;
     }
 }

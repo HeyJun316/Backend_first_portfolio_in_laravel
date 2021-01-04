@@ -65,11 +65,19 @@
           </tr>
           <tr>
             <th class="none" style="border-right:none;">郵便番号</th>
+            @if($user['postal_code'] == null)
+            <td style="color:red;font-weight:bold;">入力してください</td>
+            @else
             <td>{{$user->postal_code}}</td>
+            @endif
           </tr>
           <tr>
-            <th class="none">住所</th>
+            <th class=" none">住所</th>
+            @if($user['address'] == null)
+            <td style="color:red; font-weight:bold;">入力してください</td>
+            @else
             <td>{{$user->address}}</td>
+            @endif
           </tr>
           @endforeach
         </table>
@@ -99,13 +107,21 @@
           </span>
           <br>{{number_format($sum)}}円
         </div>
+
         <div class="content">
+          @if($users[0]['address'] === null)
+          <h2 style="color:red;font-weight:bold;">配送住所を入力してください</h2>
+          @elseif($users[0]['postal_code'] == null)
+          <h2 style="color:red;font-weight:bold;">配送住所を入力してください</h2>
+          @else
           <form action="{{ asset('charge') }}" method="post" class="kessan">
             @csrf
             {{ csrf_field() }}
+
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_51Hex2hJWvOOGSfsbU0ArdQlYHyNLmfPxyUxtsIEVT0crrQfwQ082QC6lc6GgM3R6kqhkJjfSLmT5RHbjMiLCpa4P00Fo3GNEkV" data-amount=" {{$sum}} " data-name="Stripe Demo" data-label="決済をする" data-description="Online course about integrating Stripe" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto" data-currency="JPY">
             </script>
           </form>
+          @endif
         </div>
 
       </div>
