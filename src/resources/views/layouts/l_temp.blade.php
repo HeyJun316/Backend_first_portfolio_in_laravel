@@ -40,7 +40,7 @@
 
         <a href="{{url ('/home')}}">
           <!-- <img src="../img/ウッディ.jpg" alt="logo"> -->
-          <img alt="文字表示" src="{{ asset('/img/ウッディ.jpg') }}">
+          <img alt="文字表示" src="{{ asset('/img/logo.jpg') }}">
         </a>
 
         <h2 class="header_title">最強EC</h2>
