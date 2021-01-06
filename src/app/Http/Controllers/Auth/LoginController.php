@@ -38,13 +38,13 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('home.member.login');
+        return view('member.login');
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('home/member/login');
+        return redirect('member.login');
     }
     public function __construct()
     {
@@ -66,7 +66,7 @@ class LoginController extends Controller
             $user = $this->createUserByGoogle($gUser);
         }
         \Auth::login($user, true);
-        return redirect('/home');
+        return redirect('/');
     }
 
     public function createUserByGoogle($gUser)

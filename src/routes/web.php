@@ -46,10 +46,9 @@ Route::get('/member/password_modify', 'shoesController@pass_modify')->name(
 );
 // Route::post('/member/password_modify', 'shoesController@pass_modify');
 
-Route::post(
-    '/home/member/pass_regist_comp',
-    'shoesController@pass_change',
-)->name('password_change');
+Route::post('/member/pass_regist_comp', 'shoesController@pass_change')->name(
+    'password_change',
+);
 
 Route::post('/member/regist_comp', 'shoesController@upload')->name('allupload');
 
@@ -86,15 +85,14 @@ Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
 
 //SIN_PRODUCT
 Route::get(
-    '/home/items/single_product/{id}',
+    '/items/single_product/{id}',
     'shoesController@single_product',
 )->name('single_product');
 
 //PRODUCT_LIST
-Route::get(
-    '/home/items/product_list/{id}',
-    'shoesController@product_list',
-)->name('product_list');
+Route::get('/items/product_list/{id}', 'shoesController@product_list')->name(
+    'product_list',
+);
 
 Route::get('/items/product_list', 'shoesController@new')->name('new');
 
