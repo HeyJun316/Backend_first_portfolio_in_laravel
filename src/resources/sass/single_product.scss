@@ -204,7 +204,7 @@ header {
   .p-inner {
     margin-top: 5%;
     display: flex;
-    height: 450px;
+    height: 525px;
     justify-content: space-between;
     @include mq(sp) {
       display: block;
@@ -398,7 +398,7 @@ header {
 //footerï
 //
 footer {
-  margin-top: 5%;
+  margin-top: 15%;
   height: 80px;
   background: #e5caae;
   color: $bg-base-color;
@@ -407,6 +407,7 @@ footer {
   }
   @include mq(sp) {
     font-size: 20px;
+    margin-top: 60%;
   }
   .f-container {
     display: flex;
@@ -478,6 +479,10 @@ footer {
   }
   .size-tb {
     border-collapse: collapse;
+    @include mq(sp)
+  {
+    margin: 0 auto;
+  }
   }
   td {
     padding: 5px;

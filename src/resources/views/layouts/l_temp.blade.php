@@ -32,6 +32,7 @@
 </head>
 
 <body>
+<div id="wrapper">
 
   <header>
     <div class="h-inner">
@@ -104,6 +105,7 @@
       </div>
     </div>
   </footer>
+  </div>
 
 </body>
 
@@ -145,6 +147,7 @@
 
   });
 </script>
+
 
 @yield('birthday')
 

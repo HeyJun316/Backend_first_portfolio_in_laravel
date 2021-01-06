@@ -249,7 +249,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 .product .p-inner {
   margin-top: 5%;
   display: flex;
-  height: 450px;
+  height: 525px;
   justify-content: space-between;
 }
 
@@ -542,7 +542,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 }
 
 footer {
-  margin-top: 5%;
+  margin-top: 15%;
   height: 80px;
   background: #e5caae;
   color: #93612e;
@@ -557,6 +557,7 @@ footer {
 @media (max-width: 767px) {
   footer {
     font-size: 20px;
+    margin-top: 60%;
   }
 }
 
@@ -663,6 +664,12 @@ footer .f-container .f-right li .fab {
 
 .p-toggle .size-tb {
   border-collapse: collapse;
+}
+
+@media (max-width: 767px) {
+  .p-toggle .size-tb {
+    margin: 0 auto;
+  }
 }
 
 .p-toggle td {

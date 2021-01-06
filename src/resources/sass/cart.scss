@@ -353,6 +353,7 @@ header {
 //
 footer {
   height: 80px;
+  margin-top: 19.5%;
   background: #e5caae;
   color: $bg-base-color;
   @include mq(tab-only) {

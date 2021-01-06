@@ -5,15 +5,13 @@
 @endsection
 
 @section('content')
-<section class="resist">
+<section class="resist" >
   <div class="title">
     <h2>
       会員情報編集
     </h2>
   </div>
   <div class="r-container">
-
-
     <div class="r-inner">
       <form action="{{route('shipupload')}}" method="post">
         @csrf

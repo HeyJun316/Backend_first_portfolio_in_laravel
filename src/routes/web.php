@@ -13,101 +13,90 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('home/member/login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('member/login/google', 'Auth\LoginController@redirectToGoogle');
 Route::get(
-    'home/member/login/google/callback',
+    'member/login/google/callback',
     'Auth\LoginController@handleGoogleCallback',
 );
 
-Route::get('/home/member/login', 'Auth\LoginController@showLoginForm')->name(
-    'login',
-);
-Route::post('/home/member/login', 'Auth\LoginController@login');
+Route::get('member/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('member/login', 'Auth\LoginController@login');
 
 // REGITS
-Route::get('/home/member/regist', 'shoesController@regist');
-Route::post('/home/member/regist_conf', 'shoesController@regist_conf')->name(
+Route::get('member/regist', 'shoesController@regist');
+Route::post('member/regist_conf', 'shoesController@regist_conf')->name(
     'regist_conf',
 );
-Route::get('/home/member/regist_comp', 'shoesController@regist_comp');
+Route::get('member/regist_comp', 'shoesController@regist_comp');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name(
     'register',
 );
 Route::post('register', 'Auth\RegisterController@register');
 
-Route::get('/home/member/user', 'shoesController@user');
+Route::get('member/user', 'shoesController@user');
 //MODIFY
-Route::get('/home/member/modify', 'shoesController@modify')->name('modify');
-Route::get('/home/member/ship_modify', 'shoesController@ship_modify')->name(
+Route::get('member/modify', 'shoesController@modify')->name('modify');
+Route::get('member/ship_modify', 'shoesController@ship_modify')->name(
     'ship_modify',
 );
-Route::get('/home/member/password_modify', 'shoesController@pass_modify')->name(
+Route::get('member/password_modify', 'shoesController@pass_modify')->name(
     'password_modify',
 );
-// Route::post('/home/member/password_modify', 'shoesController@pass_modify');
+// Route::post('member/password_modify', 'shoesController@pass_modify');
 
-Route::post(
-    '/home/member/pass_regist_comp',
-    'shoesController@pass_change',
-)->name('password_change');
-
-Route::post('/home/member/regist_comp', 'shoesController@upload')->name(
-    'allupload',
+Route::post('member/pass_regist_comp', 'shoesController@pass_change')->name(
+    'password_change',
 );
 
-Route::post('/home/member/ship_regist_comp', 'shoesController@upload')->name(
+Route::post('member/regist_comp', 'shoesController@upload')->name('allupload');
+
+Route::post('member/ship_regist_comp', 'shoesController@upload')->name(
     'shipupload',
 );
 
 //DELETE
-Route::get('/home/member/delete_conf', 'shoesController@delete_conf');
-Route::post('/home/member/delete_comp', 'shoesController@delete_comp')->name(
+Route::get('member/delete_conf', 'shoesController@delete_conf');
+Route::post('member/delete_comp', 'shoesController@delete_comp')->name(
     'delete',
 );
 
-Route::get('/home/member/history', 'shoesController@history')
+Route::get('member/history', 'shoesController@history')
     ->name('history')
     ->middleware('auth');
 
-Route::get('/home/items/search/search', 'shoesController@search');
+Route::get('items/search/search', 'shoesController@search');
 
 //LOGOUT
-Route::post('/home/member/logout', 'Auth\LoginController@logout')->name(
-    'logout',
-);
+Route::post('member/logout', 'Auth\LoginController@logout')->name('logout');
 
 //STRIPE
 Route::post('/charge', 'ChargeController@charge');
 
 //CONTACT FORM
-Route::get('home/contact/contact', 'ContactController@contact')->name(
+Route::get('contact/contact', 'ContactController@contact')->name(
     'contact.contact',
 );
-Route::post('home/contact/confirm', 'ContactController@confirm')->name(
+Route::post('contact/confirm', 'ContactController@confirm')->name(
     'contact.confirm',
 );
-Route::post('home/contact/thanks', 'ContactController@send')->name(
-    'contact.send',
-);
+Route::post('contact/thanks', 'ContactController@send')->name('contact.send');
 
 //SIN_PRODUCT
-Route::get(
-    '/home/items/single_product/{id}',
-    'shoesController@single_product',
-)->name('single_product');
+Route::get('items/single_product/{id}', 'shoesController@single_product')->name(
+    'single_product',
+);
 
 //PRODUCT_LIST
-Route::get(
-    '/home/items/product_list/{id}',
-    'shoesController@product_list',
-)->name('product_list');
+Route::get('items/product_list/{id}', 'shoesController@product_list')->name(
+    'product_list',
+);
 
-Route::get('/home/items/product_list', 'shoesController@new')->name('new');
+Route::get('items/product_list', 'shoesController@new')->name('new');
 
-Route::get('/home/items/cheaper_product_list', 'shoesController@cheap')->name(
+Route::get('items/cheaper_product_list', 'shoesController@cheap')->name(
     'cheap',
 );
-Route::get('/home/items/pricier_product_list', 'shoesController@pricy')->name(
+Route::get('items/pricier_product_list', 'shoesController@pricy')->name(
     'pricy',
 );
 
@@ -115,11 +104,11 @@ Route::get('/home/items/pricier_product_list', 'shoesController@pricy')->name(
 Route::get('/home', 'shoesController@home');
 
 //CART
-Route::get('/home/cart/cart/', 'shoesController@cart')->name('cart');
-Route::post('/home/cart/cart/', 'cartController@addMyCart');
+Route::get('cart/cart/', 'shoesController@cart')->name('cart');
+Route::post('cart/cart/', 'cartController@addMyCart');
 
 Route::post('/cartdelete', 'cartController@cartDelete')->name('cartdelete');
 
-Route::get('/home/cart/payment_conf', 'shoesController@payment_conf')->name(
+Route::get('cart/payment_conf', 'shoesController@payment_conf')->name(
     'payment_conf',
 );
