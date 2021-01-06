@@ -101,7 +101,7 @@ Route::get('items/pricier_product_list', 'shoesController@pricy')->name(
 );
 
 //HOME
-Route::get('/home', 'shoesController@home');
+Route::get('/', 'shoesController@home');
 
 //CART
 Route::get('cart/cart/', 'shoesController@cart')->name('cart');
