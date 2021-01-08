@@ -58,7 +58,7 @@
         <form action="{{route ('payment_conf')}}" method="get" class="form">
           <input type="submit" name="next" value="レジへ進む" class="btn next-btn">
           <!-- <div class="div_btn_in_cart"> -->
-          <a href="{{url ('/')}}">
+          <a href="{{url ('/home')}}">
             <input type="button" name="back" value="他の商品を選ぶ" class="input_btn_in_cart">
           </a>
           <!-- </div> -->
@@ -74,7 +74,7 @@
   @else
   <div class="empty_p">
     <p>カート内は空っぽです</p>
-    <a href="{{url ('/')}}" class="a_btn_in_cart">
+    <a href="{{url ('/home')}}" class="a_btn_in_cart">
       <input type="button" name="back" value="商品を選ぶ" class="input_btn_in_cart_emp">
     </a>
   </div>

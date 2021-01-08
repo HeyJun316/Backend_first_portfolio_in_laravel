@@ -23,6 +23,8 @@ Route::get('/member/login', 'Auth\LoginController@showLoginForm')->name(
     'login',
 );
 Route::post('/member/login', 'Auth\LoginController@login');
+//LOGOUT
+Route::post('/member/logout', 'Auth\LoginController@logout')->name('logout');
 
 // REGITS
 Route::get('/member/regist', 'shoesController@regist');
@@ -67,9 +69,6 @@ Route::get('/member/history', 'shoesController@history')
     ->middleware('auth');
 
 Route::get('/items/search/search', 'shoesController@search');
-
-//LOGOUT
-Route::post('/member/logout', 'Auth\LoginController@logout')->name('logout');
 
 //STRIPE
 Route::post('/charge', 'ChargeController@charge');
