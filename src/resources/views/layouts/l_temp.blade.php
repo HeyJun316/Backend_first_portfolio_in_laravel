@@ -186,7 +186,7 @@
 <script>
     $(function() {
       var height=$("#header").height();
-      $("body").css("margin-top", height + 10);//10pxだけ余裕をもたせる
+      $("body").css("margin-top", height + 0);//10pxだけ余裕をもたせる
     });
 </script>
 

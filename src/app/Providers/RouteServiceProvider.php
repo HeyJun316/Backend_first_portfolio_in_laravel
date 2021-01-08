@@ -19,7 +19,6 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
 
-
     /**
      * The controller namespace for the application.
      *
@@ -37,7 +36,6 @@ class RouteServiceProvider extends ServiceProvider
     protected $namespace = 'App\Http\Controllers'; //追加
     public function boot()
     {
-
         $this->configureRateLimiting();
 
         $this->routes(function () {
@@ -59,10 +57,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function configureRateLimiting()
     {
-
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60);
         });
-
     }
 }
