@@ -68,9 +68,9 @@ a {
 //
 //header
 header {
+  position: fixed;
   background: $bg-base-color;
   width: 100%;
-  position: fiexd;
   left: 0;
   top: 0;
   z-index: 100;
@@ -91,7 +91,8 @@ header {
       margin-left: 75px;
       display: flex;
       @include mq(sp) {
-        margin-left: auto;
+        margin-left: 33px;
+        width: 100%;
       }
       img {
         width: 65px;
@@ -115,7 +116,7 @@ header {
           font-size: 18px;
         }
         @include mq(sp) {
-          margin-left: 20px;
+          margin-left: 5px;
           margin-top: 13px;
           font-size: 20px;
         }
@@ -123,11 +124,12 @@ header {
     }
     .h-right {
       margin-left: auto;
-      @include mq(sp) {
-        display: none;
+        // display: none;
       }
       .h-navs {
-        padding-right: 30px;
+        // padding-right: 30px;
+
+
         .h-nav {
           padding-right: 50px;
           display: inline-block;
@@ -135,6 +137,11 @@ header {
           @include mq(tab-only) {
             padding-right: 15px;
           }
+          @include mq(sp){
+            margin-right: 70px;
+            width: 100%;
+          }
+
           a {
             font-size: 13px;
           }
@@ -168,13 +175,38 @@ header {
       }
     }
   }
-}
+  .drawer-nav {
+    z-index: 200px;
+    background-color: $bg-sub-color;
+  }
+  // button.drawer-toggle {
+  //   display: none;
+  // }
+  button.drawer-hamburger {
+    display: none;
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      display: block;
+      z-index: 200px;
+    }
+  }
+  .always{
+    display: block;
+  }
+  .sp-hidden{
+    @include mq(sp){
+      visibility: hidden;
+    }
+  }
+
 .login_regist {
   font-size: 12px;
 }
 .logout {
-  background-color: #93612e;
-  color: #d6d6d6;
+  background-color: $bg-sub-color;
+  color: black;
   border: none;
   outline: none;
   cursor: pointer;
@@ -193,16 +225,14 @@ header {
   writing-mode: vertical-rl;
   font-size: 50px;
   position: absolute;
-  top: 23%;
+  top: 33%;
   right: 190px;
   height: auto;
   @include mq(tab-only) {
     font-size: 35px;
-    top: 45px;
     right: 120px;
   }
   @include mq(sp) {
-    top: 30px;
     right: 15%;
     font-size: 24px;
   }
@@ -214,6 +244,7 @@ header {
   height: 550px;
   width: 100%;
   min-width: 40%;
+  padding-top: 6%;
   @include mq(tab-only) {
     font-size: 20px;
     height: 400px;
@@ -221,6 +252,7 @@ header {
   @include mq(sp) {
     font-size: 10px;
     height: 230px;
+    margin-top: 7%;
   }
 }
 .swiper-pagination {
@@ -291,6 +323,7 @@ header {
     }
     @include mq(sp) {
       margin-top: 0;
+      margin-left: 20px;
       width: 100%;
     }
     .category {
@@ -514,7 +547,7 @@ footer {
       }
       @include mq(sp) {
         font-size: 17px;
-        margin: 3px 60px 0;
+        margin: 3px 40px 0;
       }
     }
     .f-right li {

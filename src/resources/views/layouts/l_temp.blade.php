@@ -9,6 +9,13 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- drawer.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
 
   @yield('homecss')
   @yield('product_listcss')
@@ -31,10 +38,10 @@
   <title>最強EC</title>
 </head>
 
-<body>
+<body class="drawer drawer--right">
 <div id="wrapper">
 
-  <header>
+  <header id="header">
     <div class="h-inner">
 
       <div class="h-left">
@@ -51,12 +58,12 @@
       <div class="h-right">
         <ul class="h-navs">
           @if(Auth::check())
-          <li class="h-nav"><a href="{{ url('/home/') }}">{{Auth::user()->name}}</a></li>
-          <li class="h-nav"><a href="{{url ('/home/cart/cart') }}">カート</a></a></li>
+          <li class="h-nav sp-hidden"><a href="{{ url('/home/') }}">{{Auth::user()->name}} 様</a></li>
+          <li class="h-nav sp-hidden"><a href="{{url ('/home/cart/cart') }}">カート</a></a></li>
           <!--カートに飛ばして追加した商品を表示？カート機能必要-->
-          <li class="h-nav"><a href="{{route ('history') }}">購入履歴</a></li>
+          <li class="h-nav sp-hidden"><a href="{{route ('history') }}">購入履歴</a></li>
           <!-- historyに飛ばしてuserIDから-->
-          <li class="h-nav"><a href="#" class="dropdown-btn">その他</a>
+          <li class="h-nav sp-hidden"><a href="#" class="dropdown-btn">その他</a>
             <ul class="dropdown">
               <li class="d-item"><a href="{{url ('/home/member/user')}}">会員情報</a></li>
 
@@ -74,6 +81,28 @@
             </ul>
           </li>
         </ul>
+        <!-- drawer.js -->
+        <button class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+        <!-- ?-->
+        <nav class="drawer-nav" role="navigation">
+          <ul class="drawer-menu">
+            <li><a class="drawer-brand">{{Auth::user()->name}} 様</a></li>
+            <li><a href="{{url ('/home/cart/cart') }}" class="drawer-menu-item">カート</a></li>
+            <li><a href="{{route ('history') }}" class="drawer-menu-item">購入履歴</a></li>
+            <li><a href="{{url ('/home/member/user')}}" class="drawer-menu-item">会員情報</a></li>
+            <form action="{{route ('logout') }}" method="post">
+                @csrf
+                <li class="d-item drawer-menu-item">
+                  <button type="submit" class="logout">
+                    ログアウト
+                </li>
+              </form>
+            <li><a href="{{url ('/home/member/delete_conf')}}" class="drawer-menu-item">退会</a></li>
+          </ul>
+        </nav>
         @else
         <li class="h-nav"><a href="{{ url('/home/member/login') }}" class="login_regist">ログイン/登録</a></li>
 
@@ -106,6 +135,7 @@
     </div>
   </footer>
   </div>
+  <!--wrapper-->
 
 </body>
 
@@ -147,6 +177,19 @@
 
   });
 </script>
+<script>
+  $(document).ready(function () {
+    $('.drawer').drawer();
+  });
+
+</script>
+<script>
+    $(function() {
+      var height=$("#header").height();
+      $("body").css("margin-top", height + 10);//10pxだけ余裕をもたせる
+    });
+</script>
+
 
 
 @yield('birthday')

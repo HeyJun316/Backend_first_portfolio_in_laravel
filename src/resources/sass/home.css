@@ -57,9 +57,9 @@ a {
 }
 
 header {
+  position: fixed;
   background: #93612e;
   width: 100%;
-  position: fiexd;
   left: 0;
   top: 0;
   z-index: 100;
@@ -92,7 +92,8 @@ header .h-inner .h-left {
 
 @media (max-width: 767px) {
   header .h-inner .h-left {
-    margin-left: auto;
+    margin-left: 33px;
+    width: 100%;
   }
 }
 
@@ -131,7 +132,7 @@ header .h-inner .h-left .header_title {
 
 @media (max-width: 767px) {
   header .h-inner .h-left .header_title {
-    margin-left: 20px;
+    margin-left: 5px;
     margin-top: 13px;
     font-size: 20px;
   }
@@ -141,33 +142,30 @@ header .h-inner .h-right {
   margin-left: auto;
 }
 
-@media (max-width: 767px) {
-  header .h-inner .h-right {
-    display: none;
-  }
-}
-
-header .h-inner .h-right .h-navs {
-  padding-right: 30px;
-}
-
-header .h-inner .h-right .h-navs .h-nav {
+header .h-inner .h-navs .h-nav {
   padding-right: 50px;
   display: inline-block;
   transition: all 0.5s ease-in-out 0s;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
-  header .h-inner .h-right .h-navs .h-nav {
+  header .h-inner .h-navs .h-nav {
     padding-right: 15px;
   }
 }
 
-header .h-inner .h-right .h-navs .h-nav a {
+@media (max-width: 767px) {
+  header .h-inner .h-navs .h-nav {
+    margin-right: 70px;
+    width: 100%;
+  }
+}
+
+header .h-inner .h-navs .h-nav a {
   font-size: 13px;
 }
 
-header .h-inner .h-right .h-navs .dropdown {
+header .h-inner .h-navs .dropdown {
   z-index: 200;
   display: none;
   background-color: #93612e;
@@ -179,17 +177,17 @@ header .h-inner .h-right .h-navs .dropdown {
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
-  header .h-inner .h-right .h-navs .dropdown {
+  header .h-inner .h-navs .dropdown {
     right: 0px;
     width: 74px;
   }
 }
 
-header .h-inner .h-right .h-navs .dropdown .d-item {
+header .h-inner .h-navs .dropdown .d-item {
   width: 100%;
 }
 
-header .h-inner .h-right .h-navs .dropdown .d-item a {
+header .h-inner .h-navs .dropdown .d-item a {
   z-index: 200;
   color: #ebd6c7;
   display: block;
@@ -197,8 +195,40 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
-  header .h-inner .h-right .h-navs .dropdown .d-item a {
+  header .h-inner .h-navs .dropdown .d-item a {
     font-size: 13px;
+  }
+}
+
+.drawer-nav {
+  z-index: 200px;
+  background-color: #e5caae;
+}
+
+button.drawer-hamburger {
+  display: none;
+}
+
+@media (max-width: 1087px) {
+  button.drawer-hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  button.drawer-hamburger {
+    display: block;
+    z-index: 200px;
+  }
+}
+
+.always {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .sp-hidden {
+    visibility: hidden;
   }
 }
 
@@ -207,8 +237,8 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 }
 
 .logout {
-  background-color: #93612e;
-  color: #d6d6d6;
+  background-color: #e5caae;
+  color: black;
   border: none;
   outline: none;
   cursor: pointer;
@@ -230,7 +260,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
   writing-mode: vertical-rl;
   font-size: 50px;
   position: absolute;
-  top: 23%;
+  top: 33%;
   right: 190px;
   height: auto;
 }
@@ -238,14 +268,12 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 @media (min-width: 768px) and (max-width: 1087px) {
   .vertical {
     font-size: 35px;
-    top: 45px;
     right: 120px;
   }
 }
 
 @media (max-width: 767px) {
   .vertical {
-    top: 30px;
     right: 15%;
     font-size: 24px;
   }
@@ -257,6 +285,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
   height: 550px;
   width: 100%;
   min-width: 40%;
+  padding-top: 6%;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
@@ -270,6 +299,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
   .swiper-slide {
     font-size: 10px;
     height: 230px;
+    margin-top: 7%;
   }
 }
 
@@ -358,6 +388,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 @media (max-width: 767px) {
   .side-main .s-container {
     margin-top: 0;
+    margin-left: 20px;
     width: 100%;
   }
 }
@@ -679,7 +710,7 @@ footer .f-container .f-left {
 @media (max-width: 767px) {
   footer .f-container .f-left {
     font-size: 17px;
-    margin: 3px 60px 0;
+    margin: 3px 40px 0;
   }
 }
 

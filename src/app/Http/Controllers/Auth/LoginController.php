@@ -38,13 +38,13 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('member.login');
+        return view('home.member.login');
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('member.login');
+        return redirect('home/member/login');
     }
     public function __construct()
     {

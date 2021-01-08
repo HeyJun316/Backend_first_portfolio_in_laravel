@@ -35,7 +35,6 @@ body {
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
-  position: relative;
   @include mq(tab-only) {
     font-size: 20px;
     margin: 32px 0;
@@ -92,7 +91,7 @@ header {
       margin-left: 75px;
       display: flex;
       @include mq(sp) {
-        margin-left: auto;
+        // margin-left: auto;
       }
       img {
         width: 65px;
@@ -124,11 +123,11 @@ header {
     }
     .h-right {
       margin-left: auto;
-      @include mq(sp) {
-        display: none;
+        // display: none;
       }
       .h-navs {
         padding-right: 30px;
+
         .h-nav {
           padding-right: 50px;
           display: inline-block;
@@ -136,6 +135,7 @@ header {
           @include mq(tab-only) {
             padding-right: 15px;
           }
+
           a {
             font-size: 13px;
           }
@@ -145,13 +145,13 @@ header {
           display: none;
           background-color: $bg-base-color;
           position: absolute;
-          top: 65px;
+          top: 90px;
           right: -11px;
           width: 120px;
           padding: 10px 9px 10px 20px;
           @include mq(tab-only) {
+            right: 0px;
             width: 74px;
-            right: 0px
           }
           .d-item {
             width: 100%;
@@ -169,7 +169,29 @@ header {
       }
     }
   }
-}
+  .drawer-nav {
+    z-index: 200px;
+  }
+  // button.drawer-toggle {
+  //   display: none;
+  // }
+  button.drawer-hamburger {
+    display: none;
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      display: block;
+      z-index: 200px;
+    }
+  }
+  .always{
+    display: block;
+  }
+  .sp-hidden{
+    visibility: hidden;
+  }
+
 .login_regist {
   font-size: 12px;
 }
