@@ -42,7 +42,7 @@
   </table>
   @endforeach
   <div class="back">
-      <a href="{{url ('/home')}}">
+      <a href="{{route('top')}}">
         <input type="button" name="back" value="戻る" class="btn back_btn">
       </a>
   </div>

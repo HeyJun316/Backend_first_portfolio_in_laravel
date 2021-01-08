@@ -84,7 +84,7 @@
     <!--cate-->
     <div class="ser-box">
       <h2 class="s-head">検索</h2>
-      <form action="{{ url('/home/items/search/search')}}" method="get" class="form">
+      <form action="{{ route('search')}}" method="get" class="form">
         @csrf
         <input type="search" class="search_input" name="product_name" placeholder="キーワード">
         <input type="submit" value="検索" class="search_btn">

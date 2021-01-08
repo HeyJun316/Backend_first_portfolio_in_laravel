@@ -83,7 +83,7 @@ header .h-inner .h-left {
 }
 @media (max-width: 767px) {
   header .h-inner .h-left {
-    margin-left: 33px;
+    margin-left: 10px;
     width: 100%;
   }
 }
@@ -118,7 +118,7 @@ header .h-inner .h-left .header_title {
 @media (max-width: 767px) {
   header .h-inner .h-left .header_title {
     margin-left: 5px;
-    margin-top: 13px;
+    margin-top: 5px;
     font-size: 20px;
   }
 }
@@ -139,6 +139,7 @@ header .h-inner .h-navs .h-nav {
   header .h-inner .h-navs .h-nav {
     margin-right: 70px;
     width: 100%;
+    margin-bottom: 8px;
   }
 }
 header .h-inner .h-navs .h-nav a {
@@ -210,8 +211,8 @@ button.drawer-hamburger {
 }
 
 .logout {
-  background-color: #e5caae;
-  color: black;
+  background-color: #93612e;
+  color: #d6d6d6;
   border: none;
   outline: none;
   cursor: pointer;
@@ -221,6 +222,15 @@ button.drawer-hamburger {
   .logout {
     font-size: 12px;
   }
+}
+
+.d-logout {
+  background-color: #e5caae;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .m-main img {

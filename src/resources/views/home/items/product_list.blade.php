@@ -38,7 +38,7 @@
     <!--cate-->
     <div class="ser-box">
       <h2 class="s-head">検索</h2>
-      <form action="{{ url('/home/items/search/search')}}" method="get" class="form">
+      <form action="{{ route('search')}}" method="get" class="form">
         @csrf
         <input type="serach" name="product_name" placeholder="キーワード" class="search_input">
         <input type="submit" value="検索" class="search_btn">
@@ -50,9 +50,9 @@
   <!--s-container-->
   <div class="m-container">
     @if(isset($name))
-    <h2 class="s-head"><a href="{{ url('/home') }}">Home</a> ≫ {{$name}}</h2>
+    <h2 class="s-head"><a href="{{ route('top') }}">Home</a> ≫ {{$name}}</h2>
     @else
-    <h2 class="s-head"><a href="{{ url('/home') }}">Home</a> ≫ 最新</h2>
+    <h2 class="s-head"><a href="{{ route('top') }}">Home</a> ≫ 最新</h2>
     @endif
     <div class="items">
       @foreach($products as $product)

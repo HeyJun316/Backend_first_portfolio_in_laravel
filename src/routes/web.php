@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/member/login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get(
+    '/member/login/google',
+    'Auth\LoginController@redirectToGoogle',
+)->name('google');
 Route::get(
     '/member/login/google/callback',
     'Auth\LoginController@handleGoogleCallback',
@@ -27,7 +30,7 @@ Route::post('/member/login', 'Auth\LoginController@login');
 Route::post('/member/logout', 'Auth\LoginController@logout')->name('logout');
 
 // REGITS
-Route::get('/member/regist', 'shoesController@regist');
+Route::get('/member/regist', 'shoesController@regist')->name('member-regist');
 Route::post('/member/regist_conf', 'shoesController@regist_conf')->name(
     'regist_conf',
 );
@@ -37,7 +40,7 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name(
 );
 Route::post('register', 'Auth\RegisterController@register');
 
-Route::get('/member/user', 'shoesController@user');
+Route::get('/member/user', 'shoesController@user')->name('member-user');
 //MODIFY
 Route::get('/member/modify', 'shoesController@modify')->name('modify');
 Route::get('/member/ship_modify', 'shoesController@ship_modify')->name(
@@ -59,7 +62,9 @@ Route::post('/member/ship_regist_comp', 'shoesController@upload')->name(
 );
 
 //DELETE
-Route::get('/member/delete_conf', 'shoesController@delete_conf');
+Route::get('/member/delete_conf', 'shoesController@delete_conf')->name(
+    'member-delete_conf',
+);
 Route::post('/member/delete_comp', 'shoesController@delete_comp')->name(
     'delete',
 );
@@ -68,15 +73,13 @@ Route::get('/member/history', 'shoesController@history')
     ->name('history')
     ->middleware('auth');
 
-Route::get('/items/search/search', 'shoesController@search');
+Route::get('/items/search/search', 'shoesController@search')->name('search');
 
 //STRIPE
 Route::post('/charge', 'ChargeController@charge');
 
 //CONTACT FORM
-Route::get('/contact/contact', 'ContactController@contact')->name(
-    'contact.contact',
-);
+Route::get('/contact', 'ContactController@contact')->name('contact.contact');
 Route::post('/contact/confirm', 'ContactController@confirm')->name(
     'contact.confirm',
 );
@@ -103,11 +106,11 @@ Route::get('/items/pricier_product_list', 'shoesController@pricy')->name(
 );
 
 //HOME
-Route::get('/', 'shoesController@home');
+Route::get('/', 'shoesController@home')->name('top');
 
 //CART
-Route::get('/cart/cart/', 'shoesController@cart')->name('cart');
-Route::post('/cart/cart/', 'cartController@addMyCart');
+Route::get('/cart', 'shoesController@cart')->name('cart');
+Route::post('/cart', 'cartController@addMyCart');
 
 Route::post('/cartdelete', 'cartController@cartDelete')->name('cartdelete');
 

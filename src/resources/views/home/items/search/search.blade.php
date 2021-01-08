@@ -26,7 +26,7 @@
 
     <div class="ser-box">
       <h2 class="s-head">検索</h2>
-      <form action="{{ url('/home/items/search/search')}}" method="get" class="form">
+      <form action="{{ route('search')}}" method="get" class="form">
         @csrf
         <input type="serach" name="product_name" placeholder="キーワード" class="search_input">
         <input type="submit" value="検索" class="search_btn">
@@ -38,7 +38,7 @@
 
   <div class="m-container">
     @if ($search_products->isNotEmpty())
-    <h2 class="s-head"><a href="{{ url('/home') }}">Home</a> ≫ {{$keyword_name}}</h2>
+    <h2 class="s-head"><a href="{{ route('top') }}">Home</a> ≫ {{$keyword_name}}</h2>
     <div class="items">
       <!--繰り返し DBからとりだしのを件数分ｸ返す-->
       @foreach($search_products as $product)
@@ -59,7 +59,7 @@
       @endforeach
     </div>
     @else
-      <h2 class="s-head"><a href="{{ url('/home') }}">Home</a> ≫ {{$keyword_name}} ≫ 検索結果はありません。</h2>
+      <h2 class="s-head"><a href="{{ route('top') }}">Home</a> ≫ {{$keyword_name}} ≫ 検索結果はありません。</h2>
 
     @endif
     <!--items-->

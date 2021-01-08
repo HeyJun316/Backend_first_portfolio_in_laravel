@@ -16,7 +16,7 @@
   <div class="d-container">
     <div class="d-inner" style="display: inline-flex;">
       <form action="" method="post" class="back">
-        <a href="{{url ('/home')}}">
+        <a href="{{route('top')}}">
           <input type="button" name="back" value="ホームに戻る" class="btn back-btn">
         </a>
       </form>

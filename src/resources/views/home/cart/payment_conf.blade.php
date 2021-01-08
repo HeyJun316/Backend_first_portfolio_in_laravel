@@ -35,8 +35,8 @@
             <td>{{$cart->size->size}}</td>
             <td>1</td>
             <td>
-              <a href="{{url('home/cart/cart')}}">
-                <input href="{{url('home/cart/cart')}}" style="color:black;" type="submit" value="変更">
+              <a href="{{route('cart')}}">
+                <input href="{{route('cart')}}" style="color:black;" type="submit" value="変更">
                 <!--直前の数量を反映する-->
               </a>
             </td>

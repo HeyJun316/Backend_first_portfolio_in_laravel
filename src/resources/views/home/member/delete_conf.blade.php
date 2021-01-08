@@ -13,10 +13,10 @@
   </div>
   <div class="d-container">
     <div class="d-inner" style="display: inline-flex;">
-      <a href="{{url ('/home')}}">
+      <a href="{{route('top')}}">
         <input type="button" name="back" value="戻る" class="btn back-btn">
       </a>
-      <form action="{{route ('delete') }}" method="post" class="delete">
+      <form action="{{route ('delete') }}" method="post">
         @csrf
         <input type="submit" name="delete" value="退会する" class="btn d-btn">
       </form>

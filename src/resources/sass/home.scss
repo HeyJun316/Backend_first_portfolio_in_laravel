@@ -91,7 +91,7 @@ header {
       margin-left: 75px;
       display: flex;
       @include mq(sp) {
-        margin-left: 33px;
+        margin-left: 10px;
         width: 100%;
       }
       img {
@@ -117,7 +117,7 @@ header {
         }
         @include mq(sp) {
           margin-left: 5px;
-          margin-top: 13px;
+          margin-top: 5px;
           font-size: 20px;
         }
       }
@@ -127,7 +127,6 @@ header {
         // display: none;
       }
       .h-navs {
-        // padding-right: 30px;
 
 
         .h-nav {
@@ -140,6 +139,7 @@ header {
           @include mq(sp){
             margin-right: 70px;
             width: 100%;
+            margin-bottom: 8px;
           }
 
           a {
@@ -205,8 +205,8 @@ header {
   font-size: 12px;
 }
 .logout {
-  background-color: $bg-sub-color;
-  color: black;
+   background-color: #93612e;
+   color: #d6d6d6;
   border: none;
   outline: none;
   cursor: pointer;
@@ -214,6 +214,14 @@ header {
   @include mq(tab-only) {
     font-size: 12px;
   }
+}
+.d-logout{
+    background-color: $bg-sub-color;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
 }
 //mainvisual
 //

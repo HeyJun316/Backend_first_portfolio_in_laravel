@@ -46,7 +46,7 @@
 
       <div class="h-left">
 
-        <a href="{{url ('/home')}}">
+        <a href="{{route ('top')}}">
           <!-- <img src="../img/ウッディ.jpg" alt="logo"> -->
           <img alt="文字表示" src="{{ asset('/img/logo.jpg') }}">
         </a>
@@ -58,14 +58,14 @@
       <div class="h-right">
         <ul class="h-navs">
           @if(Auth::check())
-          <li class="h-nav sp-hidden"><a href="{{ url('/home/') }}">{{Auth::user()->name}} 様</a></li>
-          <li class="h-nav sp-hidden"><a href="{{url ('/home/cart/cart') }}">カート</a></a></li>
+          <li class="h-nav sp-hidden"><a href="{{ route('top') }}">{{Auth::user()->name}} 様</a></li>
+          <li class="h-nav sp-hidden"><a href="{{route('cart') }}">カート</a></a></li>
           <!--カートに飛ばして追加した商品を表示？カート機能必要-->
           <li class="h-nav sp-hidden"><a href="{{route ('history') }}">購入履歴</a></li>
           <!-- historyに飛ばしてuserIDから-->
           <li class="h-nav sp-hidden"><a href="#" class="dropdown-btn">その他</a>
             <ul class="dropdown">
-              <li class="d-item"><a href="{{url ('/home/member/user')}}">会員情報</a></li>
+              <li class="d-item"><a href="{{route('member-user')}}">会員情報</a></li>
 
               <!-- userIDから全情報を持ってくる-->
               <form action="{{route ('logout') }}" method="post">
@@ -76,7 +76,7 @@
                 </li>
               </form>
 
-              <li class="d-item"><a href="{{url ('/home/member/delete_conf')}}">退会</a></li>
+              <li class="d-item"><a href="{{route('member-delete_conf')}}">退会</a></li>
 
             </ul>
           </li>
@@ -90,21 +90,21 @@
         <nav class="drawer-nav" role="navigation">
           <ul class="drawer-menu">
             <li><a class="drawer-brand">{{Auth::user()->name}} 様</a></li>
-            <li><a href="{{url ('/home/cart/cart') }}" class="drawer-menu-item">カート</a></li>
+            <li><a href="{{route('cart') }}" class="drawer-menu-item">カート</a></li>
             <li><a href="{{route ('history') }}" class="drawer-menu-item">購入履歴</a></li>
-            <li><a href="{{url ('/home/member/user')}}" class="drawer-menu-item">会員情報</a></li>
+            <li><a href="{{route('member-user')}}" class="drawer-menu-item">会員情報</a></li>
             <form action="{{route ('logout') }}" method="post">
                 @csrf
                 <li class="d-item drawer-menu-item">
-                  <button type="submit" class="logout">
+                  <button type="submit" class="logout d-logout">
                     ログアウト
                 </li>
               </form>
-            <li><a href="{{url ('/home/member/delete_conf')}}" class="drawer-menu-item">退会</a></li>
+            <li><a href="{{route('member-delete_conf')}}" class="drawer-menu-item">退会</a></li>
           </ul>
         </nav>
         @else
-        <li class="h-nav"><a href="{{ url('/home/member/login') }}" class="login_regist">ログイン/登録</a></li>
+        <li class="h-nav"><a href="{{ route('login') }}" class="login_regist">ログイン/登録</a></li>
 
 
         </ul>
@@ -128,7 +128,7 @@
     <div class="f-container">
       <div class="f-left">©︎最強EC</div>
       <div class="div_contact">
-        <a href="{{url ('/home/contact/contact')}}" class="a_contact">
+        <a href="{{route('contact.contact')}}" class="a_contact">
           <input type="button" name="contact" value="お問い合わせ" class="input_contact">
         </a>
       </div>
@@ -183,12 +183,7 @@
   });
 
 </script>
-<script>
-    $(function() {
-      var height=$("#header").height();
-      $("body").css("margin-top", height + 0);//10pxだけ余裕をもたせる
-    });
-</script>
+
 
 
 

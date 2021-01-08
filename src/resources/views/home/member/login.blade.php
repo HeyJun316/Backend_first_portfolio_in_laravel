@@ -44,7 +44,7 @@
     <div class="login-right">
       <h3 class="l-title">外部からログイン</h3>
       <form action="" method="post">
-        <a href="{{ url('/home/member/login/google')}}">
+        <a href="{{ route('google')}}">
           <input type="button" name="login" value="Googleでログイン" class="btn google">
         </a>
       </form>
@@ -55,7 +55,7 @@
     <h2 class="title">新規登録</h2>
     <form action="" method="post">
 
-      <a href="{{url ('/home/member/regist')}}">
+      <a href="{{route('member-regist')}}">
         <input type="button" value="会員登録" class="btn sign-btn">
       </a>
     </form>

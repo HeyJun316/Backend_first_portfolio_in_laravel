@@ -35,7 +35,6 @@ body {
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
-  position: relative;
   @include mq(tab-only) {
     font-size: 20px;
     margin: 32px 0;
@@ -69,9 +68,9 @@ a {
 //
 //header
 header {
+  position: fixed;
   background: $bg-base-color;
   width: 100%;
-  position: fiexd;
   left: 0;
   top: 0;
   z-index: 100;
@@ -92,7 +91,8 @@ header {
       margin-left: 75px;
       display: flex;
       @include mq(sp) {
-        margin-left: auto;
+        margin-left: 10px;
+        width: 100%;
       }
       img {
         width: 65px;
@@ -116,19 +116,19 @@ header {
           font-size: 18px;
         }
         @include mq(sp) {
-          margin-left: 20px;
-          margin-top: 13px;
+          margin-left: 5px;
+          margin-top: 5px;
           font-size: 20px;
         }
       }
     }
     .h-right {
       margin-left: auto;
-      @include mq(sp) {
-        display: none;
+        // display: none;
       }
       .h-navs {
-        padding-right: 30px;
+
+
         .h-nav {
           padding-right: 50px;
           display: inline-block;
@@ -136,6 +136,12 @@ header {
           @include mq(tab-only) {
             padding-right: 15px;
           }
+          @include mq(sp){
+            margin-right: 70px;
+            width: 100%;
+            margin-bottom: 8px;
+          }
+
           a {
             font-size: 13px;
           }
@@ -145,13 +151,13 @@ header {
           display: none;
           background-color: $bg-base-color;
           position: absolute;
-          top: 65px;
+          top: 90px;
           right: -11px;
           width: 120px;
           padding: 10px 9px 10px 20px;
           @include mq(tab-only) {
-            width: 74px;
             right: 0px;
+            width: 74px;
           }
           .d-item {
             width: 100%;
@@ -169,13 +175,38 @@ header {
       }
     }
   }
-}
+  .drawer-nav {
+    z-index: 200px;
+    background-color: $bg-sub-color;
+  }
+  // button.drawer-toggle {
+  //   display: none;
+  // }
+  button.drawer-hamburger {
+    display: none;
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      display: block;
+      z-index: 200px;
+    }
+  }
+  .always{
+    display: block;
+  }
+  .sp-hidden{
+    @include mq(sp){
+      visibility: hidden;
+    }
+  }
+
 .login_regist {
   font-size: 12px;
 }
 .logout {
-  background-color: #93612e;
-  color: #d6d6d6;
+   background-color: #93612e;
+   color: #d6d6d6;
   border: none;
   outline: none;
   cursor: pointer;
@@ -184,17 +215,31 @@ header {
     font-size: 12px;
   }
 }
+.d-logout{
+    background-color: $bg-sub-color;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
 //
 //PRODUCT
 //
 .product {
   color: $font-sub-color;
   height: 600px;
+  padding-top: 6%;
+
   @include mq(tab-only) {
     margin-bottom: 5%;
+    padding-top: 8%;
+
   }
   @include mq(sp) {
     margin-bottom: 30%;
+    padding-top: 20%;
+
   }
 
   @include mq(sp) {
@@ -397,8 +442,8 @@ header {
 //
 //footerï
 //
+
 footer {
-  margin-top: 15%;
   height: 80px;
   background: #e5caae;
   color: $bg-base-color;
@@ -407,7 +452,6 @@ footer {
   }
   @include mq(sp) {
     font-size: 20px;
-    margin-top: 60%;
   }
   .f-container {
     display: flex;
@@ -426,7 +470,7 @@ footer {
       }
       @include mq(sp) {
         font-size: 17px;
-        margin: 3px 60px 0;
+        margin: 3px 40px 0;
       }
     }
     .f-right li {
@@ -462,38 +506,7 @@ footer {
     font-size: 14px;
   }
 }
-.p-toggle {
-  margin-left: 40px;
-  text-align: left;
-  margin-bottom: 30px;
-  cursor: pointer;
-  @include mq(tab-only) {
-    margin-left: 0;
-  }
-  @include mq(sp) {
-    text-align: center;
-    margin-left: 0;
-  }
-  .a-click {
-    margin-bottom: 5px;
-  }
-  .size-tb {
-    border-collapse: collapse;
-    @include mq(sp)
-  {
-    margin: 0 auto;
-  }
-  }
-  td {
-    padding: 5px;
-    border: 1px solid black;
-    font-size: 13px;
-    @include mq(tab-only) {
-      font-size: 10px;
-    }
-  }
-}
-.table_header td {
-  font-weight: bold;
-  background-color: #f2f2f2;
+
+.div_price {
+  margin-top: 30px;
 }

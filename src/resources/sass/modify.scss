@@ -35,7 +35,6 @@ body {
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
-  position: relative;
   @include mq(tab-only) {
     font-size: 20px;
     margin: 32px 0;
@@ -69,9 +68,9 @@ a {
 //
 //header
 header {
+  position: fixed;
   background: $bg-base-color;
   width: 100%;
-  position: fiexd;
   left: 0;
   top: 0;
   z-index: 100;
@@ -92,7 +91,8 @@ header {
       margin-left: 75px;
       display: flex;
       @include mq(sp) {
-        margin-left: auto;
+        margin-left: 10px;
+        width: 100%;
       }
       img {
         width: 65px;
@@ -116,19 +116,19 @@ header {
           font-size: 18px;
         }
         @include mq(sp) {
-          margin-left: 20px;
-          margin-top: 13px;
+          margin-left: 5px;
+          margin-top: 5px;
           font-size: 20px;
         }
       }
     }
     .h-right {
       margin-left: auto;
-      @include mq(sp) {
-        display: none;
+        // display: none;
       }
       .h-navs {
-        padding-right: 30px;
+
+
         .h-nav {
           padding-right: 50px;
           display: inline-block;
@@ -136,6 +136,12 @@ header {
           @include mq(tab-only) {
             padding-right: 15px;
           }
+          @include mq(sp){
+            margin-right: 70px;
+            width: 100%;
+            margin-bottom: 8px;
+          }
+
           a {
             font-size: 13px;
           }
@@ -145,14 +151,13 @@ header {
           display: none;
           background-color: $bg-base-color;
           position: absolute;
-          top: 65px;
+          top: 90px;
           right: -11px;
           width: 120px;
           padding: 10px 9px 10px 20px;
           @include mq(tab-only) {
-            width: 74px;
             right: 0px;
-
+            width: 74px;
           }
           .d-item {
             width: 100%;
@@ -170,13 +175,38 @@ header {
       }
     }
   }
-}
+  .drawer-nav {
+    z-index: 200px;
+    background-color: $bg-sub-color;
+  }
+  // button.drawer-toggle {
+  //   display: none;
+  // }
+  button.drawer-hamburger {
+    display: none;
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      display: block;
+      z-index: 200px;
+    }
+  }
+  .always{
+    display: block;
+  }
+  .sp-hidden{
+    @include mq(sp){
+      visibility: hidden;
+    }
+  }
+
 .login_regist {
   font-size: 12px;
 }
 .logout {
-  background-color: #93612e;
-  color: #d6d6d6;
+   background-color: #93612e;
+   color: #d6d6d6;
   border: none;
   outline: none;
   cursor: pointer;
@@ -185,13 +215,29 @@ header {
     font-size: 12px;
   }
 }
+.d-logout{
+    background-color: $bg-sub-color;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
 //
 //resist
 //
 
 .resist {
+  padding-top: 6%;
+
   color: $font-sub-color;
   margin-bottom: 9%;
+  @include mq(tab-only){
+    padding-top: 8%;
+    }
+    @include mq(sp){
+      padding-top: 11%;
+    }
   .r-container {
     margin: 5% auto 0 auto;
     width: 50%;
