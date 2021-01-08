@@ -38,7 +38,7 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('home.member.login');
+        return view('member.login');
     }
 
     public function logout()
