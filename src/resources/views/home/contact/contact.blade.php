@@ -44,7 +44,7 @@
                             </label>
                         </dt>
                         <dd>
-                            <textarea col="20" rows="3" name="body" class="textarea_size" wrap="hard">{{ old('body') }}</textarea>
+                            <textarea col="30" rows="6" name="body" class="textarea_size" wrap="hard">{{ old('body') }}</textarea>
                             <br>
                             @if ($errors->has('title'))
                             <p class="error-message">{{ $errors->first('body') }}</p>

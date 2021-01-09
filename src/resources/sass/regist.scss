@@ -68,9 +68,9 @@ a {
 //
 //header
 header {
+  position: fixed;
   background: $bg-base-color;
   width: 100%;
-  position: fiexd;
   left: 0;
   top: 0;
   z-index: 100;
@@ -91,7 +91,8 @@ header {
       margin-left: 75px;
       display: flex;
       @include mq(sp) {
-        // margin-left: auto;
+        margin-left: 10px;
+        width: 100%;
       }
       img {
         width: 65px;
@@ -115,8 +116,8 @@ header {
           font-size: 18px;
         }
         @include mq(sp) {
-          margin-left: 20px;
-          margin-top: 13px;
+          margin-left: 5px;
+          margin-top: 5px;
           font-size: 20px;
         }
       }
@@ -126,7 +127,7 @@ header {
         // display: none;
       }
       .h-navs {
-        padding-right: 30px;
+
 
         .h-nav {
           padding-right: 50px;
@@ -134,6 +135,11 @@ header {
           transition: all 0.5s ease-in-out 0s;
           @include mq(tab-only) {
             padding-right: 15px;
+          }
+          @include mq(sp){
+            margin-right: 70px;
+            width: 100%;
+            margin-bottom: 8px;
           }
 
           a {
@@ -171,6 +177,7 @@ header {
   }
   .drawer-nav {
     z-index: 200px;
+    background-color: $bg-sub-color;
   }
   // button.drawer-toggle {
   //   display: none;
@@ -189,15 +196,17 @@ header {
     display: block;
   }
   .sp-hidden{
-    visibility: hidden;
+    @include mq(sp){
+      visibility: hidden;
+    }
   }
 
 .login_regist {
   font-size: 12px;
 }
 .logout {
-  background-color: #93612e;
-  color: #d6d6d6;
+   background-color: #93612e;
+   color: #d6d6d6;
   border: none;
   outline: none;
   cursor: pointer;
@@ -206,13 +215,28 @@ header {
     font-size: 12px;
   }
 }
+.d-logout{
+    background-color: $bg-sub-color;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
 //
 //resist
 //
 
 .resist {
+  margin-top: 11%;
   color: $font-sub-color;
   margin-bottom: 4%;
+  @include mq(tab-only){
+    margin-top: 15%;
+  }
+  @include mq(sp){
+    margin-top: 24%;
+  }
   .r-container {
     margin: 5% auto 0 auto;
     width: 50%;
@@ -244,7 +268,7 @@ header {
             margin: 5px -11px 0 0;
           }
           @include mq(sp) {
-            font-size: 11px;
+            font-size: 7px;
             width: 40%;
             margin-right: 0;
           }
@@ -295,9 +319,20 @@ header {
 
   }
 }
+
+.textarea_size{
+  width: 300px;
+  @include mq(tab-only){
+    width: auto;
+  }
+  @include mq(sp){
+    width: auto;
+  }
+}
 //
 //footerï
 //
+
 footer {
   height: 80px;
   background: #e5caae;
@@ -325,7 +360,7 @@ footer {
       }
       @include mq(sp) {
         font-size: 17px;
-        margin: 3px 60px 0;
+        margin: 3px 40px 0;
       }
     }
     .f-right li {
@@ -360,4 +395,8 @@ footer {
   @include mq(sp) {
     font-size: 14px;
   }
+}
+
+.div_price {
+  margin-top: 30px;
 }

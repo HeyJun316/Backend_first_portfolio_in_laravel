@@ -59,63 +59,55 @@
           <dt class="a-click" date-target="syncer-acdb-01">*サイズ一覧<span class="a-icon"></span></dt>
           <dd class="a-contents">
             <div class="a-body">
-              <table class="size-tb">
+              <table border="1" class="size-tb" >
                 <!-- table header -->
                 <tbody class="size-tb-body">
                   <tr class="table_header">
-                    <td class="header_info10">JP</td>
-                    <td class="header_info30">24.5</td>
-                    <td class="header_info20">25.0</td>
-                    <td class="header_info30">25.5</td>
-                    <td class="header_info20">26.0</td>
-                    <td class="header_info30">26.5</td>
-                    <td class="header_info20">27.0</td>
-                    <td class="header_info30">27.5</td>
-                    <td class="header_info20">28.0</td>
-                    <td class="header_info30">28.5</td>
-                    <td class="header_info20">29.0</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">JP</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">24.5</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">25.0</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">25.5</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">26.0</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">26.5</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">27.0</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">27.5</td>
+                    <td class="header_infojp" sytle="border: 1px solid black">28.0</td>
                   </tr>
                   <!-- us size -->
                   <tr class="row1">
-                    <td class="data_info10">USA</td>
-                    <td class="data_info30">6.5</td>
-                    <td class="data_info20">7</td>
-                    <td class="data_info30">7.5</td>
-                    <td class="data_info20">8</td>
-                    <td class="data_info30">8.5</td>
-                    <td class="data_info20">9</td>
-                    <td class="data_info30">9.5</td>
-                    <td class="data_info20">10</td>
-                    <td class="data_info30">10.5</td>
-                    <td class="data_info20">11</td>
+                    <td class="data_infous">USA</td>
+                    <td class="data_infous">6.5</td>
+                    <td class="data_infous">7</td>
+                    <td class="data_infous">7.5</td>
+                    <td class="data_infous">8</td>
+                    <td class="data_infous">8.5</td>
+                    <td class="data_infous">9</td>
+                    <td class="data_infous">9.5</td>
+                    <td class="data_infous">10</td>
                   </tr>
                   <!-- uk size -->
                   <tr class="row1">
-                    <td class="data_info10">UK</td>
-                    <td class="data_info30">6</td>
-                    <td class="data_info20">6.5</td>
-                    <td class="data_info30">7</td>
-                    <td class="data_info20">7.5</td>
-                    <td class="data_info30">8</td>
-                    <td class="data_info20">8.5</td>
-                    <td class="data_info30">9</td>
-                    <td class="data_info20">9.5</td>
-                    <td class="data_info30">10</td>
-                    <td class="data_info20">10.5</td>
+                    <td class="data_info">UK</td>
+                    <td class="data_info">6</td>
+                    <td class="data_info">6.5</td>
+                    <td class="data_info">7</td>
+                    <td class="data_info">7.5</td>
+                    <td class="data_info">8</td>
+                    <td class="data_info">8.5</td>
+                    <td class="data_info">9</td>
+                    <td class="data_info">9.5</td>
                   </tr>
                   <!-- euro size -->
                   <tr class="row1">
-                    <td class="data_info10">EU</td>
-                    <td class="data_info30">39</td>
-                    <td class="data_info20">40</td>
-                    <td class="data_info30">41</td>
-                    <td class="data_info20">42</td>
-                    <td class="data_info30">-</td>
-                    <td class="data_info20">43</td>
-                    <td class="data_info30">-</td>
-                    <td class="data_info20">44</td>
-                    <td class="data_info30">-</td>
-                    <td class="data_info20">45</td>
+                    <td class="data_infoeu">EU</td>
+                    <td class="data_infoeu">39</td>
+                    <td class="data_infoeu">40</td>
+                    <td class="data_infoeu">41</td>
+                    <td class="data_infoeu">42</td>
+                    <td class="data_infoeu">-</td>
+                    <td class="data_infoeu">43</td>
+                    <td class="data_infoeu">-</td>
+                    <td class="data_infoeu">44</td>
                   </tr>
                 </tbody>
               </table>

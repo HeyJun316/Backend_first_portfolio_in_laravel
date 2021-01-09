@@ -266,7 +266,7 @@ header {
         font-size: 12px;
       }
       @include mq(sp) {
-        padding: 15px;
+        padding: 3px;
       }
     }
     td {
@@ -280,7 +280,7 @@ header {
         padding: 20px 4px;
       }
       @include mq(sp) {
-        padding: 15px;
+        padding: 9px;
       }
     }
     .delete input {

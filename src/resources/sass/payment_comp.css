@@ -13,7 +13,6 @@ body {
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
-  position: relative;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
@@ -32,7 +31,7 @@ body {
 
 .btn {
   margin-top: 20px;
-  width: 38%;
+  width: auto;
   font-size: 19px;
   cursor: pointer;
   background-color: #93612e;
@@ -58,9 +57,9 @@ a {
 }
 
 header {
+  position: fixed;
   background: #93612e;
   width: 100%;
-  position: fiexd;
   left: 0;
   top: 0;
   z-index: 100;
@@ -79,6 +78,12 @@ header .h-inner {
   }
 }
 
+@media (max-width: 767px) {
+  header .h-inner {
+    height: 60px;
+  }
+}
+
 header .h-inner .h-left {
   margin-right: auto;
   margin-left: 75px;
@@ -87,7 +92,8 @@ header .h-inner .h-left {
 
 @media (max-width: 767px) {
   header .h-inner .h-left {
-    margin: 0 auto;
+    margin-left: 10px;
+    width: 100%;
   }
 }
 
@@ -105,31 +111,30 @@ header .h-inner .h-left img {
 
 @media (max-width: 767px) {
   header .h-inner .h-left img {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
+    width: 45px;
+    height: 45px;
   }
 }
 
-header .h-inner .h-left h2 {
+header .h-inner .h-left .header_title {
   margin-left: 25px;
   margin-top: 20px;
   font-size: 30px;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
-  header .h-inner .h-left h2 {
+  header .h-inner .h-left .header_title {
     margin-left: 20px;
     margin-top: 16px;
     font-size: 18px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1087px) and (max-width: 767px) {
-  header .h-inner .h-left h2 {
-    font-size: 26px;
-    margin-top: 11px;
-    margin-left: 25px;
+@media (max-width: 767px) {
+  header .h-inner .h-left .header_title {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 20px;
   }
 }
 
@@ -137,54 +142,53 @@ header .h-inner .h-right {
   margin-left: auto;
 }
 
-@media (max-width: 767px) {
-  header .h-inner .h-right {
-    display: none;
-  }
-}
-
-header .h-inner .h-right .h-navs {
-  padding-right: 30px;
-}
-
-header .h-inner .h-right .h-navs .h-nav {
+header .h-inner .h-navs .h-nav {
   padding-right: 50px;
   display: inline-block;
   transition: all 0.5s ease-in-out 0s;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
-  header .h-inner .h-right .h-navs .h-nav {
+  header .h-inner .h-navs .h-nav {
     padding-right: 15px;
   }
 }
 
-header .h-inner .h-right .h-navs .h-nav a {
+@media (max-width: 767px) {
+  header .h-inner .h-navs .h-nav {
+    margin-right: 70px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+header .h-inner .h-navs .h-nav a {
   font-size: 13px;
 }
 
-header .h-inner .h-right .h-navs .dropdown {
+header .h-inner .h-navs .dropdown {
   z-index: 200;
   display: none;
   background-color: #93612e;
   position: absolute;
-  top: 65px;
-  right: 0;
+  top: 90px;
+  right: -11px;
   width: 120px;
   padding: 10px 9px 10px 20px;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
-  header .h-inner .h-right .h-navs .dropdown {
+  header .h-inner .h-navs .dropdown {
+    right: 0px;
     width: 74px;
   }
 }
 
-header .h-inner .h-right .h-navs .dropdown .d-item {
+header .h-inner .h-navs .dropdown .d-item {
   width: 100%;
 }
 
-header .h-inner .h-right .h-navs .dropdown .d-item a {
+header .h-inner .h-navs .dropdown .d-item a {
   z-index: 200;
   color: #ebd6c7;
   display: block;
@@ -192,8 +196,40 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
-  header .h-inner .h-right .h-navs .dropdown .d-item a {
+  header .h-inner .h-navs .dropdown .d-item a {
     font-size: 13px;
+  }
+}
+
+.drawer-nav {
+  z-index: 200px;
+  background-color: #e5caae;
+}
+
+button.drawer-hamburger {
+  display: none;
+}
+
+@media (max-width: 1087px) {
+  button.drawer-hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  button.drawer-hamburger {
+    display: block;
+    z-index: 200px;
+  }
+}
+
+.always {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .sp-hidden {
+    visibility: hidden;
   }
 }
 
@@ -207,16 +243,26 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
   border: none;
   outline: none;
   cursor: pointer;
+  padding: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1087px) {
   .logout {
     font-size: 12px;
-    padding: 0;
   }
 }
 
+.d-logout {
+  background-color: #e5caae;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 .delete {
+  padding-top: 10%;
   margin-bottom: 18%;
 }
 
@@ -228,6 +274,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 
 @media (max-width: 767px) {
   .delete {
+    padding-top: 20%;
     margin-bottom: 0%;
   }
 }
@@ -278,6 +325,7 @@ header .h-inner .h-right .h-navs .dropdown .d-item a {
 @media (max-width: 767px) {
   .delete .d-container .d-inner .back-btn {
     width: 100px;
+    margin: 0;
   }
 }
 
@@ -295,13 +343,13 @@ footer {
 
 @media (max-width: 767px) {
   footer {
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
 footer .f-container {
   display: flex;
-  padding-top: 30px;
+  padding-top: 25px;
   margin-right: auto;
 }
 
@@ -313,7 +361,7 @@ footer .f-container {
 
 footer .f-container .f-left {
   font-size: 20px;
-  margin: 0 auto 0 80px;
+  margin: 5px auto 0 80px;
   display: flex;
 }
 
@@ -327,7 +375,7 @@ footer .f-container .f-left {
 @media (max-width: 767px) {
   footer .f-container .f-left {
     font-size: 17px;
-    margin: 3px auto 0 auto;
+    margin: 3px 40px 0;
   }
 }
 
@@ -339,22 +387,20 @@ footer .f-container .f-right li .fab {
   cursor: pointer;
 }
 
-.search_btn {
-  width: 20%;
-  font-size: 15px;
-  cursor: pointer;
-  background-color: #93612e;
-  color: #d6d6d6;
-}
-
 .div_contact {
   text-align: center;
   margin: 0 80px 0 auto;
 }
 
+@media (min-width: 768px) and (max-width: 1087px) {
+  .div_contact {
+    margin: 5px 80px 0px auto;
+  }
+}
+
 @media (max-width: 767px) {
   .div_contact {
-    margin: 0 auto 0 auto;
+    margin: 0 60px 0 auto;
   }
 }
 
@@ -368,13 +414,16 @@ footer .f-container .f-right li .fab {
 
 @media (min-width: 768px) and (max-width: 1087px) {
   .input_contact {
-    margin-top: 8px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 767px) {
   .input_contact {
-    font-size: 12px;
+    font-size: 14px;
   }
+}
+
+.div_price {
+  margin-top: 30px;
 }

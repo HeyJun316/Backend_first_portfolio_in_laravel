@@ -31,9 +31,10 @@ body {
 }
 .title {
   color: $font-sub-color;
-  margin: 30px 0 20px;
+  margin: 60px 0;
   text-align: center;
   font-size: 30px;
+  margin-bottom: 50px;
   @include mq(tab-only) {
     font-size: 20px;
     margin: 32px 0;
@@ -46,7 +47,7 @@ body {
 
 .btn {
   margin-top: 20px;
-  width: 38%;
+  width: auto;
   font-size: 19px;
   cursor: pointer;
   background-color: $bg-base-color;
@@ -59,6 +60,7 @@ body {
     margin-top: 15px;
   }
 }
+
 a {
   text-decoration: none;
   color: $font-base-color;
@@ -66,9 +68,9 @@ a {
 //
 //header
 header {
+  position: fixed;
   background: $bg-base-color;
   width: 100%;
-  position: fiexd;
   left: 0;
   top: 0;
   z-index: 100;
@@ -89,7 +91,8 @@ header {
       margin-left: 75px;
       display: flex;
       @include mq(sp) {
-        margin-left: auto;
+        margin-left: 10px;
+        width: 100%;
       }
       img {
         width: 65px;
@@ -99,8 +102,8 @@ header {
           height: 50px;
         }
         @include mq(sp) {
-          width: 40px;
-          height: 40px;
+          width: 45px;
+          height: 45px;
         }
       }
       .header_title {
@@ -111,19 +114,21 @@ header {
           margin-left: 20px;
           margin-top: 16px;
           font-size: 18px;
-          @include mq(sp) {
-            margin: 0;
-          }
+        }
+        @include mq(sp) {
+          margin-left: 5px;
+          margin-top: 5px;
+          font-size: 20px;
         }
       }
     }
     .h-right {
       margin-left: auto;
-      @include mq(sp) {
-        display: none;
+        // display: none;
       }
       .h-navs {
-        padding-right: 30px;
+
+
         .h-nav {
           padding-right: 50px;
           display: inline-block;
@@ -131,6 +136,12 @@ header {
           @include mq(tab-only) {
             padding-right: 15px;
           }
+          @include mq(sp){
+            margin-right: 70px;
+            width: 100%;
+            margin-bottom: 8px;
+          }
+
           a {
             font-size: 13px;
           }
@@ -140,11 +151,12 @@ header {
           display: none;
           background-color: $bg-base-color;
           position: absolute;
-          top: 65px;
-          right: 0;
+          top: 90px;
+          right: -11px;
           width: 120px;
           padding: 10px 9px 10px 20px;
           @include mq(tab-only) {
+            right: 0px;
             width: 74px;
           }
           .d-item {
@@ -163,35 +175,73 @@ header {
       }
     }
   }
-}
+  .drawer-nav {
+    z-index: 200px;
+    background-color: $bg-sub-color;
+  }
+  // button.drawer-toggle {
+  //   display: none;
+  // }
+  button.drawer-hamburger {
+    display: none;
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      display: block;
+      z-index: 200px;
+    }
+  }
+  .always{
+    display: block;
+  }
+  .sp-hidden{
+    @include mq(sp){
+      visibility: hidden;
+    }
+  }
+
 .login_regist {
   font-size: 12px;
 }
 .logout {
-  background-color: #93612e;
-  color: #d6d6d6;
+   background-color: #93612e;
+   color: #d6d6d6;
   border: none;
   outline: none;
   cursor: pointer;
-  padding-left: 0;
+  padding: 0;
   @include mq(tab-only) {
     font-size: 12px;
-    padding: 0;
   }
+}
+.d-logout{
+    background-color: $bg-sub-color;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
 }
 //
 //history
 //
 .payment {
+  padding-top: 10%;
+
   height: 700px;
   color: $font-sub-color;
   width: 80%;
   margin: 0 auto 5%;
   @include mq(tab-only) {
     width: 100%;
+    padding-top: 8%;
+
   }
   @include mq(sp) {
     height: auto;
+    padding-top: 11%;
+
   }
   .p-inner {
     display: flex;
@@ -223,7 +273,7 @@ header {
             padding: 15px 10px;
           }
           @include mq(sp) {
-            padding: 10px;
+            padding: 9px;
           }
         }
       }
@@ -347,14 +397,14 @@ footer {
   }
   .f-container {
     display: flex;
-    padding-top: 30px;
+    padding-top: 25px;
     margin-right: auto;
     @include mq(tab-only) {
       padding-top: 10px;
     }
     .f-left {
       font-size: 20px;
-      margin: 0 auto 0 80px;
+      margin: 5px auto 0 80px;
       display: flex;
       @include mq(tab-only) {
         font-size: 15px;
@@ -362,7 +412,7 @@ footer {
       }
       @include mq(sp) {
         font-size: 17px;
-        margin: 3px auto 0 auto;
+        margin: 3px 40px 0;
       }
     }
     .f-right li {
@@ -376,6 +426,13 @@ footer {
 .div_contact {
   text-align: center;
   margin: 0 80px 0 auto;
+  @include mq(tab-only) {
+    margin: 5px 80px 0px auto;
+  }
+
+  @include mq(sp) {
+    margin: 0 60px 0 auto;
+  }
 }
 .input_contact {
   width: 100%;
@@ -383,4 +440,15 @@ footer {
   cursor: pointer;
   background-color: $bg-base-color;
   color: $btn-base-color;
+  @include mq(tab-only) {
+    font-size: 16px;
+  }
+
+  @include mq(sp) {
+    font-size: 14px;
+  }
+}
+
+.div_price {
+  margin-top: 30px;
 }

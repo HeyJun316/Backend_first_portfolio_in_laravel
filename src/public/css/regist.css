@@ -53,9 +53,9 @@ a {
 }
 
 header {
+  position: fixed;
   background: #93612e;
   width: 100%;
-  position: fiexd;
   left: 0;
   top: 0;
   z-index: 100;
@@ -80,6 +80,12 @@ header .h-inner .h-left {
   margin-right: auto;
   margin-left: 75px;
   display: flex;
+}
+@media (max-width: 767px) {
+  header .h-inner .h-left {
+    margin-left: 10px;
+    width: 100%;
+  }
 }
 header .h-inner .h-left img {
   width: 65px;
@@ -111,16 +117,13 @@ header .h-inner .h-left .header_title {
 }
 @media (max-width: 767px) {
   header .h-inner .h-left .header_title {
-    margin-left: 20px;
-    margin-top: 13px;
+    margin-left: 5px;
+    margin-top: 5px;
     font-size: 20px;
   }
 }
 header .h-inner .h-right {
   margin-left: auto;
-}
-header .h-inner .h-navs {
-  padding-right: 30px;
 }
 header .h-inner .h-navs .h-nav {
   padding-right: 50px;
@@ -130,6 +133,13 @@ header .h-inner .h-navs .h-nav {
 @media (min-width: 768px) and (max-width: 1087px) {
   header .h-inner .h-navs .h-nav {
     padding-right: 15px;
+  }
+}
+@media (max-width: 767px) {
+  header .h-inner .h-navs .h-nav {
+    margin-right: 70px;
+    width: 100%;
+    margin-bottom: 8px;
   }
 }
 header .h-inner .h-navs .h-nav a {
@@ -168,6 +178,7 @@ header .h-inner .h-navs .dropdown .d-item a {
 
 .drawer-nav {
   z-index: 200px;
+  background-color: #e5caae;
 }
 
 button.drawer-hamburger {
@@ -189,8 +200,10 @@ button.drawer-hamburger {
   display: block;
 }
 
-.sp-hidden {
-  visibility: hidden;
+@media (max-width: 767px) {
+  .sp-hidden {
+    visibility: hidden;
+  }
 }
 
 .login_regist {
@@ -211,9 +224,29 @@ button.drawer-hamburger {
   }
 }
 
+.d-logout {
+  background-color: #e5caae;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 .resist {
+  margin-top: 11%;
   color: black;
   margin-bottom: 4%;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  .resist {
+    margin-top: 15%;
+  }
+}
+@media (max-width: 767px) {
+  .resist {
+    margin-top: 24%;
+  }
 }
 .resist .r-container {
   margin: 5% auto 0 auto;
@@ -257,7 +290,7 @@ button.drawer-hamburger {
 }
 @media (max-width: 767px) {
   .resist .r-container .r-inner dl .r-info .r-dt {
-    font-size: 11px;
+    font-size: 7px;
     width: 40%;
     margin-right: 0;
   }
@@ -308,6 +341,20 @@ button.drawer-hamburger {
   }
 }
 
+.textarea_size {
+  width: 300px;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  .textarea_size {
+    width: auto;
+  }
+}
+@media (max-width: 767px) {
+  .textarea_size {
+    width: auto;
+  }
+}
+
 footer {
   height: 80px;
   background: #e5caae;
@@ -347,7 +394,7 @@ footer .f-container .f-left {
 @media (max-width: 767px) {
   footer .f-container .f-left {
     font-size: 17px;
-    margin: 3px 60px 0;
+    margin: 3px 40px 0;
   }
 }
 footer .f-container .f-right li {
@@ -388,4 +435,8 @@ footer .f-container .f-right li .fab {
   .input_contact {
     font-size: 14px;
   }
+}
+
+.div_price {
+  margin-top: 30px;
 }

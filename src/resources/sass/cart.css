@@ -318,7 +318,7 @@ button.drawer-hamburger {
 
 @media (max-width: 767px) {
   .main .l-container th {
-    padding: 15px;
+    padding: 3px;
   }
 }
 
@@ -339,7 +339,7 @@ button.drawer-hamburger {
 
 @media (max-width: 767px) {
   .main .l-container td {
-    padding: 15px;
+    padding: 9px;
   }
 }
 
