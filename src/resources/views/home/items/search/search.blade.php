@@ -22,6 +22,22 @@
             @endforeach
       </ul>
     </div>
+    <div class="category div_price">
+      <h2 class="s-head ">価格検索</h2>
+      <ul class="s-search">
+        <li class="category_nav">
+          <a href="{{ route('cheap') }}">
+            価格が安い順番
+          </a>
+        </li>
+        <li class="category_nav">
+          <a href="{{ route('pricy') }}" class="category">
+            価格が高い順番
+
+          </a>
+        </li>
+      </ul>
+    </div>
     <!--cate-->
 
     <div class="ser-box">

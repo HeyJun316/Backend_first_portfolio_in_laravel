@@ -314,13 +314,18 @@ button.drawer-hamburger {
   display: flex;
   width: 100%;
   min-height: 500px;
-  margin: 70px 9% 85px 0;
+  margin: 11% 9% 85px 0;
+}
+@media (min-width: 768px) and (max-width: 1087px) {
+  .side-main {
+    margin-top: 15%;
+  }
 }
 @media (max-width: 767px) {
   .side-main {
     font-size: 15px;
     display: block;
-    padding-top: 11%;
+    padding-top: 0;
   }
 }
 .side-main .s-head {
