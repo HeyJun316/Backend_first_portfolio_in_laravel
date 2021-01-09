@@ -229,7 +229,7 @@ header {
 .product {
   color: $font-sub-color;
   height: 600px;
-  padding-top: 10%;
+  padding-top: 8%;
 
   @include mq(tab-only) {
     margin-bottom: 5%;
@@ -475,6 +475,7 @@ footer {
   height: 80px;
   background: #e5caae;
   color: $bg-base-color;
+  margin-top: 10%;
   @include mq(tab-only) {
     height: 60px;
   }
