@@ -143,7 +143,7 @@
         <input type="submit" name="cart" value="カートに入れる" class="btn cart_in">
         </form>
         @else
-        <a href="{{url('home/member/login')}}">
+        <a href="{{route('login')}}">
           <input type="button" name="cart" value="カートに入れる" class="btn">
         </a>
         @endif

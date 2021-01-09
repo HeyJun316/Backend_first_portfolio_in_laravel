@@ -325,7 +325,7 @@ button.drawer-hamburger {
   .side-main {
     font-size: 15px;
     display: block;
-    padding-top: 0;
+    padding-top: 10%;
   }
 }
 .side-main .s-head {
